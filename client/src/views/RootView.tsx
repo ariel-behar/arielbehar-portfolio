@@ -1,11 +1,23 @@
-import React from 'react'
+import { useState } from 'react'
 import HomeView from './HomeView'
+import MainView from './MainView'
 
 function RootView() {
+    const [showMainView, setShowMainView] = useState<boolean>(false)
+
+    const showMainViewHandler = () => {
+        setShowMainView(true)
+    }
+
     return (
         <>
             {/* <div>RootView</div> */}
-            <HomeView />
+            {
+                !showMainView 
+                ? <HomeView showMainViewHandler={showMainViewHandler} />
+                : <MainView />
+            }
+            
         </>
     )
 }

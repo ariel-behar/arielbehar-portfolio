@@ -1,5 +1,8 @@
 import Stack from '@mui/material/Stack'
 import styled from '@mui/material/styles/styled'
+import Typography from '@mui/material/Typography'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const StyledFlyInTextUl = styled('ul')`
     list-style: none;
@@ -7,7 +10,9 @@ const StyledFlyInTextUl = styled('ul')`
     top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
+    z-index: 3;
+    padding-left: 0;
+
     &.hidden li {
         opacity: 0;
         &:nth-child(1) {
@@ -36,14 +41,12 @@ const StyledFlyInTextUl = styled('ul')`
             transform: translate(200px, 0);
         }
     }
+
     li {
         display: inline-block;
         color: #2e2e2e;
-        margin-right: 0;
-        font-weight: 400;
-        font-size: 1.5rem;
-        opacity: 1;
-        transition: all 2.5s ease;
+        transition: all 3.5s ease;
+
         &:nth-child(7) {
             margin-right: 7px;
         }
@@ -54,8 +57,17 @@ const StyledFlyInTextUl = styled('ul')`
     }
 `
 
-
 function FlyInText() {
+    const [isTextHidden, setIsTextHidden] = useState<boolean>(true)
+
+    useEffect(() => {
+        setIsTextHidden(false)
+
+        return () => {
+
+        }
+    }, [])
+
     return (
         <Stack
             direction='column'
@@ -65,15 +77,35 @@ function FlyInText() {
             position='absolute'
             height='100%'
             width='100%'
+
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1}}
+            
         >
-            <StyledFlyInTextUl className="fly-in-text hidden">
-                <li>W</li>
-                <li>E</li>
-                <li>L</li>
-                <li>C</li>
-                <li>O</li>
-                <li>M</li>
-                <li>E</li>
+            <StyledFlyInTextUl className={`${isTextHidden ? 'hidden' : ''}`}>
+                <li>
+                    <Typography variant="h3" component='p'>W</Typography>
+                </li>
+                <li>
+                    <Typography variant="h3" component='p'>E</Typography>
+                </li>
+                <li>
+                    <Typography variant="h3" component='p'>L</Typography>
+                </li>
+                <li>
+                    <Typography variant="h3" component='p'>C</Typography>
+                </li>
+                <li>
+                    <Typography variant="h3" component='p'>O</Typography>
+                </li>
+                <li>
+                    <Typography variant="h3" component='p'>M</Typography>
+                </li>
+                <li>
+                    <Typography variant="h3" component='p'>E</Typography>
+                </li>
                 <li>
                     <i>TO</i>
                 </li>
