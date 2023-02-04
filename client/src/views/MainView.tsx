@@ -1,9 +1,12 @@
+import Box from "@mui/material/Box"
+import FirstSection from "../components/MainViewComponents/FirstSection"
+
 function MainView() {
 
 	return (
-		<>
-			<div>MainView</div>
-		</>
+		<Box>
+			<FirstSection />
+		</Box>
 	)
 }
 
