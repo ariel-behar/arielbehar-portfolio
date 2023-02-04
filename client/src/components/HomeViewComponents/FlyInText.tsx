@@ -44,7 +44,7 @@ const StyledFlyInTextUl = styled('ul')`
 
     li {
         display: inline-block;
-        color: #2e2e2e;
+        color: ${({ theme }) => theme.palette.custom.black.main};
         transition: all 3.5s ease;
 
         &:nth-child(7) {
@@ -62,10 +62,6 @@ function FlyInText() {
 
     useEffect(() => {
         setIsTextHidden(false)
-
-        return () => {
-
-        }
     }, [])
 
     return (
