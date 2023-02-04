@@ -1,0 +1,38 @@
+[
+    {
+        "language": "English",
+        "flag": "American flag",
+        "img": "usa.png",
+        "proficiencies": "5 / 5 / 5 / 5"
+    },
+    {
+        "language": "Spanish",
+        "flag": "Spanish flag",
+        "img": "spain.png",
+        "proficiencies": "4 / 4 / 5 / 5"
+    },
+    {
+        "language": "Bulgarian",
+        "flag": "Bulgarian flag",
+        "img": "bulgaria.png",
+        "proficiencies": "Native"
+    },
+    {
+        "language": "Hebrew",
+        "flag": "Israeli flag",
+        "img": "israel.png",
+        "proficiencies": "5 / 5 / 5 / 5"
+    },
+    {
+        "language": "French",
+        "flag": "French flag",
+        "img": "france.png",
+        "proficiencies": "2 / 2 / 3 / 3"
+    },
+    {
+        "language": "Russian",
+        "flag": "Russian flag",
+        "img": "russia.png",
+        "proficiencies": "2 / 1 / 3 / 3"
+    }
+]
