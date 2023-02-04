@@ -8,7 +8,6 @@ import FlyInText from "../components/HomeViewComponents/FlyInText"
 import Logo from "../components/HomeViewComponents/Logo"
 import Overlay from "../components/HomeViewComponents/Overlay"
 import VideoBackground from "../components/HomeViewComponents/VideoBackground"
-import theme from "../theme/theme"
 
 interface Props {
     showMainViewHandler: () => void

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import logoLight from '../../assets/img/logo/logo-light.png'
 
 const StyledLogoImg = styled(motion.img)`
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-height: 270px;
 `
 

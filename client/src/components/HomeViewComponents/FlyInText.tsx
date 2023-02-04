@@ -6,10 +6,6 @@ import { useEffect, useState } from 'react'
 
 const StyledFlyInTextUl = styled('ul')`
     list-style: none;
-    position: absolute;
-    top: 23%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 3;
     padding-left: 0;
 
@@ -69,10 +65,6 @@ function FlyInText() {
             direction='column'
             justifyContent='center'
             alignItems='center'
-            top='0'
-            position='absolute'
-            height='100%'
-            width='100%'
 
             component={motion.div}
             initial={{ opacity: 0 }}
