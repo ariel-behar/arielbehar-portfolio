@@ -21,7 +21,8 @@ declare module '@mui/material/styles' {
             }
         },
         text: {
-            tertiary: PaletteColor
+            tertiary: PaletteColor,
+            muted: string
         }
     }
 
@@ -33,12 +34,14 @@ declare module '@mui/material/styles' {
             green: PaletteColorOptions
         },
         text: {
-            tertiary: PaletteColorOptions
+            tertiary: PaletteColorOptions,
+            muted: PaletteColorOptions
         }
     }
 
     interface TypeText {
-        tertiary: PaletteColorOptions
+        tertiary: PaletteColorOptions,
+        muted: PaletteColorOptions
     }
 
 }

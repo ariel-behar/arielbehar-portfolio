@@ -16,21 +16,23 @@ const StyledBox = styled(Box)`
     background-image: url(${ariel});
     background-position: right center;
     background-repeat: no-repeat;
+
+    text-shadow: 1px 1px 7px #000;
 `
 
 function SecondSection() {
     return (
-        <StyledBox component='section'>
-            <Container >
-                <Grid container spacing={2}>
+        <StyledBox component='section' py={6}>
+            <Container>
+                <Grid container spacing={4}>
                     <Grid item md={8}>
-                        <Typography variant='h4' component='h5'>About Me</Typography>
+                        <Typography variant='h4' component='h5' mb={1}>About Me</Typography>
                         <Typography variant='body1' component='p'>Certified Full-Stack Web Developer. Multilingual and self-taught in a variety of web technologies and programming languages. Passionate about both front and back end-development. Highly reliable and self-propelled to success and professionalism with a constant hunger for knowledge and improvement.</Typography>
                     </Grid>
 
                     <Grid item md={8}>
-                        <Typography variant='h4' component='h5'>Languages</Typography>
-                        <Typography variant='body2' component='p'>
+                        <Typography variant='h4' component='h5' mb={1}>Languages</Typography>
+                        <Typography variant='body2' component='p' color='text.muted'  mb={1}>
                             *Speaking / Writing / Reading /	Understanding rated from 1 to 5 (5 being the highest)
                         </Typography>
 

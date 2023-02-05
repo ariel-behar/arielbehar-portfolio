@@ -9,6 +9,10 @@ const StyledBox = styled(Box)`
     background: rgb(64,150,238);
     background: linear-gradient(-45deg, rgba(64,150,238,1) 0%, rgba(240,248,255,1) 100%);
 
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 12px 15px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
+
     height: 37vh;
 `
 

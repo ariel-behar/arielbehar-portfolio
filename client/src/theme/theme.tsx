@@ -19,7 +19,8 @@ const theme = createTheme({
         text: {
             primary: '#2e2e2e',
             secondary: colors.grey[300],
-            tertiary: colors.green[500]
+            tertiary: colors.green[500],
+            muted: '#636c72'
         }
     }
 })

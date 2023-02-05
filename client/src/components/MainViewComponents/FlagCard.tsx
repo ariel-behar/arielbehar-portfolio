@@ -1,3 +1,4 @@
+import Typography from "@mui/material/Typography"
 import Stack from "@mui/system/Stack"
 
 interface Props {
@@ -12,9 +13,10 @@ interface Props {
 function FlagCard({language}: Props) {
   return (
     <Stack direction='column' alignItems='center'>
-        {language.language}
+        <Typography variant="body1" component='p' >{language.language}</Typography>
         <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/flags/${language.img}`} alt={language.flag} />
-        {language.proficiencies}
+        
+        <Typography variant="body2" component='p' color='text.muted'> {language.proficiencies} </Typography>
     </Stack>
   )
 }
