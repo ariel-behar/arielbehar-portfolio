@@ -1,5 +1,6 @@
 [
     {
+        "_id": 1,
         "order": 0,
         "projectName": "Brasileirão 2019",
         "image": "brasileirao.jpg",
@@ -14,6 +15,7 @@
         "notes": []
     },
     {
+        "_id": 2,
         "order": 1,
         "projectName": "Ariel Behar Portfolio",
         "image": "portfolio.jpg",
@@ -28,6 +30,7 @@
         "notes": [ "The site you're currently on" ]
     },
     {
+        "_id": 3,
         "order": 2,
         "projectName": "A&M GameHub",
         "image": "am-gamehub.jpg",
@@ -42,6 +45,7 @@
         "notes": [ "The site's language is Bulgarian.", "Optimized for large screen sizes only." ]
     },
     {
+        "_id": 4,
         "order": 3,
         "projectName": "eSports Marketing Group",
         "image": "esports.jpg",
@@ -56,6 +60,7 @@
         "notes": []
     },
     {
+        "_id": 5,
         "order": 4,
         "projectName": "VX Aviation",
         "image": "vx-aviation.jpg",
@@ -70,6 +75,7 @@
         "notes": []
     },
     {
+        "_id": 6,
         "order": 5,
         "projectName": "Blago-darya",
         "image": "blago-darya.jpg",
@@ -84,6 +90,7 @@
         "notes": [ "The site's language is Bulgarian." ]
     },
     {
+        "_id": 7,
         "order": 6,
         "projectName": "Travel@Style",
         "image": "travel.jpg",
@@ -98,6 +105,7 @@
         "notes": []
     },
     {
+        "_id": 8,
         "order": 7,
         "projectName": "T&T Customs",
         "image": "tt.jpg",
@@ -112,6 +120,7 @@
         "notes": []
     },
     {
+        "_id": 9,
         "order": 8,
         "projectName": "The Credit Score Guru",
         "image": "guru.jpg",
@@ -126,6 +135,7 @@
         "notes": []
     },
     {
+        "_id": 10,
         "order": 9,
         "projectName": "HUG Tampa Bay",
         "image": "hug.jpg",
@@ -140,6 +150,7 @@
         "notes": []
     },
     {
+        "_id": 11,
         "order": 10,
         "projectName": "Body Wrap Spalon",
         "image": "ispalon.jpg",
