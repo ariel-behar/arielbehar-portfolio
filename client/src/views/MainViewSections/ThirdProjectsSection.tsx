@@ -3,8 +3,8 @@ import { useState } from 'react'
 import projects from '../../data/projects.json'
 import Project from '../../model/Project'
 
-import ProjectCard from "../../components/ThirdProjectsSectionComponents/ProjectCard"
-import ProjectsCarousel from "../../components/ThirdProjectsSectionComponents/ProjectsCarousel"
+import ProjectCard from "../../components/ThirdSectionComponents/ProjectCard"
+import ProjectsCarousel from "../../components/ThirdSectionComponents/ProjectsCarousel"
 
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
