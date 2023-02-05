@@ -7,13 +7,13 @@ interface Project extends Identifiable<Idtype> {
     image: string,
     description: string,
     myRole: string,
-    technologies: [],
+    technologies: string[],
     month: string,
     year: number,
     url: string,
-    type: "MPA" | "SPA" | "Bootstrap" | "Wordpress" ,
+    type: "MPA" | "SPA" | "Bootstrap" | "Wordpress",
     category: "real" | "mockup",
-    notes: []
+    notes: string[] | []
 }
 
 export default Project
