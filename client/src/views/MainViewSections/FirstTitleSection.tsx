@@ -24,7 +24,7 @@ const StyledStack = styled(Stack)`
     background-repeat: no-repeat;
 `
 
-function FirstSection() {
+function FirstTitleSection() {
     return (
         <StyledBox component='section'>
 
@@ -36,4 +36,4 @@ function FirstSection() {
     )
 }
 
-export default FirstSection
+export default FirstTitleSection

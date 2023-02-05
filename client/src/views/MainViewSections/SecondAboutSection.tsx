@@ -20,7 +20,7 @@ const StyledBox = styled(Box)`
     text-shadow: 1px 1px 7px #000;
 `
 
-function SecondSection() {
+function SecondAboutSection() {
     return (
         <StyledBox component='section' py={6}>
             <Container>
@@ -57,4 +57,4 @@ function SecondSection() {
     )
 }
 
-export default SecondSection
+export default SecondAboutSection
