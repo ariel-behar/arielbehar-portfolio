@@ -46,8 +46,6 @@ const StyledCarousel = styled(Carousel)`
 		}
 	}
 `
-
-
 interface Props {
 	selectedProject: Project | null,
 	projects: Project[],
@@ -89,7 +87,7 @@ function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }
 				projects.map(project => {
 					return (
 						<div key={project._id} data-project-id={project._id} data-project-url={project.url}>
-							<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/slides/${project.image}`} alt={`${project.projectName} || ${project._id}`} />
+							<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${project.image}`} alt={`${project.projectName} || ${project._id}`} />
 							<p className="legend">{project.projectName}</p>
 						</div>
 					)
