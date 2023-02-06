@@ -10,6 +10,7 @@ import 'react-multi-carousel/lib/styles.css';
 import mockupProjects from '../../data/mockupProjects.json'
 
 const StyledCarousel = styled(Carousel)`
+	min-height: 460px;
 	height: 100%;
 	
 	.react-multi-carousel-track  {
