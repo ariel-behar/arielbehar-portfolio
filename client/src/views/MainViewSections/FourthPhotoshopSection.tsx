@@ -24,7 +24,7 @@ function FourthPhotoshopSection() {
 	return (
 		<Grid container spacing={2} py={7}>
 			<Grid item md={6} px={2}>
-				<Box px={6} pt={1}>
+				<Box px={5} >
 					<Typography variant="h4" component='h4' textAlign='center' color='text.secondary'>PSD to HTML</Typography>
 
 					<Typography mt={2} variant="body1" component='p' textAlign='justify' color='text.secondary'>This section focuses on my ability to work with Adobe Photoshop and accurately recreate websites from a PSD file into HTML format.</Typography>

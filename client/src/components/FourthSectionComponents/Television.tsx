@@ -10,6 +10,7 @@ import { useState } from 'react'
 
 const StyledBox = styled(Box)`
     position: relative;
+    margin-top: 16px;
     
     .tv-background {
         position: absolute;
@@ -51,6 +52,7 @@ const StyledBox = styled(Box)`
         right: 10%;
 
         cursor: pointer;
+        color: ${({ theme }) => theme.palette.text.secondary};
     }
 
     .tvOn {
@@ -60,7 +62,6 @@ const StyledBox = styled(Box)`
     .tvOff {
         color: ${({ theme }) => theme.palette.error.main};
     }
-
 `
 
 
