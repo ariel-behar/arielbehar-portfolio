@@ -23,10 +23,8 @@ function ThirdProjectsSection() {
 		}
 	}
 
-	console.log(selectedProject);
-
 	return (
-		<Box py={3}>
+		<Box py={3} component="section" id='third-section'>
 			<Typography variant="h2" component='h3' textAlign='center' color='text.secondary'>My Projects</Typography>
 
 			<Grid container spacing={3} py={2}>

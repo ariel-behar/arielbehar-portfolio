@@ -26,7 +26,7 @@ const StyledStack = styled(Stack)`
 
 function FirstTitleSection() {
     return (
-        <StyledBox component='section'>
+        <StyledBox component='section' id='first-section'>
 
             <StyledStack direction='column' justifyContent='center' alignItems='center' >
                 <Typography variant="h4" component='h1'>ARIEL BEHAR WEB DESIGN </Typography>

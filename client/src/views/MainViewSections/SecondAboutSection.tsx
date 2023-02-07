@@ -22,7 +22,7 @@ const StyledBox = styled(Box)`
 
 function SecondAboutSection() {
     return (
-        <StyledBox component='section' py={6}>
+        <StyledBox component='section' py={6} id="second-section">
             <Container>
                 <Grid container spacing={4}>
                     <Grid item md={8}>

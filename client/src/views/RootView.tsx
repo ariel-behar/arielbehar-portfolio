@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import { motion } from 'framer-motion'
 import { lazy, useState, Suspense } from 'react'
+import Navigation from '../components/Navigation/Navigation'
 import HomeView from './HomeView'
 
 const MainViewPromise = import('./MainView')
@@ -15,6 +16,8 @@ function RootView() {
 
     return (
         <Box height={showMainView ? 'inherit' : '100vh'} overflow={showMainView ? 'block' : 'hidden'}>
+            <Navigation showMainView={showMainView}/>
+            
 
         {/* Delete the below BOX when done with the DEVELOPMENT PROCESS. Leave only the HomeView */}
             <Box sx={showMainView ? { opacity: 0 } : {}} > 
@@ -29,6 +32,8 @@ function RootView() {
                 transition={{ duration: 2.5 }}
             >
                 <Suspense fallback={'...loading'}>
+                    
+
                     <MainView />
                 </Suspense>
             </Box>
