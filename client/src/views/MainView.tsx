@@ -10,6 +10,7 @@ import ThirdProjectsSection from './MainViewSections/ThirdProjectsSection'
 import Container from '@mui/material/Container'
 import FourthPhotoshopSection from './MainViewSections/FourthPhotoshopSection'
 import FifthAbilitiesSection from './MainViewSections/FifthAbilitiesSection'
+import SixthDocumentsSection from './MainViewSections/SixthDocumentsSection'
 
 const StyledBox = styled(Box)`
 	background-image: url(${pattern1});
@@ -37,7 +38,11 @@ function MainView() {
 					<FifthAbilitiesSection />
 
 					<hr />
+
+					<Box py={3}></Box>
 				</Container>
+
+				<SixthDocumentsSection />
 			</StyledBox>
 		</Box>
 	)
