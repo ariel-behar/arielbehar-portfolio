@@ -1,0 +1,110 @@
+[
+    {
+        "skill": "React",
+        "proficiency": 1,
+        "image": "react.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Node",
+        "proficiency": 1,
+        "image": "node.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Express",
+        "proficiency": 1,
+        "image": "express.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "HTML",
+        "proficiency": 1,
+        "image": "html.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "CSS",
+        "proficiency": 1,
+        "image": "css.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Sass",
+        "proficiency": 1,
+        "image": "sass.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Material Ui",
+        "proficiency": 1,
+        "image": "materialui.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Bootstrap",
+        "proficiency": 1,
+        "image": "bootstrap.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "MDBootstrap",
+        "proficiency": 1,
+        "image": "mdbootstrap.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Javascript",
+        "proficiency": 1,
+        "image": "javascript.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "jQuery",
+        "proficiency": 1,
+        "image": "jquery.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Wordpress",
+        "proficiency": 1,
+        "image": "wordpress.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Git",
+        "proficiency": 1,
+        "image": "git.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Photoshop",
+        "proficiency": 1,
+        "image": "photoshop.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "MongoDB",
+        "proficiency": 1,
+        "image": "mongodb.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "TypeScript",
+        "proficiency": 2,
+        "image": "typescript.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Illustrator",
+        "proficiency": 3,
+        "image": "illustrator.png",
+        "displaySkill": false
+    },
+    {
+        "skill": "Premiere",
+        "proficiency": 3,
+        "image": "premiere.png",
+        "displaySkill": true
+    }
+]
