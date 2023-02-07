@@ -24,7 +24,7 @@ function MainView() {
 
 			<SecondAboutSection />
 
-			<StyledBox>
+			<StyledBox pb={5}>
 				<Container>
 					<ThirdProjectsSection />
 
@@ -35,6 +35,8 @@ function MainView() {
 					<hr />
 
 					<FifthAbilitiesSection />
+
+					<hr />
 				</Container>
 			</StyledBox>
 		</Box>

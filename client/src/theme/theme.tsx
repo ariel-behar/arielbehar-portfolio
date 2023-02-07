@@ -14,13 +14,22 @@ const theme = createTheme({
             },
             green: {
                 main: colors.green[500]
+            },
+            chip: {
+                green: "#419745",
+                yellow: "#fdeb50",
+                blue: "#2f85db"
             }
         },
         text: {
             primary: '#2e2e2e',
             secondary: colors.grey[300],
             tertiary: colors.green[500],
-            muted: '#636c72'
+            muted: {
+                main: "#636c72",
+                light: "#9e9e9e"
+            }
+            
         }
     }
 })

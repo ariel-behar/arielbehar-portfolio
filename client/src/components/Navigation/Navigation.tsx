@@ -19,7 +19,7 @@ const StyledBox = styled(Box)`
 
     .nav-list {
         .nav-item {
-            &:first-child {
+            &:first-of-type {
                 width: 100%;
                 img {
                     margin: 0 auto;
@@ -71,7 +71,7 @@ function Navigation({showMainView}: Props) {
                         <Link className="nav-link" href="#third-section">PROJECTS</Link>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#fourth-section">SKILLS</Link>
+                        <Link className="nav-link" href="#fifth-section">SKILLS</Link>
                     </ListItem>
                     <ListItem className="nav-item">
                         <Link className="nav-link" href="#fifth-section">RESUME</Link>

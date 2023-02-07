@@ -44,13 +44,13 @@
     {
         "skill": "Bootstrap",
         "proficiency": 1,
-        "image": "bootstrap.png",
+        "image": "bootstrap.jpg",
         "displaySkill": true
     },
     {
         "skill": "MDBootstrap",
         "proficiency": 1,
-        "image": "mdbootstrap.png",
+        "image": "mdbootstrap.jpg",
         "displaySkill": true
     },
     {
@@ -78,15 +78,15 @@
         "displaySkill": true
     },
     {
-        "skill": "Photoshop",
-        "proficiency": 1,
-        "image": "photoshop.png",
-        "displaySkill": true
-    },
-    {
         "skill": "MongoDB",
         "proficiency": 1,
         "image": "mongodb.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Photoshop",
+        "proficiency": 1,
+        "image": "photoshop.png",
         "displaySkill": true
     },
     {

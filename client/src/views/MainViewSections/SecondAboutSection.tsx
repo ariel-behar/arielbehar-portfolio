@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import ariel from '../../assets/img/ariel.png'
 import languages from '../../data/languages.json'
 
@@ -40,8 +42,8 @@ function SecondAboutSection() {
                             {
                                 languages.map(language => {
                                     return (
-                                        <Grid item sm={4} md={2}> 
-                                            <FlagCard key={language.language} language={language} />
+                                        <Grid item sm={4} md={2} key={uuidv4()}> 
+                                            <FlagCard language={language} />
                                         </Grid>
                                     )
                                 })

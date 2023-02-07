@@ -18,6 +18,11 @@ declare module '@mui/material/styles' {
             }, 
             green: {
                 main: string | PaletteColor
+            },
+            chip: {
+                green: string | PaletteColor,
+                yellow: string | PaletteColor,
+                blue:string | PaletteColor
             }
         },
         text: {
@@ -31,8 +36,14 @@ declare module '@mui/material/styles' {
             blue: PaletteColorOptions,
             grey: PaletteColorOptions,
             black: PaletteColorOptions,
-            green: PaletteColorOptions
+            green: PaletteColorOptions,
+            chip: {
+                green: PaletteColorOptions,
+                yellow: PaletteColorOptions,
+                blue:PaletteColorOptions
+            }
         },
+        
         text: {
             tertiary: PaletteColorOptions,
             muted: PaletteColorOptions

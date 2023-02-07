@@ -11,29 +11,29 @@ const StyledFlyInTextUl = styled('ul')`
 
     &.hidden li {
         opacity: 0;
-        &:nth-child(1) {
+        &:nth-of-type(1) {
             transform: translate(-200px, -200px);
         }
-        &:nth-child(2) {
+        &:nth-of-type(2) {
             transform: translate(20px, 100px);
         }
-        &:nth-child(3) {
+        &:nth-of-type(3) {
             transform: translate(-150px, -80px);
         }
-        &:nth-child(4) {
+        &:nth-of-type(4) {
             transform: translate(10px, -200px);
         }
-        &:nth-child(5) {
+        &:nth-of-type(5) {
             transform: translate(-300px, 200px);
         }
-        &:nth-child(6) {
+        &:nth-of-type(6) {
             transform: translate(20px, -20px);
         }
-        &:nth-child(7) {
+        &:nth-of-type(7) {
             transform: translate(30px, 200px);
             margin-right: 0;
         }
-        &:nth-child(8) {
+        &:nth-of-type(8) {
             transform: translate(200px, 0);
         }
     }
@@ -43,7 +43,7 @@ const StyledFlyInTextUl = styled('ul')`
         color: ${({ theme }) => theme.palette.custom.black.main};
         transition: all 3.5s ease;
 
-        &:nth-child(7) {
+        &:nth-of-type(7) {
             margin-right: 7px;
         }
         &:last-child {

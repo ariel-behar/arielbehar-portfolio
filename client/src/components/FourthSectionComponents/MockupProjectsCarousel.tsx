@@ -57,9 +57,9 @@ const StyledCarousel = styled(Carousel)`
 	}
 
 	@keyframes pulse {
-	0% {font-size: 30px;}
-	50% {font-size: 33px;}
-	100% {font-size: 30px;}
+		0% {font-size: 30px;}
+		50% {font-size: 33px;}
+		100% {font-size: 30px;}
 	}
 `
 
