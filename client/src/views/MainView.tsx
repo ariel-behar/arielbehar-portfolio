@@ -11,6 +11,7 @@ import FifthAbilitiesSection from './MainViewSections/FifthAbilitiesSection'
 import SixthDocumentsSection from './MainViewSections/SixthDocumentsSection'
 import SeventhContactSection from './MainViewSections/SeventhContactSection'
 import EightBonusSection from "./MainViewSections/EightBonusSection"
+import Footer from "../components/Footer"
 
 const StyledBox = styled(Box)`
 	background-image: url("https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg");
@@ -25,7 +26,7 @@ function MainView() {
 
 			<SecondAboutSection />
 
-			<StyledBox pb={5}>
+			<StyledBox>
 				<Container>
 					<ThirdProjectsSection />
 
@@ -47,6 +48,8 @@ function MainView() {
 				<SeventhContactSection />
 
 				<EightBonusSection />
+
+				<Footer />
 			</StyledBox>
 		</Box>
 	)
