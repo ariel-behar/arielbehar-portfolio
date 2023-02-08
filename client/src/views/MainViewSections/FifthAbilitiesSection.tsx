@@ -13,7 +13,7 @@ import Typography from "@mui/material/Typography"
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Chip from '../../components/FifthSectionComponents/Chip'
-import getChipColor from '../../utils/getChipColor';
+import ProficiencyTitle from '../../components/FifthSectionComponents/ProficiencyTitle';
 
 const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
 	color: ${(({ theme }) => theme.palette.text.muted.light)};
@@ -28,17 +28,32 @@ const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
 	}
 `
 
-const StyledHoverableButtonBox = styled(Box)`
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
+const skillTitles: {title: string, proficiencyNum: 1 | 2 | 3}[] = [
+	{
+		title: 'PROFICIENT',
+		proficiencyNum: 1
+	},
+	{
+		title: 'COMPETENT',
+		proficiencyNum: 2
+	},
+	{
+		title: 'NOVICE',
+		proficiencyNum: 3
+	}
 
-	margin-top: 5px;
-	margin-bottom: 10px;
-`
+]
 
 function FifthAbilitiesSection() {
 	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>(null)
+
+	const onMouseEnterProficiencyTitleHandler = (skillProficiencyNum: 1 | 2 | 3) => {
+		setHoveredProficiency(skillProficiencyNum)
+	}
+
+	const onMouseLeaveProficiencyTitleHandler = () => {
+		setHoveredProficiency(null)
+	}
 
 	return (
 		<Box component='section' id="fifth-section">
@@ -51,32 +66,18 @@ function FifthAbilitiesSection() {
 						<StyledKeyboardArrowDownIcon />
 
 						<Box mt={3}>
-							<Stack direction='column' alignItems='center'
-								onMouseEnter={() => setHoveredProficiency(1)}
-								onMouseLeave={() => setHoveredProficiency(null)}
-								sx={{opacity: hoveredProficiency ? hoveredProficiency === 1 ? 1 : 0.5 : 1}}
-							>
-								<Typography variant="body1" component='p' color="text.secondary">PROFICIENT</Typography>
-								<StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(1) }} />
-							</Stack>
-
-							<Stack direction='column' alignItems='center'
-								onMouseEnter={() => setHoveredProficiency(2)}
-								onMouseLeave={() => setHoveredProficiency(null)}
-								sx={{opacity: hoveredProficiency ? hoveredProficiency === 2 ? 1 : 0.5 : 1}}
-							>
-								<Typography variant="body1" component='p' color="text.secondary">COMPETENT</Typography>
-								<StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(2) }} />
-							</Stack>
-
-							<Stack direction='column' alignItems='center'
-								onMouseEnter={() => setHoveredProficiency(3)}
-								onMouseLeave={() => setHoveredProficiency(null)}
-								sx={{opacity: hoveredProficiency ? hoveredProficiency === 3 ? 1 : 0.5 : 1}}
-							>
-								<Typography variant="body1" component='p' color="text.secondary">NOVICE</Typography>
-								<StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(3) }} />
-							</Stack>
+							{
+								skillTitles.map(skillTitle => {
+									return <ProficiencyTitle
+										hoveredProficiency={hoveredProficiency}
+										skillProficiencyNum={skillTitle.proficiencyNum}
+										onMouseEnterProficiencyTitleHandler={onMouseEnterProficiencyTitleHandler}
+										onMouseLeaveProficiencyTitleHandler={onMouseLeaveProficiencyTitleHandler}
+									>
+										{skillTitle.title}
+									</ProficiencyTitle>
+								})
+							}
 						</Box>
 					</Stack>
 				</Grid>
@@ -84,7 +85,7 @@ function FifthAbilitiesSection() {
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
 
 					<Stack direction='row' flexWrap='wrap' justifyContent='center'>
-						{ skills.map((skill: Skill) => <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
+						{skills.map((skill: Skill) => <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
 					</Stack>
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center'>*In constant learning of new skills and improvement on already existing ones</Typography>
