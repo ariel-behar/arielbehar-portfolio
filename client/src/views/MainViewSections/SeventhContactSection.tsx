@@ -1,25 +1,25 @@
 import styled from '@mui/material/styles/styled'
 
+import ContactForm from '../../components/SeventhSectionComponents/ContactForm'
+
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
-import ContactForm from '../../components/SeventhSectionComponents/ContactForm'
+import Link from '@mui/material/Link'
 
 const StyledSectionBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/phone-blurred.jpg');
-    background-attachment: fixed;
+    /* background-attachment: fixed; */ 
     background-size: cover;
     background-position: right center;
-
 `
 
 const StyledDarkBox = styled(Box)`
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 `
-
 
 const StyledLogoImg = styled('img')`
     position: absolute;
@@ -29,9 +29,21 @@ const StyledLogoImg = styled('img')`
     width: 75px;
 `
 
+const StyledSocialIconStack = styled(Stack)`
+    a{
+        height: auto;
+        text-align: center;
+    }
+    img {
+        width: auto;
+        height: 128px;
+    }
+    
+`
+
 function SeventhContactSection() {
     return (
-        <StyledSectionBox component='section' id='seventh-section' py={4}>
+        <StyledSectionBox component='section' id='seventh-section' py={4} > 
             <Container>
                 <Grid container >
                     <Grid item md={7} lg={6}>
@@ -52,7 +64,23 @@ function SeventhContactSection() {
                     <Grid item md={1} lg={2}></Grid>
 
                     <Grid item md={4}>
-                        i. Velit inventore explicabo maxime dolores accusamus voluptates natus officia nemo eaque deleniti, repudiandae officiis neque modi consectetur tempore cumque eos ut voluptatum? Quos eveniet sequi hic id quo, libero unde, eligendi error commodi, nisi ratione. Ducimus amet maiores, eos ad laborum soluta quidem neque expedita labore. Maiores, quam! Quidem corrupti cupiditate fugit pariatur corporis eos nam quisquam explicabo? Veritatis et natus cumque a repellendus sint veniam fuga hic commodi culpa deleniti consequatur sapiente nisi dolorem, provident quod neque illum eos doloribus, adipisci modi ea ad possimus impedit? Tenetur accusantium aut vitae maxime, amet, recusandae soluta cumque voluptatibus voluptates rem consectetur reiciendis alias repellendus iusto molestias voluptatum impedit qui. Assumenda dolore eligendi, velit, minus veritatis debitis in deserunt nesciunt quibusdam doloribus officiis vel illum quod, eius ipsum enim libero reiciendis tenetur aspernatur doloremque hic porro adipisci. Pariatur quod quidem exercitationem, perferendis quo aspernatur dolor dolore deserunt voluptate necessitatibus totam repe
+                        <StyledDarkBox p={4} >
+                            <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' mb={3}>FIND ME ON</Typography>
+
+                            <StyledSocialIconStack direction='row' justifyContent='space-evenly' mb={3}>
+                                <Link href="https://www.linkedin.com/in/ariel-behar/" target="_blank" mr={1}>
+                                    <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/linkedin.svg" alt="LinkedIn Logo" />
+                                </Link>
+                                <Link href="https://github.com/ariel-behar" target="_blank" ml={1}>
+                                    <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/github.svg" alt="Github Logo" />
+                                </Link>
+                            </StyledSocialIconStack>
+
+                            <Typography variant='h6' component='p' color='text.secondary' textAlign='center' mb={3}>OR EMAIL ME DIRECTLY AT</Typography>
+
+                            <Typography variant='body1' component='p' color='text.secondary' textAlign='center' mb={3}>ariel.behar@hotmail.com</Typography>
+
+                        </StyledDarkBox>
                     </Grid>
                 </Grid>
 

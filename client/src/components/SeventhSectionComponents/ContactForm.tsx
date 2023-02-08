@@ -13,7 +13,6 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CreateIcon from '@mui/icons-material/Create';
 import contactFormSchema from '../../validations/contactFormSchema';
 
-
 interface FormData {
 	name: string,
 	email: string,
@@ -39,7 +38,6 @@ function ContactForm() {
 		const {name, email, subject, message } = data;
 
 		// Need to handle form
-
 	}
 
 	return (
@@ -104,7 +102,7 @@ function ContactForm() {
 					<Stack direction='row' justifyContent='center'>
 						<Button
 							type='submit'
-							sx={{ backgroundColor: 'custom.blue.main' }}
+							sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
 							variant='contained'
 							endIcon={<SendIcon />}
 							disabled={!(isDirty && isValid)}
