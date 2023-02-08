@@ -7,7 +7,8 @@ const theme = createTheme({
                 main: colors.blue[900]
             },
             grey: {
-                main: colors.grey[300]
+                main: colors.grey[300],
+                darker: '#9e9e9e',
             },
             black: {
                 main: '#2e2e2e'
