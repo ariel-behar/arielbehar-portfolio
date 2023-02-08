@@ -33,9 +33,18 @@ function ContactForm() {
 		}
 	});
 
+	const onFormSubmit = (data: FormData, e: React.BaseSyntheticEvent<object, any, any> | undefined) => {
+		e?.preventDefault()
+
+		const {name, email, subject, message } = data;
+
+		// Need to handle form
+
+	}
+
 	return (
 		<Box>
-			<form>
+			<form onSubmit={handleSubmit(onFormSubmit)}>
 				<Stack direction='column' spacing={3}>
 					<Stack direction='row' justifyContent='space-between' alignItems='end'>
 						<PersonIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px' }} />
