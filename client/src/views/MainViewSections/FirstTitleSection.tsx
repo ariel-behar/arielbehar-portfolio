@@ -1,5 +1,3 @@
-import logo from '../../assets/img/logo/logo-blue.png'
-
 import Box from "@mui/material/Box"
 import Stack from "@mui/material/Stack"
 import styled from "@mui/material/styles/styled"
@@ -19,7 +17,7 @@ const StyledBox = styled(Box)`
 const StyledStack = styled(Stack)`
     height:100%;
 
-    background-image: url(${logo});
+    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo-blue.png');
     background-position: left center;
     background-repeat: no-repeat;
 `

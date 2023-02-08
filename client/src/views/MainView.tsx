@@ -1,5 +1,3 @@
-import pattern1 from '../assets/img/pattern1.jpg'
-
 import styled from "@mui/material/styles/styled"
 
 import Box from "@mui/material/Box"
@@ -11,9 +9,10 @@ import Container from '@mui/material/Container'
 import FourthPhotoshopSection from './MainViewSections/FourthPhotoshopSection'
 import FifthAbilitiesSection from './MainViewSections/FifthAbilitiesSection'
 import SixthDocumentsSection from './MainViewSections/SixthDocumentsSection'
+import SeventhContactSection from './MainViewSections/SeventhContactSection'
 
 const StyledBox = styled(Box)`
-	background-image: url(${pattern1});
+	background-image: url("https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg");
 	background-repeat: repeat;
 `
 
@@ -43,6 +42,8 @@ function MainView() {
 				</Container>
 
 				<SixthDocumentsSection />
+
+				<SeventhContactSection />
 			</StyledBox>
 		</Box>
 	)

@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import ariel from '../../assets/img/ariel.png'
 import languages from '../../data/languages.json'
 
 import styled from '@mui/material/styles/styled'
@@ -15,7 +14,7 @@ const StyledBox = styled(Box)`
     background-color: ${({ theme }) => theme.palette.custom.black.main};
     color: ${({ theme }) => theme.palette.custom.grey.main};
 
-    background-image: url(${ariel});
+    background-image: url("https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/ariel.png");
     background-position: right center;
     background-repeat: no-repeat;
 

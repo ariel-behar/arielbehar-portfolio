@@ -1,8 +1,6 @@
 import styled from '@mui/material/styles/styled'
 import { motion } from 'framer-motion'
 
-import logoLight from '../../assets/img/logo/logo-light.png'
-
 const StyledLogoImg = styled(motion.img)`
     margin-top: 1rem;
     max-height: 270px;
@@ -11,7 +9,7 @@ const StyledLogoImg = styled(motion.img)`
 function Logo() {
     return (
         <StyledLogoImg
-            src={logoLight}
+            src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo-light.png"
             alt='Ariel Behar Logo'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -2,8 +2,6 @@ import designMP4 from '../../assets/video/design.mp4'
 import designWEBM from '../../assets/video/design.webm'
 import designOGV from '../../assets/video/design.ogv'
 
-import television from '../../assets/img/tv.png'
-
 import styled from '@mui/material/styles/styled'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
@@ -90,7 +88,7 @@ function Television() {
                 {/* 
             <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/psd-to-html5.png" alt="PSD TO HTML Poster" className="hidden-md-up img-fluid mb-3 mt-2" /> */}
 
-                <img className='tv-image' src={television} alt="Television" />
+                <img className='tv-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/tv.png" alt="Television" />
 
 
 

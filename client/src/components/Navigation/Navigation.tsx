@@ -1,5 +1,3 @@
-import logo from '../../assets/img/logo/logo.png'
-
 import styled from "@mui/material/styles/styled"
 
 import Box from "@mui/material/Box"
@@ -59,7 +57,7 @@ function Navigation({showMainView}: Props) {
             <StyledBox component={'nav'} >
                 <List className='nav-list'>
                     <ListItem className="nav-item">
-                        <img src={logo} alt="Logo" height="35px" width="35px" />
+                        <img src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png' alt="Logo" height="35px" width="35px" />
                     </ListItem>
                     <ListItem className="nav-item">
                         <Link className="nav-link" href="#first-section">INTRO</Link>
