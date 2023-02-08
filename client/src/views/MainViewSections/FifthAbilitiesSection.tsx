@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 import skills from '../../data/skills.json'
@@ -11,32 +12,10 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useState } from 'react'
+import Chip from '../../components/FifthSectionComponents/Chip'
+import getChipColor from '../../utils/getChipColor';
 
-const StyledChipBox = styled(Box)`
- 	margin: 17px 7px;
-	color: black;
-	text-align: center;
-	font-size: 17px;
-	min-width: 170px;
-    border-radius: 16px;
-
-	img {
-		transform: scale(1.5);
-
-		float: left;
-		margin: 0 8px;
-		height: 32px;
-		width: 32px;
-		border-radius: 50%;
-	}
-
-	p {
-		margin: 3px 0 0 0;
-	}
-`
 const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
-
 	color: ${(({ theme }) => theme.palette.text.muted.light)};
 
 	position: relative;
@@ -59,17 +38,7 @@ const StyledHoverableButtonBox = styled(Box)`
 `
 
 function FifthAbilitiesSection() {
-	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>()
-
-	const getChipColor = (proficieny: number) => {
-		if (proficieny === 1) {
-			return 'custom.chip.green'
-		} else if (proficieny === 2) {
-			return 'custom.chip.yellow'
-		} else if (proficieny === 3) {
-			return 'custom.chip.blue'
-		}
-	}
+	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>(null)
 
 	return (
 		<Box component='section' id="fifth-section">
@@ -88,7 +57,7 @@ function FifthAbilitiesSection() {
 								sx={{opacity: hoveredProficiency ? hoveredProficiency === 1 ? 1 : 0.5 : 1}}
 							>
 								<Typography variant="body1" component='p' color="text.secondary">PROFICIENT</Typography>
-								<StyledHoverableButtonBox sx={{ backgroundColor: "custom.chip.green" }} />
+								<StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(1) }} />
 							</Stack>
 
 							<Stack direction='column' alignItems='center'
@@ -97,7 +66,7 @@ function FifthAbilitiesSection() {
 								sx={{opacity: hoveredProficiency ? hoveredProficiency === 2 ? 1 : 0.5 : 1}}
 							>
 								<Typography variant="body1" component='p' color="text.secondary">COMPETENT</Typography>
-								<StyledHoverableButtonBox sx={{ backgroundColor: "custom.chip.yellow" }} />
+								<StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(2) }} />
 							</Stack>
 
 							<Stack direction='column' alignItems='center'
@@ -106,7 +75,7 @@ function FifthAbilitiesSection() {
 								sx={{opacity: hoveredProficiency ? hoveredProficiency === 3 ? 1 : 0.5 : 1}}
 							>
 								<Typography variant="body1" component='p' color="text.secondary">NOVICE</Typography>
-								<StyledHoverableButtonBox sx={{ backgroundColor: "custom.chip.blue" }} />
+								<StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(3) }} />
 							</Stack>
 						</Box>
 					</Stack>
@@ -115,21 +84,7 @@ function FifthAbilitiesSection() {
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
 
 					<Stack direction='row' flexWrap='wrap' justifyContent='center'>
-						{
-							skills.map((skill: Skill) => {
-								return <StyledChipBox
-									key={uuidv4()}
-									sx={{
-										backgroundColor: getChipColor(skill.proficiency),
-										opacity: hoveredProficiency ? hoveredProficiency === skill.proficiency ? 1 : 0.5 : 1
-									}}
-								>
-									<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/${skill.image}`} alt={`${skill.skill} logo`} />
-
-									<p>{skill.skill}</p>
-								</StyledChipBox>
-							})
-						}
+						{ skills.map((skill: Skill) => <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
 					</Stack>
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center'>*In constant learning of new skills and improvement on already existing ones</Typography>
