@@ -69,6 +69,7 @@ function FifthAbilitiesSection() {
 							{
 								skillTitles.map(skillTitle => {
 									return <ProficiencyTitle
+										key={uuidv4()}
 										hoveredProficiency={hoveredProficiency}
 										skillProficiencyNum={skillTitle.proficiencyNum}
 										onMouseEnterProficiencyTitleHandler={onMouseEnterProficiencyTitleHandler}
