@@ -12,7 +12,6 @@ const StyledCarousel = styled(Carousel)`
 	height: 100%;
 	
 	.react-multi-carousel-track  {
-		
 		.react-multi-carousel-item {
 			height: 300px;
 
@@ -20,10 +19,6 @@ const StyledCarousel = styled(Carousel)`
 				img {
 					height: 100%;
 					width: auto;
-				}
-
-				p {
-					color: aliceblue;
 				}
 			}
 		}

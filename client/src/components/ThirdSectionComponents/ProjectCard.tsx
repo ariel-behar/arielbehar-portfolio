@@ -48,7 +48,7 @@ function ProjectDetailsBox({ project, projectCategory, hideTitle }: Props) {
                         variant='body1'
                         component='p'
                         color='text.muted.main'
-                        mt={0}
+                        mt={1}
                     >
                         *{note.note}&nbsp;
                         {note.hasLink && <Link href={note.hasLink} target='_blank'>here</Link>}

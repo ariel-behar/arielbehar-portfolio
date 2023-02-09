@@ -1,10 +1,11 @@
-import { forwardRef} from 'react';
+import { forwardRef } from 'react';
 
 import Project from '../model/Project';
+import ProjectCard from './ThirdSectionComponents/ProjectCard';
 import { Partial } from '../types/common-types';
 
 import styled from '@mui/material/styles/styled';
-
+import { TransitionProps } from '@mui/material/transitions';
 
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -12,11 +13,10 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
-import { TransitionProps } from '@mui/material/transitions';
-
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ProjectCard from './ThirdSectionComponents/ProjectCard';
+
+import CloseIcon from '@mui/icons-material/Close';
 
 const Transition = forwardRef(function Transition(
     props: TransitionProps & {
@@ -31,10 +31,24 @@ const StyledDialogTitle = styled(DialogTitle)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg');
     background-repeat: repeat;
 
+    position: relative;
     text-align: center;
     border-bottom: 1px solid white;
 
     color: ${(({ theme }) => theme.palette.text.secondary)};
+
+    .close-icon {
+        position: absolute;
+        color: ${(({theme}) => theme.palette.text.muted.main)};
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        cursor: pointer;
+        &:hover {
+            color: ${(({theme}) => theme.palette.text.muted.light)};
+        }
+    }
 `
 
 const StyledDialogContent = styled(DialogContent)`
@@ -53,7 +67,9 @@ const StyledDialogContent = styled(DialogContent)`
 const StyledDialogActions = styled(DialogActions)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg');
     background-repeat: repeat;
+
     border-top: 1px solid white;
+    padding: 20px;
 `
 interface Props {
     project: Partial<Project>
@@ -65,8 +81,6 @@ function ProjectModal({ project, showModal, handleCloseModal }: Props) {
 
     return (
         <div>
-            {/* <Button onClick={() => setOpen(true)}>Open Dialog</Button> */}
-
             <Dialog
                 maxWidth='md'
                 open={showModal}
@@ -78,7 +92,9 @@ function ProjectModal({ project, showModal, handleCloseModal }: Props) {
                 aria-describedby="alert-dialog-description"
             >
                 <StyledDialogTitle id="alert-dialog-title">
+                    <CloseIcon className='close-icon' onClick={() => handleCloseModal()} />
                     <Typography variant='h5' component='h5'>{project.title}</Typography>
+
                 </StyledDialogTitle>
 
                 <StyledDialogContent>

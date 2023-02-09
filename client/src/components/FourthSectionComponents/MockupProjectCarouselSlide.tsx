@@ -34,15 +34,20 @@ function MockupProjectCarouselSlide({ project }: Props) {
                 pb={1}
 
             >
-                <img onClick={() => setShowModal(true)} src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/mockup-projects/${project.image}`} alt={`${project.title} || ${project._id}`} />
+                <img
+                    onClick={() => setShowModal(true)}
+                    style={{cursor: "pointer"}}
+                    src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/mockup-projects/${project.image}`}
+                    alt={`${project.title} || ${project._id}`}
+                />
 
-                <Typography mt={2} mb={1} variant="h5" component='p'>{project.title}</Typography>
+                <Typography mt={2} mb={1} variant="h5" component='p' color='aliceblue'>{project.title}</Typography>
 
                 <Stack direction='row' justifyContent='center'>
-                    <Typography variant="h6" component='p'>
-                        <Link href={project.url} style={{ textDecoration: 'none' }}>Project Description</Link>
+                    <Typography variant="h6" component='p' sx={{ color: 'primary.main', cursor: 'pointer'}} onClick={() => setShowModal(true)}>
+                        Project Description
                     </Typography>
-                    <Typography variant="h6" component='p'>&nbsp;|&nbsp;</Typography>
+                    <Typography variant="h6" component='p' color='aliceblue'>&nbsp;|&nbsp;</Typography>
                     <Typography variant="h6" component='p'>
                         <Link href={project.url} target="_blank" style={{ textDecoration: 'none' }} >Visit Project's Site</Link>
                     </Typography>
