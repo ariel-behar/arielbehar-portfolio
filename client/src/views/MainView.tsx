@@ -19,9 +19,9 @@ const StyledBox = styled(Box)`
 `
 
 function MainView() {
-
 	return (
 		<Box>
+			
 			<FirstTitleSection />
 
 			<SecondAboutSection />
