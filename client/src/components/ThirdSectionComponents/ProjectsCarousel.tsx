@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -87,8 +86,8 @@ function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }
 				projects.map(project => {
 					return (
 						<div key={project._id} data-project-id={project._id} data-project-url={project.url}>
-							<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${project.image}`} alt={`${project.projectName} || ${project._id}`} />
-							<p className="legend">{project.projectName}</p>
+							<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${project.image}`} alt={`${project.title} || ${project._id}`} />
+							<p className="legend">{project.title}</p>
 						</div>
 					)
 				})

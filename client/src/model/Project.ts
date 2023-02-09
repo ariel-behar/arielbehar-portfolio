@@ -3,7 +3,7 @@ import { Identifiable, Idtype } from "../types/common-types"
 interface Project extends Identifiable<Idtype> {
     _id: Idtype
     order: number,
-    projectName: string,
+    title: string,
     image: string,
     description: string,
     myRole: string,

@@ -111,10 +111,10 @@ function MockupProjectsCarousel() {
 
 							>
 								<Link href="#">
-									<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/mockup-projects/${project.image}`} alt={`${project.projectName} || ${project._id}`} />
+									<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/mockup-projects/${project.image}`} alt={`${project.title} || ${project._id}`} />
 								</Link>
 
-								<Typography mt={2} mb={1} variant="h5" component='p'>{project.projectName}</Typography>
+								<Typography mt={2} mb={1} variant="h5" component='p'>{project.title}</Typography>
 
 								<Stack direction='row' justifyContent='center'>
 									<Typography variant="h6" component='p'>

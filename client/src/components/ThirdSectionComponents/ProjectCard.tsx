@@ -39,7 +39,7 @@ function ProjectCard({ selectedProject }: Props) {
 					)
 					: (
 						<Stack>
-							<Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{selectedProject?.projectName}</Typography>
+							<Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{selectedProject?.title}</Typography>
 
 							<Typography mt={2} variant='h6' component='h6' color='text.secondary'>Project Description:</Typography>
 							<Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{selectedProject?.description}</Typography>
@@ -59,7 +59,7 @@ function ProjectCard({ selectedProject }: Props) {
 
 							<Typography mt={2} variant='h6' component='h6' color='text.secondary'>
 								Visit site:&nbsp;
-								<Link href={selectedProject?.url} target='_blank'>{selectedProject?.projectName}</Link>
+								<Link href={selectedProject?.url} target='_blank'>{selectedProject?.title}</Link>
 							</Typography>
 						</Stack>
 					)
