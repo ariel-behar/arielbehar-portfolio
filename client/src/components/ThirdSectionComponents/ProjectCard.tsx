@@ -1,71 +1,42 @@
-import Project from "../../model/Project"
+import Box from '@mui/material/Box'
+import Link from '@mui/material/Link'
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
+import Project from '../../model/Project'
 
-import styled from "@mui/material/styles/styled"
-
-import Link from "@mui/material/Link"
-import Box from "@mui/material/Box"
-import Typography from "@mui/material/Typography"
-import Stack from "@mui/system/Stack"
-import { motion } from "framer-motion"
-
-const StyledProjectBox = styled(Box)`
-	background-color: rgba(0, 0, 0, 0.3);
-	border-radius: 20px;
-	padding: 30px 15px 10px;
-	height: 100%;
-`
 interface Props {
-	selectedProject: Project | null
+	project: Project | null,
+    hideTitle?: boolean
 }
 
-function ProjectCard({ selectedProject }: Props) {
-	return (
-		<StyledProjectBox>
-			{
-				!selectedProject
-					? (
-						<Stack direction='column' justifyContent='center' alignItems='center' height='100%'>
-							<Typography 
-								variant='h4' 
-								component={motion.h5} 
-								textAlign='center' 
-								color='text.secondary'
-								animate={{ scale: [0.9, 1, 1, 0.9], }}
-								transition={{ duration: 1.3, repeat: Infinity }}
-								>
-									Click on Thumbnails to See Information About Each Project
-									</Typography>
-						</Stack>
-					)
-					: (
-						<Stack>
-							<Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{selectedProject?.title}</Typography>
+function ProjectDetailsBox({project, hideTitle}: Props) {
+    return (
+        <Stack>
 
-							<Typography mt={2} variant='h6' component='h6' color='text.secondary'>Project Description:</Typography>
-							<Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{selectedProject?.description}</Typography>
+            { !hideTitle && <Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{project?.title}</Typography> }
 
-							{selectedProject?.notes && selectedProject?.notes.map(note => <Typography variant='body1' component='p' color='text.muted' mt={0}>*{note}</Typography>)}
+            <Typography mt={2} variant='h6' component='h6' color='text.secondary'>Project Description:</Typography>
+            <Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{project?.description}</Typography>
 
-							<Typography mt={2} variant='h6' component='h6' color='text.secondary'>My Role in the Project:</Typography>
-							<Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{selectedProject?.myRole}</Typography>
+            {project?.notes && project?.notes.map(note => <Typography variant='body1' component='p' color='text.muted' mt={0}>*{note}</Typography>)}
 
-							<Box>
-								<Typography mt={2} variant='h6' component='h6' color='text.secondary'>Technologies Used:</Typography>
-								{selectedProject?.technologies && selectedProject?.technologies.map(technology => <Typography variant='body1' component='p' color='text.tertiary' display='inline-block'>•&nbsp;{technology}&nbsp;</Typography>)}
-							</Box>
+            <Typography mt={2} variant='h6' component='h6' color='text.secondary'>My Role in the Project:</Typography>
+            <Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{project?.myRole}</Typography>
 
-							<Typography mt={1} variant='h6' component='h6' color='text.secondary'>Project Launched in:</Typography>
-							<Typography variant='body1' component='p' color='text.tertiary'>{selectedProject?.month} {selectedProject?.year}</Typography>
+            <Box>
+                <Typography mt={2} variant='h6' component='h6' color='text.secondary'>Technologies Used:</Typography>
+                {project?.technologies && project?.technologies.map(technology => <Typography variant='body1' component='p' color='text.tertiary' display='inline-block'>•&nbsp;{technology}&nbsp;</Typography>)}
+            </Box>
 
-							<Typography mt={2} variant='h6' component='h6' color='text.secondary'>
-								Visit site:&nbsp;
-								<Link href={selectedProject?.url} target='_blank'>{selectedProject?.title}</Link>
-							</Typography>
-						</Stack>
-					)
-			}
-		</StyledProjectBox>
-	)
+            <Typography mt={1} variant='h6' component='h6' color='text.secondary'>Project Launched in:</Typography>
+            <Typography variant='body1' component='p' color='text.tertiary'>{project?.month} {project?.year}</Typography>
+
+            <Typography mt={2} variant='h6' component='h6' color='text.secondary'>
+                Visit site:&nbsp;
+                <Link href={project?.url} target='_blank'>{project?.title}</Link>
+            </Typography>
+        </Stack>
+    )
 }
 
-export default ProjectCard
+export default ProjectDetailsBox
