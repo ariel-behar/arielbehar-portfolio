@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import Project from "../../model/Project"
-import ProjectModal from "../ProjectModal"
+import Modal from "../Modal"
 
 import Link from "@mui/material/Link"
 import Stack from "@mui/material/Stack"
@@ -20,7 +20,7 @@ function MockupProjectCarouselSlide({ project }: Props) {
 
     return (
         <>
-            {showModal && <ProjectModal project={project as Project} showModal={showModal} handleCloseModal={handleCloseModal} />}
+            {showModal && <Modal project={project as Project} showModal={showModal} handleCloseModal={handleCloseModal} />}
 
             <Stack
                 className="slide"
