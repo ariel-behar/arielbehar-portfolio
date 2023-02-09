@@ -13,7 +13,12 @@ interface Project extends Identifiable<Idtype> {
     url: string,
     type: "MPA" | "SPA" | "Bootstrap" | "Wordpress",
     category: "real" | "mockup",
-    notes: string[] | []
+    notes: [] | [
+        {
+            note: string,
+            hasLink?: string
+        }
+    ]
 }
 
 export default Project

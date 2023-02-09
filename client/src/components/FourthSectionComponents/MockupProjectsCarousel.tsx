@@ -1,13 +1,11 @@
-import Link from "@mui/material/Link";
-import Stack from "@mui/material/Stack";
 import styled from "@mui/material/styles/styled"
-import Typography from "@mui/material/Typography";
+
 import Carousel from "react-multi-carousel";
-// import { Carousel } from "react-responsive-carousel"
-// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import mockupProjects from '../../data/mockupProjects.json'
+import Project from "../../model/Project";
+import MockupProjectCarouselSlide from "./MockupProjectCarouselSlide";
 
 const StyledCarousel = styled(Carousel)`
 	min-height: 460px;
@@ -19,13 +17,9 @@ const StyledCarousel = styled(Carousel)`
 			height: 300px;
 
 			.slide {
-				a {
+				img {
 					height: 100%;
 					width: auto;
-					img {
-						height: 100%;
-						width: auto;
-					}
 				}
 
 				p {
@@ -83,7 +77,6 @@ const responsive = {
 };
 
 function MockupProjectsCarousel() {
-
 	return (
 		<>
 			<StyledCarousel
@@ -96,44 +89,10 @@ function MockupProjectsCarousel() {
 			>
 				{
 					mockupProjects.map(project => {
-						return (
-							<Stack
-								className="slide"
-								key={project._id}
-								data-project-id={project._id}
-								data-project-url={project.url}
-								direction='column'
-								justifyContent='center'
-								alignItems='center'
-								height='100%'
-								mt={2}
-								pb={1}
-
-							>
-								<Link href="#">
-									<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/mockup-projects/${project.image}`} alt={`${project.title} || ${project._id}`} />
-								</Link>
-
-								<Typography mt={2} mb={1} variant="h5" component='p'>{project.title}</Typography>
-
-								<Stack direction='row' justifyContent='center'>
-									<Typography variant="h6" component='p'>
-										<Link href={project.url} style={{ textDecoration: 'none' }}>Project Description</Link>
-									</Typography>
-									<Typography variant="h6" component='p'>&nbsp;|&nbsp;</Typography>
-									<Typography variant="h6" component='p'>
-										<Link href={project.url} target="_blank" style={{ textDecoration: 'none' }} >Visit Project's Site</Link>
-									</Typography>
-								</Stack>
-							</Stack>
-
-						)
+						return <MockupProjectCarouselSlide key={project._id} project={project as Project} />
 					})
 				}
-
-
 			</StyledCarousel>
-
 		</>
 	)
 }

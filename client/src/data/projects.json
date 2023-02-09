@@ -42,7 +42,7 @@
         "url": "http://www.am-gamehub.arielbehar.com/",
         "type": "SPA",
         "category": "real",
-        "notes": [ "The site's language is Bulgarian.", "Optimized for large screen sizes only." ]
+        "notes": [ { "note": "The site's language is Bulgarian." }, { "note": "Optimized for large screen sizes only." }]
     },
     {
         "_id": 4,
@@ -87,7 +87,7 @@
         "url": "http://my-dummy-site.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": [ "The site's language is Bulgarian." ]
+        "notes": [ { "note": "The site's language is Bulgarian." } ]
     },
     {
         "_id": 7,

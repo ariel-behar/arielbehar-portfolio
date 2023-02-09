@@ -5,20 +5,25 @@ import Typography from '@mui/material/Typography'
 import Project from '../../model/Project'
 
 interface Props {
-	project: Project | null,
+    project: Project | null,
+    projectCategory: 'real' | 'mockup',
     hideTitle?: boolean
 }
 
-function ProjectDetailsBox({project, hideTitle}: Props) {
+function ProjectDetailsBox({ project, projectCategory, hideTitle }: Props) {
     return (
         <Stack>
-
-            { !hideTitle && <Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{project?.title}</Typography> }
+            {!hideTitle && <Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{project?.title}</Typography>}
 
             <Typography mt={2} variant='h6' component='h6' color='text.secondary'>Project Description:</Typography>
             <Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{project?.description}</Typography>
 
-            {project?.notes && project?.notes.map(note => <Typography variant='body1' component='p' color='text.muted' mt={0}>*{note}</Typography>)}
+            {
+                projectCategory === 'real'
+                && project?.notes && project?.notes.map(note => {
+                    return <Typography variant='body1' component='p' color='text.muted.main' mt={0}>*{note.note}</Typography>
+                })
+            }
 
             <Typography mt={2} variant='h6' component='h6' color='text.secondary'>My Role in the Project:</Typography>
             <Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{project?.myRole}</Typography>
@@ -35,6 +40,22 @@ function ProjectDetailsBox({project, hideTitle}: Props) {
                 Visit site:&nbsp;
                 <Link href={project?.url} target='_blank'>{project?.title}</Link>
             </Typography>
+
+            {
+                projectCategory === 'mockup'
+                && project?.notes && project?.notes.map(note => {
+                    return <Typography
+                        variant='body1'
+                        component='p'
+                        color='text.muted.main'
+                        mt={0}
+                    >
+                        *{note.note}&nbsp;
+                        {note.hasLink && <Link href={note.hasLink} target='_blank'>here</Link>}
+                    </Typography>
+                })
+            }
+
         </Stack>
     )
 }

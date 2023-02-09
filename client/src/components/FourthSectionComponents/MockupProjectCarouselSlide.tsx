@@ -1,0 +1,55 @@
+import { useState } from "react"
+
+import Project from "../../model/Project"
+import ProjectModal from "../ProjectModal"
+
+import Link from "@mui/material/Link"
+import Stack from "@mui/material/Stack"
+import Typography from "@mui/material/Typography"
+
+interface Props {
+    project: Project
+}
+
+function MockupProjectCarouselSlide({ project }: Props) {
+    const [showModal, setShowModal] = useState<boolean>(false)
+
+    const handleCloseModal = () => {
+        setShowModal(false)
+    }
+
+    return (
+        <>
+            {showModal && <ProjectModal project={project as Project} showModal={showModal} handleCloseModal={handleCloseModal} />}
+
+            <Stack
+                className="slide"
+                data-project-id={project._id}
+                data-project-url={project.url}
+                direction='column'
+                justifyContent='center'
+                alignItems='center'
+                height='100%'
+                mt={2}
+                pb={1}
+
+            >
+                <img onClick={() => setShowModal(true)} src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/mockup-projects/${project.image}`} alt={`${project.title} || ${project._id}`} />
+
+                <Typography mt={2} mb={1} variant="h5" component='p'>{project.title}</Typography>
+
+                <Stack direction='row' justifyContent='center'>
+                    <Typography variant="h6" component='p'>
+                        <Link href={project.url} style={{ textDecoration: 'none' }}>Project Description</Link>
+                    </Typography>
+                    <Typography variant="h6" component='p'>&nbsp;|&nbsp;</Typography>
+                    <Typography variant="h6" component='p'>
+                        <Link href={project.url} target="_blank" style={{ textDecoration: 'none' }} >Visit Project's Site</Link>
+                    </Typography>
+                </Stack>
+            </Stack>
+        </>
+    )
+}
+
+export default MockupProjectCarouselSlide

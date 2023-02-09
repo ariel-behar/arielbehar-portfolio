@@ -24,7 +24,7 @@ function ProjectDetailsBox({ selectedProject }: Props) {
 		<StyledProjectBox>
 			{
 				selectedProject
-					? <ProjectCard project={(selectedProject as Project)} />
+					? <ProjectCard project={(selectedProject as Project)} projectCategory='real'/>
 					: (
 						<Stack direction='column' justifyContent='center' alignItems='center' height='100%'>
 							<Typography
