@@ -1,7 +1,7 @@
-import { Identifiable, Idtype } from "../types/common-types"
+import { Identifiable, IdType } from "../types/common-types"
 
-interface Project extends Identifiable<Idtype> {
-    _id: Idtype
+interface Project extends Identifiable<IdType> {
+    _id: IdType
     order: number,
     title: string,
     image: string,

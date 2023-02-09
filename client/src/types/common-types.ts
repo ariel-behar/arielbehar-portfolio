@@ -1,4 +1,4 @@
-export type Idtype = number;
+export type IdType = number;
 
 export interface Identifiable<K> {
     _id: K
