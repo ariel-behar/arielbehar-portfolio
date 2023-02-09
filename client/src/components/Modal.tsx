@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectModalContent from './ProjectModalContent';
+import Document from '../model/Document';
 
 const Transition = forwardRef(function Transition(
     props: TransitionProps & {
@@ -50,8 +51,6 @@ const StyledDialogTitle = styled(DialogTitle)`
     }
 `
 
-
-
 const StyledDialogActions = styled(DialogActions)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg');
     background-repeat: repeat;
@@ -61,7 +60,7 @@ const StyledDialogActions = styled(DialogActions)`
 `
 interface Props {
     project?: Partial<Project>,
-    document?: string,
+    document?: Partial<Document>,
     showModal: boolean,
     handleCloseModal: () => void
 }
