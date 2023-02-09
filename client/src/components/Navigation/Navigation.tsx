@@ -72,13 +72,13 @@ function Navigation({showMainView}: Props) {
                         <Link className="nav-link" href="#fifth-section">SKILLS</Link>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#fifth-section">RESUME</Link>
+                        <Link className="nav-link" href="#sixth-section">RESUME</Link>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#sixth-section">CONTACT</Link>
+                        <Link className="nav-link" href="#seventh-section">CONTACT</Link>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#bonus">BONUS</Link>
+                        <Link className="nav-link" href="#eight-section">BONUS</Link>
                     </ListItem>
                 </List>
             </StyledBox>
