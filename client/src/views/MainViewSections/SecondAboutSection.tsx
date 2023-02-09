@@ -28,7 +28,7 @@ function SecondAboutSection() {
                 <Grid container spacing={4}>
                     <Grid item md={8}>
                         <Typography variant='h4' component='h5' mb={1}>About Me</Typography>
-                        <Typography variant='body1' component='p'>Certified Full-Stack Web Developer. Multilingual and self-taught in a variety of web technologies and programming languages. Passionate about both front and back end-development. Highly reliable and self-propelled to success and professionalism with a constant hunger for knowledge and improvement.</Typography>
+                        <Typography variant='body1' component='p'>Certified Full-Stack Web Developer. Multilingual and self-taught in a variety of web technologies and programming languages. Passionate about both front and back-end development. Highly reliable and self-propelled to success and professionalism with a constant hunger for knowledge and improvement.</Typography>
                     </Grid>
 
                     <Grid item md={8}>
@@ -48,11 +48,8 @@ function SecondAboutSection() {
                                 })
                             }
                         </Grid>
-
-
                     </Grid>
                 </Grid>
-
             </Container>
         </StyledBox>
     )
