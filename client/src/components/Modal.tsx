@@ -17,6 +17,7 @@ import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectModalContent from './ProjectModalContent';
 import Document from '../model/Document';
+import DocumentModalContent from './DocumentModalContent';
 
 const Transition = forwardRef(function Transition(
     props: TransitionProps & {
@@ -60,12 +61,24 @@ const StyledDialogActions = styled(DialogActions)`
 `
 interface Props {
     project?: Partial<Project>,
-    document?: Partial<Document>,
+    documentCategory?: Document['category'],
     showModal: boolean,
     handleCloseModal: () => void
 }
 
-function Modal({ project, showModal, handleCloseModal }: Props) {
+function Modal({ project, documentCategory, showModal, handleCloseModal }: Props) {
+
+    const getDocumentTitle = (category:Document['category']): 'Résumé' | 'References' | 'Certificates' | '' => {
+        if(category === 'resume') {
+            return 'Résumé'
+        } else if(category === 'reference') {
+            return 'References'
+        } else if(category === 'certificate') {
+            return 'Certificates'
+        } else {
+            return ''
+        }
+    }
 
     return (
         <Dialog
@@ -80,11 +93,16 @@ function Modal({ project, showModal, handleCloseModal }: Props) {
         >
             <StyledDialogTitle id="alert-dialog-title">
                 <CloseIcon className='close-icon' onClick={() => handleCloseModal()} />
-                <Typography variant='h5' component='h5'>{project?.title}</Typography>
+
+                {project && <Typography variant='h5' component='h5'>{project?.title}</Typography>}
+
+                {documentCategory && <Typography variant='h5' component='h5'>{getDocumentTitle(documentCategory)}</Typography>}
 
             </StyledDialogTitle>
 
             { project && <ProjectModalContent project={project}/> }
+
+            { documentCategory && <DocumentModalContent documentCategory={documentCategory}/>}
 
             <StyledDialogActions>
                 <Button

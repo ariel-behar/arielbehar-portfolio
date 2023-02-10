@@ -1,10 +1,18 @@
+import { useState } from 'react'
+
+import Document from '../../model/Document'
+
+
+import styled from "@mui/material/styles/styled"
+
+
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-
-import styled from "@mui/material/styles/styled"
 import Typography from '@mui/material/Typography'
+import Modal from '../../components/Modal'
+
 
 const StyledSectionBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/chalkboard.jpg');
@@ -72,32 +80,48 @@ const StyledReferencesPaper = styled(Paper)`
 `
 
 function SixthDocumentsSection() {
+    const [showModal, setShowModal] = useState<boolean>(false)
+    const [documentCategory, setDocumentCategory] = useState<Document['category'] | null>(null)
+
+    const onClickImageHandler = (category: Document['category']) => {
+        setDocumentCategory(category)
+        setShowModal(true)
+    }
+
+    const handleCloseModal = () => {
+        setDocumentCategory(null)
+        setShowModal(false)
+    }
+
     return (
-        <StyledSectionBox component='section' id='sixth-section' pb={5}>
-            <Container>
-                <Typography variant="h2" component='h3' color='text.secondary' my={3}>Some Reading Material</Typography>
+        <>
+            {(showModal && documentCategory) && <Modal documentCategory={documentCategory} showModal handleCloseModal={handleCloseModal} />}
 
-                <Grid container >
-                    <Grid item md={4} >
+            <StyledSectionBox component='section' id='sixth-section' pb={5}>
+                <Container>
+                    <Typography variant="h2" component='h3' color='text.secondary' my={3}>Some Reading Material</Typography>
 
-                        <StyledResumePaper elevation={10}>
-                            <Typography variant="h4" component='h4' color='text.secondary'>Résumé</Typography>
+                    <Grid container >
+                        <Grid item md={4} >
+                            <StyledResumePaper elevation={10}>
+                                <Typography variant="h4" component='h4' color='text.secondary'>Résumé</Typography>
 
-                            <img src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/resume-onepage.jpg' alt='Resume' />
-                        </StyledResumePaper>
+                                <img onClick={() => onClickImageHandler('resume')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/resume-onepage.jpg' alt='Resume' />
+                            </StyledResumePaper>
+                        </Grid>
+                        <Grid item md={1}></Grid>
+
+                        <Grid item md={4}>
+                            <StyledReferencesPaper elevation={10}>
+                                <Typography variant="h4" component='h4' color='text.secondary'>References</Typography>
+
+                                <img onClick={() => onClickImageHandler('reference')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/recommendation-letter-visual-edge.jpg' alt='Reference' />
+                            </StyledReferencesPaper>
+                        </Grid>
                     </Grid>
-                    <Grid item md={1}></Grid>
-
-                    <Grid item md={4}>
-                        <StyledReferencesPaper elevation={10}>
-                            <Typography variant="h4" component='h4' color='text.secondary'>References</Typography>
-
-                            <img src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/recommendation-letter-visual-edge.jpg' alt='Reference' />
-                        </StyledReferencesPaper>
-                    </Grid>
-                </Grid>
-            </Container>
-        </StyledSectionBox>
+                </Container>
+            </StyledSectionBox>
+        </>
     )
 }
 
