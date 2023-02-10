@@ -3,3 +3,4 @@ declare module '*.ogv'
 declare module '*.webm'
 
 declare module 'uuid'
+declare module 'react-scroll'

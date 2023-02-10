@@ -1,3 +1,5 @@
+import { Element } from 'react-scroll'
+
 import styled from "@mui/material/styles/styled"
 
 import Box from "@mui/material/Box"
@@ -21,18 +23,20 @@ const StyledBox = styled(Box)`
 function MainView() {
 	return (
 		<Box>
-			
+
 			<FirstTitleSection />
 
 			<SecondAboutSection />
 
 			<StyledBox>
 				<Container>
-					<ThirdProjectsSection />
+					<Element name="projects-photoshop-container-section"> 
+						<ThirdProjectsSection />
 
-					<hr />
+						<hr />
 
-					<FourthPhotoshopSection />
+						<FourthPhotoshopSection />
+					</Element>
 
 					<hr />
 

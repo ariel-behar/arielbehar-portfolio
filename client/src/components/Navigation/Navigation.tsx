@@ -1,10 +1,12 @@
+import {Link as ScrollLink} from 'react-scroll'
+import { motion } from 'framer-motion'
+
 import styled from "@mui/material/styles/styled"
 
 import Box from "@mui/material/Box"
-import Link from "@mui/material/Link"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
-import { motion } from 'framer-motion'
+
 
 const StyledBox = styled(Box)`
     background-color: rgba(0, 0, 0, 0.5);
@@ -27,6 +29,12 @@ const StyledBox = styled(Box)`
                 color: ${(({ theme }) => theme.palette.text.tertiary)};
                 text-decoration: none;
 
+                cursor: pointer;
+
+                &.active {
+                    color: ${(({ theme }) => theme.palette.text.secondary)};
+                }
+
                 &:hover {
                     color: ${(({ theme }) => theme.palette.text.secondary)};
                 }
@@ -39,7 +47,6 @@ interface Props {
     showMainView: boolean
 }
 
-
 function Navigation({showMainView}: Props) {
     return (
         <Box
@@ -50,7 +57,7 @@ function Navigation({showMainView}: Props) {
                 top: "15%",
                 zIndex: 5
              }}
-            component={motion.div}
+            component={motion.nav}
             animate={showMainView ? { opacity: 1 } : {}}
             transition={showMainView ? { delay: 2.2, duration: 0.5 } : {}}
         >
@@ -60,25 +67,25 @@ function Navigation({showMainView}: Props) {
                         <img src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png' alt="Logo" height="35px" width="35px" />
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#first-section">INTRO</Link>
+                        <ScrollLink className="nav-link" to="first-section" spy={true} smooth={true} offset={0} duration={500}>INTRO</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#second-section">ABOUT</Link>
+                        <ScrollLink className="nav-link" to="second-section" spy={true} smooth={true} offset={0} duration={500}>ABOUT</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#third-section">PROJECTS</Link>
+                        <ScrollLink className="nav-link" to="projects-photoshop-container-section" spy={true} smooth={true} offset={0} duration={500}>PROJECTS</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#fifth-section">SKILLS</Link>
+                        <ScrollLink className="nav-link" to="fifth-section" spy={true} smooth={true} offset={-30} duration={500}>SKILLS</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#sixth-section">RESUME</Link>
+                        <ScrollLink className="nav-link" to="sixth-section" spy={true} smooth={true} offset={-50} duration={500}>RESUME</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#seventh-section">CONTACT</Link>
+                        <ScrollLink className="nav-link" to="seventh-section" spy={true} smooth={true} offset={0} duration={500}>CONTACT</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <Link className="nav-link" href="#eight-section">BONUS</Link>
+                        <ScrollLink className="nav-link" to="eight-section" spy={true} smooth={true} offset={0} duration={500}>BONUS</ScrollLink>
                     </ListItem>
                 </List>
             </StyledBox>
