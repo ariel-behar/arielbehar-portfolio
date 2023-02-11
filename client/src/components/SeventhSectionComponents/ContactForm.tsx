@@ -12,6 +12,17 @@ import MailIcon from '@mui/icons-material/Mail';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CreateIcon from '@mui/icons-material/Create';
 import contactFormSchema from '../../validations/contactFormSchema';
+import styled from '@mui/material/styles/styled';
+
+const StyledTextField = styled(TextField)`
+	input, textarea, label.Mui-error, label.Mui-focused ,label.Mui-error span {
+		color: ${(({theme}) => theme.palette.text.secondary)};
+	}
+
+	p.Mui-error {
+		color: ${(({theme}) => theme.palette.text.muted.light)};
+	}
+`
 
 interface FormData {
 	name: string,
@@ -44,9 +55,10 @@ function ContactForm() {
 		<Box>
 			<form onSubmit={handleSubmit(onFormSubmit)}>
 				<Stack direction='column' spacing={3}>
-					<Stack direction='row' justifyContent='space-between' alignItems='end'>
-						<PersonIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px' }} />
-						<TextField
+					<Stack direction='row' justifyContent='space-between' alignItems='center'>
+						<PersonIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px', marginTop: '10px' }} />
+						<StyledTextField
+							autoComplete='off'
 							fullWidth
 							required
 							{...register('name')}
@@ -57,9 +69,10 @@ function ContactForm() {
 						/>
 					</Stack>
 
-					<Stack direction='row' justifyContent='space-between' alignItems='end'>
-						<MailIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px' }} />
-						<TextField
+					<Stack direction='row' justifyContent='space-between' alignItems='center'>
+						<MailIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px', marginTop: '10px' }} />
+						<StyledTextField
+						autoComplete='off'
 							fullWidth
 							required
 							{...register('email')}
@@ -70,9 +83,10 @@ function ContactForm() {
 						/>
 					</Stack>
 
-					<Stack direction='row' justifyContent='space-between' alignItems='end'>
-						<LocalOfferIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px' }} />
-						<TextField
+					<Stack direction='row' justifyContent='space-between' alignItems='center'>
+						<LocalOfferIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px', marginTop: '10px' }} />
+						<StyledTextField
+							autoComplete='off'
 							fullWidth
 							required
 							{...register('subject')}
@@ -85,7 +99,8 @@ function ContactForm() {
 
 					<Stack direction='row' justifyContent='space-between' alignItems='start'>
 						<CreateIcon fontSize='large' sx={{ color: 'custom.grey.darker', marginRight: '15px', marginTop: '12px' }} />
-						<TextField
+						<StyledTextField
+							autoComplete='off'
 							multiline
 							rows={6}
 							fullWidth

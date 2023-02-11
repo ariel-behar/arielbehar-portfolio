@@ -27,6 +27,13 @@ const StyledLogoImg = styled('img')`
     left: -5px;
     height: 75px;
     width: 75px;
+
+    @media (max-width: 499px){
+        top: -20px;
+        left: -37px;
+        height: 66px;
+        width: 66px;
+    }
 `
 
 const StyledSocialIconStack = styled(Stack)`
@@ -38,6 +45,12 @@ const StyledSocialIconStack = styled(Stack)`
         width: auto;
         height: 128px;
     }
+
+    @media (max-width: 499px){
+        img {
+            height: 100px;
+        }
+    }
     
 `
 
@@ -45,7 +58,7 @@ function SeventhContactSection() {
     return (
         <StyledSectionBox component='section' id='seventh-section' py={4} > 
             <Container>
-                <Grid container >
+                <Grid container spacing={{xs: 2, md: 0}}>
                     <Grid item xs={12} md={7} lg={6}>
                         <StyledDarkBox px={3} pb={2}>
                             <Stack direction='row' position='relative' justifyContent='center' alignItems='center' minHeight='120px'>
@@ -83,8 +96,6 @@ function SeventhContactSection() {
                         </StyledDarkBox>
                     </Grid>
                 </Grid>
-
-
             </Container>
         </StyledSectionBox>
     )

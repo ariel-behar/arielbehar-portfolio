@@ -31,6 +31,12 @@ const theme = createTheme({
                 light: "#9e9e9e"
             }
             
+        },
+        action: {
+            disabled: "rgb(255, 255, 255, 0.5)",
+            disabledBackground: "rgb(13, 71, 161,0.5)",
+            disabledOpacity: 0.5
+
         }
     }
 })
