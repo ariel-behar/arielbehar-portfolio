@@ -18,12 +18,14 @@ import Footer from "../components/Footer"
 const StyledBox = styled(Box)`
 	background-image: url("https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg");
 	background-repeat: repeat;
+
+	position: relative;
+	box-shadow: 0px -9px 28px 14px rgba(0,0,0,0.5);
 `
 
 function MainView() {
 	return (
 		<Box>
-
 			<FirstTitleSection />
 
 			<SecondAboutSection />
