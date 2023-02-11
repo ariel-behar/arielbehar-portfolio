@@ -26,11 +26,11 @@
     ],
     "certificate": [{
             "_id": 1,
-            "title": "SoftUni Certificate - React",
-            "image": "softuni-react.jpg",
+            "title": "Modis Certificate - Full-Stack React, Express and Typescript Academy",
+            "image": "modis-full-stack.jpg",
             "category": "certificate",
-            "firm": "Software University",
-            "creator": "Svetlin Nakov"
+            "firm": "Modis",
+            "creator": "Phillippe Rouvrais"
         },
         {
             "_id": 2,
