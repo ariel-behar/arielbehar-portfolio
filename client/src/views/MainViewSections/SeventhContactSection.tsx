@@ -11,7 +11,7 @@ import Link from '@mui/material/Link'
 
 const StyledSectionBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/phone-blurred.jpg');
-    /* background-attachment: fixed; */ 
+    background-attachment: fixed; 
     background-size: cover;
     background-position: right center;
 `

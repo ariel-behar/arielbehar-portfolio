@@ -20,7 +20,8 @@ function HomeView({ showMainViewHandler }: Props) {
             <Box sx={{
                 width: '100%',
                 height: '100vh',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                position: 'relative'
             }}>
 
                 <Overlay />

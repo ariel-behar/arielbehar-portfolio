@@ -1,11 +1,61 @@
-import Box from '@mui/material/Box'
-import { motion } from 'framer-motion'
 import { lazy, useState, Suspense } from 'react'
+
 import Navigation from '../components/Navigation/Navigation'
 import HomeView from './HomeView'
 
+import styled from '@mui/material/styles/styled'
+
+import Box from '@mui/material/Box'
+
 const MainViewPromise = import('./MainView')
 const MainView = lazy(() => MainViewPromise)
+
+const StyledHomeViewBox = styled(Box)`
+    &.hide {
+        animation: hide 3.5s forwards;
+    }
+
+    @keyframes hide {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+`
+
+const StyledMainViewBox = styled(Box)`
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+
+    &.hidden {
+        display: none;
+    }
+
+    &.reveal {
+        z-index: 2;
+        opacity: 0.5;
+        animation: reveal 2.5s forwards;
+        
+    }
+
+    @keyframes reveal {
+        from {
+            opacity: 0.5;
+            top: 100vh;
+        }
+
+        to {
+            opacity: 1;
+            top: 0;
+        }
+    }
+
+`
 
 function RootView() {
     const [showMainView, setShowMainView] = useState<boolean>(true)
@@ -15,28 +65,26 @@ function RootView() {
     }
 
     return (
-        <Box height={showMainView ? 'inherit' : '100vh'} overflow={showMainView ? 'block' : 'hidden'}>
-            <Navigation showMainView={showMainView}/>
-            
+        <Box height={showMainView ? 'inherit' : '100vh'} overflow={showMainView ? 'block' : 'hidden'} position='relative'>
+            <Navigation showMainView={showMainView} />
 
-        {/* Delete the below BOX when done with the DEVELOPMENT PROCESS. Leave only the HomeView */}
-            <Box sx={showMainView ? { opacity: 0 } : {}} > 
-                <HomeView showMainViewHandler={showMainViewHandler} />
+
+            {/* Delete the below BOX when done with the DEVELOPMENT PROCESS. Leave only the HomeView */}
+            <Box sx={showMainView ? { opacity: 0 } : {}} >
+                <StyledHomeViewBox className={showMainView ? 'hide' : ''}>
+                    <HomeView showMainViewHandler={showMainViewHandler} />
+                </StyledHomeViewBox>
             </Box>
 
-            <Box
-                sx={showMainView ? { position: 'absolute', zIndex: 2, width: '100%' } : { display: 'none' }}
-                component={motion.div}
-                initial={{ opacity: 0.5 }}
-                animate={showMainView ? { y: '-100vh', opacity: 1 } : {}}
-                transition={{ duration: 2.5 }}
+            <StyledMainViewBox
+                className={showMainView ? 'reveal' : 'hidden'}
             >
                 <Suspense fallback={'...loading'}>
-                    
+
 
                     <MainView />
                 </Suspense>
-            </Box>
+            </StyledMainViewBox>
 
         </Box>
     )
