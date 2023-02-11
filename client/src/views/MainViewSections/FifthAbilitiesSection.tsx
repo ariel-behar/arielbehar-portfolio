@@ -89,7 +89,7 @@ function FifthAbilitiesSection() {
 						{skills.map((skill: Skill) => <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
 					</Stack>
 
-					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center'>*In constant learning of new skills and improvement on already existing ones</Typography>
+					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
 				</Grid>
 			</Grid>
 		</Box>

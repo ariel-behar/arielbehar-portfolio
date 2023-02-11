@@ -3,6 +3,7 @@ import getChipColor from '../../utils/getChipColor'
 import Box from '@mui/material/Box'
 import styled from '@mui/material/styles/styled'
 import Skill from '../../model/Skill'
+import Typography from '@mui/material/Typography/Typography'
 
 const StyledChipBox = styled(Box)`
  	margin: 17px 7px;
@@ -47,7 +48,7 @@ function Chip({skill, hoveredProficiency}: Props) {
         >
             <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/${skill.image}`} alt={`${skill.skill} logo`} />
 
-            <p>{skill.skill}</p>
+            <Typography variant='body1' component='p' fontWeight='bold'>{skill.skill}</Typography>
         </StyledChipBox>
     )
 }

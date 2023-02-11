@@ -36,8 +36,10 @@ const theme = createTheme({
             disabled: "rgb(255, 255, 255, 0.5)",
             disabledBackground: "rgb(13, 71, 161,0.5)",
             disabledOpacity: 0.5
-
         }
+    },
+    typography: {
+        fontFamily: "'Saira', sans-serif"
     }
 })
 
