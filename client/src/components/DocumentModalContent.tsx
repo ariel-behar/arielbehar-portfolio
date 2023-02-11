@@ -27,7 +27,7 @@ interface Props {
 }
 
 function DocumentModalContent({ documentCategory }: Props) {
-	const filteredDocuments = (documents as Document[]).filter((document: Document) => document.category === documentCategory)
+	const filteredDocuments = (documents[documentCategory] as Document[]).filter((document: Document) => document.category === documentCategory)
 
 	return (
 		<>
