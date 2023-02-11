@@ -117,6 +117,7 @@ function ContactForm() {
 					<Stack direction='row' justifyContent='center'>
 						<Button
 							type='submit'
+							size='large'
 							sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
 							variant='contained'
 							endIcon={<SendIcon />}
