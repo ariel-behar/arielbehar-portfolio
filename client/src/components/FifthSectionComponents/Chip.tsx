@@ -25,6 +25,10 @@ const StyledChipBox = styled(Box)`
 	p {
 		margin: 3px 0 0 0;
 	}
+
+	@media (max-width: 399px){
+		min-width: 155px;
+	}
 `
 
 interface Props {

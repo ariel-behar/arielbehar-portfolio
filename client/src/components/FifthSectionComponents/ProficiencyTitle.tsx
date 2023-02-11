@@ -31,7 +31,7 @@ function ProficiencyTitle({
 }: Props
 ) {
     return (
-        <Stack direction='column' alignItems='center'
+        <Stack direction='column' alignItems='center' mx={2}
             onMouseEnter={() => onMouseEnterProficiencyTitleHandler(skillProficiencyNum)}
             onMouseLeave={() => onMouseLeaveProficiencyTitleHandler()}
             sx={{ opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.5 : 1 }}

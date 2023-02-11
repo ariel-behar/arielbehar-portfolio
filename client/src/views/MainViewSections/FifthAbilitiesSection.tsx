@@ -57,15 +57,15 @@ function FifthAbilitiesSection() {
 
 	return (
 		<Box component='section' id="fifth-section">
-			<Grid container spacing={5} py={5}>
-				<Grid item xs={12} sm={2} textAlign="center">
-					<Stack pt={3} direction="column" alignItems='center'>
-						<Typography variant="body1" component='p' color="text.muted.light">HOVER</Typography>
-						<Typography variant="body1" component='p' color="text.muted.light">TAP</Typography>
+			<Typography mt={3} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{xs: 'block', md: 'none'}}>My Abilities</Typography>
+			<Grid container spacing={{xs: 1, lg: 5}} py={{xs: 2, lg: 5}}>
+				<Grid item xs={12} sm={12} md={2} textAlign="center">
+					<Stack pt={{xs: 0, lg: 3}} direction="column" alignItems='center'>
+						<Typography variant="body1" component='p' color="text.muted.light" display={{xs: 'none', lg: 'block'}}>HOVER</Typography>
 
-						<StyledKeyboardArrowDownIcon />
+						<StyledKeyboardArrowDownIcon sx={{ display: {xs: 'none', lg: 'block'} }} />
 
-						<Box mt={3}>
+						<Stack direction={{xs: 'row', md: 'column'}} justifyContent='space-around' mt={{xs: 0, md: 12, lg: 3}}>
 							{
 								skillTitles.map(skillTitle => {
 									return <ProficiencyTitle
@@ -79,11 +79,11 @@ function FifthAbilitiesSection() {
 									</ProficiencyTitle>
 								})
 							}
-						</Box>
+						</Stack>
 					</Stack>
 				</Grid>
-				<Grid item xs={12} sm={10} >
-					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
+				<Grid item xs={12} sm={12} md={10} >
+					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{xs: 'none', md: 'block'}}>My Abilities</Typography>
 
 					<Stack direction='row' flexWrap='wrap' justifyContent='center'>
 						{skills.map((skill: Skill) => <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
