@@ -28,11 +28,11 @@ function ThirdProjectsSection() {
 			<Typography variant="h2" component='h3' textAlign='center' color='text.secondary'>My Projects</Typography>
 
 			<Grid container spacing={3} py={2}>
-				<Grid item sm={12} lg={8}>
+				<Grid item xs={12} md={7} lg={8}>
 					<ProjectsCarousel selectedProject={selectedProject} projects={(projects as Project[])} onChangeSelectedProject={onChangeSelectedProject}/>
 				</Grid>
 
-				<Grid item sm={12} lg={4}>
+				<Grid item xs={12} md={5} lg={4}>
 					<ProjectDetailsBox selectedProject={selectedProject}/>
 				</Grid>
 			</Grid>

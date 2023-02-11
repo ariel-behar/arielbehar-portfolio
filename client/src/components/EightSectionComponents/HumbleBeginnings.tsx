@@ -12,12 +12,12 @@ function HumbleBeginnings({ onClickShowDanielHandler }: Props) {
     return (
         <Container sx={{ padding: "32px 0"}}>
             <Grid container>
-                <Grid item md={4}>
+                <Grid item xs={12} md={4}>
                     <Stack direction='row' alignItems='center' height='100%'>
-                        <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/bonus.png" alt="Bonus" />
+                        <img style={{width: '100%', height: 'auto'}} src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/bonus.png" alt="Bonus" />
                     </Stack>
                 </Grid>
-                <Grid item md={8}>
+                <Grid item xs={12} md={8}>
                     <Box>
                         <Typography variant="h2" component='h4' color='text.secondary' mb={2} textAlign='center'>Humble Beginnings</Typography>
 
@@ -53,8 +53,10 @@ function HumbleBeginnings({ onClickShowDanielHandler }: Props) {
                             Best regards,
                         </Typography>
 
-                        <Stack direction='row' alignItems='center'>
-                            <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/signature.png" alt="Ariel Behar Signature" style={{ left: "30px", position: "relative" }} />
+                        <Stack direction='row' alignItems='center' flexWrap='wrap' px={3}>
+                            <img 
+                                src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/signature.png" alt="Ariel Behar Signature" 
+                                style={{ maxWidth: '300px', height: 'auto' }} />
 
                             <Stack sx={{ width: '50%', marginLeft: 'auto' }}>
                                 <Button

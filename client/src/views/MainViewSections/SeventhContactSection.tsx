@@ -46,7 +46,7 @@ function SeventhContactSection() {
         <StyledSectionBox component='section' id='seventh-section' py={4} > 
             <Container>
                 <Grid container >
-                    <Grid item md={7} lg={6}>
+                    <Grid item xs={12} md={7} lg={6}>
                         <StyledDarkBox px={3} pb={2}>
                             <Stack direction='row' position='relative' justifyContent='center' alignItems='center' minHeight='120px'>
                                 <StyledLogoImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png" alt="logo" />
@@ -61,9 +61,9 @@ function SeventhContactSection() {
 
                     </Grid>
 
-                    <Grid item md={1} lg={2}></Grid>
+                    <Grid item xs={12} md={1} lg={2}></Grid>
 
-                    <Grid item md={4}>
+                    <Grid item xs={12} md={4}>
                         <StyledDarkBox p={4} >
                             <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' mb={3}>FIND ME ON</Typography>
 

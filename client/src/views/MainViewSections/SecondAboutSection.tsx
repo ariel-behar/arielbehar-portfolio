@@ -9,6 +9,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import FlagCard from '../../components/MainViewComponents/FlagCard'
+import { spacing } from '@mui/system';
 
 const StyledBox = styled(Box)`
     background-color: ${({ theme }) => theme.palette.custom.black.main};
@@ -23,25 +24,43 @@ const StyledBox = styled(Box)`
 
 function SecondAboutSection() {
     return (
-        <StyledBox component='section' py={6} id="second-section">
+        <StyledBox
+            component='section'
+            
+            py={{xs: 3, lg: 6 }}
+            id="second-section"
+
+            sx={{
+                backgroundSize: { xs: 'cover', sm: 'inherit'}
+            }}
+
+        >
             <Container>
-                <Grid container spacing={4}>
-                    <Grid item md={8}>
+                <Grid
+                    container
+                    spacing={{xs: 1, lg: 4}}
+                    p={{xs: 2, lg: 0}}
+                    sx={{
+                        backgroundColor: { xs: "rgba(0, 0, 0, 0.5)", lg: 'transparent' },
+                        borderRadius: { xs: "20px" }
+                    }}
+                >
+                    <Grid item sm={12} lg={8} >
                         <Typography variant='h4' component='h5' mb={1}>About Me</Typography>
                         <Typography variant='body1' component='p'>Certified Full-Stack Web Developer. Multilingual and self-taught in a variety of web technologies and programming languages. Passionate about both front and back-end development. Highly reliable and self-propelled to success and professionalism with a constant hunger for knowledge and improvement.</Typography>
                     </Grid>
 
-                    <Grid item md={8}>
+                    <Grid item sm={12} lg={8} mt={{xs: 2, lg: 0}}>
                         <Typography variant='h4' component='h5' mb={1}>Languages</Typography>
-                        <Typography variant='body2' component='p' color='text.muted'  mb={1}>
+                        <Typography variant='body2' component='p' color='text.muted.light' mb={1}>
                             *Speaking / Writing / Reading /	Understanding rated from 1 to 5 (5 being the highest)
                         </Typography>
 
-                        <Grid container>
+                        <Grid container spacing={2}>
                             {
                                 languages.map(language => {
                                     return (
-                                        <Grid item sm={4} md={2} key={uuidv4()}> 
+                                        <Grid item xs={4} sm={2} md={2} key={uuidv4()}>
                                             <FlagCard language={language} />
                                         </Grid>
                                     )

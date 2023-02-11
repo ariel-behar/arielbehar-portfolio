@@ -58,7 +58,7 @@ function FifthAbilitiesSection() {
 	return (
 		<Box component='section' id="fifth-section">
 			<Grid container spacing={5} py={5}>
-				<Grid item md={2} textAlign="center">
+				<Grid item xs={12} sm={2} textAlign="center">
 					<Stack pt={3} direction="column" alignItems='center'>
 						<Typography variant="body1" component='p' color="text.muted.light">HOVER</Typography>
 						<Typography variant="body1" component='p' color="text.muted.light">TAP</Typography>
@@ -82,7 +82,7 @@ function FifthAbilitiesSection() {
 						</Box>
 					</Stack>
 				</Grid>
-				<Grid item md={10} >
+				<Grid item xs={12} sm={10} >
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
 
 					<Stack direction='row' flexWrap='wrap' justifyContent='center'>

@@ -14,23 +14,27 @@ const StyledCarousel = styled(Carousel)`
 			cursor: pointer;
 		}
 	}
-	
-	li.thumb {
-        width: 23%;
-        opacity: 0.7;
-        cursor: pointer;
-		border: none;
-		&:hover{
+	ul.thumbs {
+		padding-left: 0;
+		li.thumb {
+			opacity: 0.7;
+			
+			cursor: pointer;
 			border: none;
-			opacity: 1;
-		}
+			
+			&:hover{
+				border: none;
+				opacity: 1;
+			}
 
-		&.selected {
-			transform: scale(1.1);
-			opacity: 1;
-			border: none;
+			&.selected {
+				transform: scale(1.1);
+				opacity: 1;
+				border: none;
+			}
 		}
 	}
+	
 
 	.carousel .thumbs-wrapper {
 		position: relative;
@@ -44,6 +48,28 @@ const StyledCarousel = styled(Carousel)`
 
 		}
 	}
+
+	@media only screen and (min-width: 599px) and ( max-width: 899px) {
+		.carousel {
+			padding: 0 40px
+		}
+
+		li.slide {
+			img {
+				max-height: 370px;
+				width: auto;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 599px) and ( max-width: 750px) {
+		li.slide {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
 `
 interface Props {
 	selectedProject: Project | null,

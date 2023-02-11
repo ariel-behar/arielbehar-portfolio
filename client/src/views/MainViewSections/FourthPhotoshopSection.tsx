@@ -23,7 +23,7 @@ const StyledBox = styled(Box)`
 function FourthPhotoshopSection() {
 	return (
 		<Grid container spacing={2} py={7}>
-			<Grid item md={6} px={2}>
+			<Grid item xs={12} md={6} px={2}>
 				<Box px={5} >
 					<Typography variant="h4" component='h4' textAlign='center' color='text.secondary'>PSD to HTML</Typography>
 
@@ -33,7 +33,7 @@ function FourthPhotoshopSection() {
 				<Television />
 			</Grid>
 
-			<Grid item md={6}>
+			<Grid item xs={12} md={6}>
 				<StyledBox>
 					<MockupProjectsCarousel />
 				</StyledBox>

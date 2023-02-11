@@ -1,4 +1,4 @@
-import {Link as ScrollLink} from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 import { motion } from 'framer-motion'
 
 import styled from "@mui/material/styles/styled"
@@ -47,16 +47,19 @@ interface Props {
     showMainView: boolean
 }
 
-function Navigation({showMainView}: Props) {
+function Navigation({ showMainView }: Props) {
     return (
         <Box
-            style={{ 
-                opacity: 0, 
+            style={{
+                opacity: 0,
                 position: "fixed",
                 right: 0,
                 top: "15%",
                 zIndex: 5
-             }}
+            }}
+
+            sx={{ display: { xs: 'none', lg: 'block' } }}
+
             component={motion.nav}
             animate={showMainView ? { opacity: 1 } : {}}
             transition={showMainView ? { delay: 2.2, duration: 0.5 } : {}}
