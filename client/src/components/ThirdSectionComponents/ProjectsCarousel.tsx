@@ -25,6 +25,7 @@ const StyledCarousel = styled(Carousel)`
 			&:hover{
 				border: none;
 				opacity: 1;
+				transform: scale(1.1);
 			}
 
 			&.selected {
