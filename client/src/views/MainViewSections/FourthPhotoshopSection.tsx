@@ -22,9 +22,9 @@ const StyledBox = styled(Box)`
 
 function FourthPhotoshopSection() {
 	return (
-		<Grid container spacing={2} py={7}>
-			<Grid item xs={12} md={6} px={2}>
-				<Box px={5} >
+		<Grid container spacing={{md: 2}} py={7}>
+			<Grid item xs={12} md={6} px={{md: 2}}>
+				<Box px={{xs: 3, sm: 5, md: 7}} pb={{xs: 3, sm: 0, md: 0}}>
 					<Typography variant="h4" component='h4' textAlign='center' color='text.secondary'>PSD to HTML</Typography>
 
 					<Typography mt={2} variant="body1" component='p' textAlign='justify' color='text.secondary'>This section focuses on my ability to work with Adobe Photoshop and accurately recreate websites from a PSD file into HTML format.</Typography>
@@ -33,8 +33,8 @@ function FourthPhotoshopSection() {
 				<Television />
 			</Grid>
 
-			<Grid item xs={12} md={6}>
-				<StyledBox>
+			<Grid item xs={12} md={6} mt={{xs: 10, sm: 10, md: 0}} >
+				<StyledBox >
 					<MockupProjectsCarousel />
 				</StyledBox>
 			</Grid>

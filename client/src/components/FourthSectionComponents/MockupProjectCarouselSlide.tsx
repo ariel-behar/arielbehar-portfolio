@@ -44,11 +44,13 @@ function MockupProjectCarouselSlide({ project }: Props) {
                 <Typography mt={2} mb={1} variant="h5" component='p' color='aliceblue'>{project.title}</Typography>
 
                 <Stack direction='row' justifyContent='center'>
-                    <Typography variant="h6" component='p' sx={{ color: 'primary.main', cursor: 'pointer'}} onClick={() => setShowModal(true)}>
+                    <Typography variant="h6" component='p' sx={{ color: 'primary.main', cursor: 'pointer', fontSize: {xs: '1.1rem', sm: '1.25rem'}}} onClick={() => setShowModal(true)}>
                         Project Description
                     </Typography>
-                    <Typography variant="h6" component='p' color='aliceblue'>&nbsp;|&nbsp;</Typography>
-                    <Typography variant="h6" component='p'>
+
+                    <Typography variant="h6" component='p' color='aliceblue' sx={{fontSize: {xs: '1rem', sm: '1.25rem'}}}>&nbsp;|&nbsp;</Typography>
+
+                    <Typography variant="h6" component='p' sx={{fontSize: {xs: '1.1rem', sm: '1.25rem'}}}>
                         <Link href={project.url} target="_blank" style={{ textDecoration: 'none' }} >Visit Project's Site</Link>
                     </Typography>
                 </Stack>

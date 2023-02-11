@@ -19,6 +19,7 @@ const StyledCarousel = styled(Carousel)`
 				img {
 					height: 100%;
 					width: auto;
+					max-width: 100%;
 				}
 			}
 		}
@@ -79,7 +80,7 @@ function MockupProjectsCarousel() {
 				showDots={true}
 				responsive={responsive}
 				infinite={true}
-				autoPlay={true}
+				// autoPlay={true}
 				autoPlaySpeed={4000}
 			>
 				{

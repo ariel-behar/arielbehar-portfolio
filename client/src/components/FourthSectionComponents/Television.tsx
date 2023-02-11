@@ -8,7 +8,7 @@ import { useState } from 'react'
 
 const StyledBox = styled(Box)`
     position: relative;
-    margin-top: 16px;
+    margin: 25px auto 0;
     
     .tv-background {
         position: absolute;
@@ -77,7 +77,7 @@ function Television() {
 
     return (
         <>
-            <StyledBox>
+            <StyledBox sx={{width: {xs: '100%',sm: '80%', md: '100%'}}}>
                 <Box className="tv-background"></Box>
 
                 <video loop muted autoPlay style={isTvOn ? {} : { opacity: 0 }}>
@@ -89,8 +89,6 @@ function Television() {
             <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/psd-to-html5.png" alt="PSD TO HTML Poster" className="hidden-md-up img-fluid mb-3 mt-2" /> */}
 
                 <img className='tv-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/tv.png" alt="Television" />
-
-
 
                 <Box className="tv-buttons">
                     <span onClick={turnTvOnHandler} className={isTvOn ? "tvOn" : ''} >ON </span>|<span className={isTvOn ? "" : 'tvOff'} onClick={turnTvOffHandler}> OFF</span>
