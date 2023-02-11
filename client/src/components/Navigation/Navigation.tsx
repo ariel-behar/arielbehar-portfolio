@@ -31,9 +31,9 @@ const StyledBox = styled(Box)`
 
                 cursor: pointer;
 
-                &.active {
+                /* &.active {
                     color: ${(({ theme }) => theme.palette.text.secondary)};
-                }
+                } */
 
                 &:hover {
                     color: ${(({ theme }) => theme.palette.text.secondary)};
@@ -70,25 +70,25 @@ function Navigation({ showMainView }: Props) {
                         <img src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png' alt="Logo" height="35px" width="35px" />
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="first-section" spy={true} smooth={true} offset={0} duration={500}>INTRO</ScrollLink>
+                        <ScrollLink className="nav-link" to="first-section" smooth={true} offset={0} duration={500}>INTRO</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="second-section" spy={true} smooth={true} offset={0} duration={500}>ABOUT</ScrollLink>
+                        <ScrollLink className="nav-link" to="second-section" smooth={true} offset={0} duration={500}>ABOUT</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="projects-photoshop-container-section" spy={true} smooth={true} offset={0} duration={500}>PROJECTS</ScrollLink>
+                        <ScrollLink className="nav-link" to="projects-photoshop-container-section" smooth={true} offset={0} duration={500}>PROJECTS</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="fifth-section" spy={true} smooth={true} offset={-30} duration={500}>SKILLS</ScrollLink>
+                        <ScrollLink className="nav-link" to="fifth-section" smooth={true} offset={-30} duration={500}>SKILLS</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="sixth-section" spy={true} smooth={true} offset={-50} duration={500}>RESUME</ScrollLink>
+                        <ScrollLink className="nav-link" to="sixth-section" smooth={true} offset={-50} duration={500}>RESUME</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="seventh-section" spy={true} smooth={true} offset={0} duration={500}>CONTACT</ScrollLink>
+                        <ScrollLink className="nav-link" to="seventh-section" smooth={true} offset={0} duration={500}>CONTACT</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="eight-section" spy={true} smooth={true} offset={0} duration={500}>BONUS</ScrollLink>
+                        <ScrollLink className="nav-link" to="eight-section" smooth={true} offset={0} duration={500}>BONUS</ScrollLink>
                     </ListItem>
                 </List>
             </StyledBox>
