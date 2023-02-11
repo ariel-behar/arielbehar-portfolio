@@ -2,9 +2,7 @@ import { useState } from 'react'
 
 import Document from '../../model/Document'
 
-
 import styled from "@mui/material/styles/styled"
-
 
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
@@ -12,7 +10,6 @@ import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Modal from '../../components/Modal'
-
 
 const StyledSectionBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/chalkboard.jpg');
@@ -22,60 +19,57 @@ const StyledSectionBox = styled(Box)`
     background-color: #b6d5f6;
     border-top: 3px solid ${(({ theme }) => theme.palette.custom.black.main)};
     border-bottom: 3px solid ${(({ theme }) => theme.palette.custom.black.main)};
-`
 
-const StyledResumePaper = styled(Paper)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: rgb(135,219,135);
-    background: linear-gradient(45deg, rgba(135,219,135,1) 0%, rgba(92,184,92,1) 100%);
-
-    padding: 20px 0;
-    border-radius: 20px;
-
-    img {
-        transform: rotateX(20deg) rotateY(20deg) scale(0.8);
-        transition: 1.5s ease;
-        cursor: pointer;
-
-        width: 90%;
-        height: auto;
+    .document-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
-        box-shadow: -50px 50px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-        &:hover {
-            transform: rotateX(0) rotateY(0) scale(1);
-            box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.2), -10px -10px 24px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-radius: 20px;
+
+        img {
+            transition: 1.5s ease;
+            cursor: pointer;
+
+            width: 90%;
+            height: auto;
+            box-shadow: -50px 50px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+
+            &:hover {
+                transform: rotateX(0) rotateY(0) scale(1);
+                box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.2), -10px -10px 24px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        img {
+            transform: initial;
+            &:hover {
+                transform: initial;
+              
+            }
         }
     }
 `
 
-const StyledReferencesPaper = styled(Paper)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: rgb(251,202,133);
-    background: linear-gradient(-45deg, rgba(251,202,133,1) 0%, rgba(240,173,78,1) 100%);
-
-    padding: 20px 0;
-    border-radius: 20px;
+const StyledResumePaper = styled(Paper)`
+    background: rgb(135,219,135);
+    background: linear-gradient(45deg, rgba(135,219,135,1) 0%, rgba(92,184,92,1) 100%);
 
     img {
         transform: rotateX(20deg) rotateY(20deg) scale(0.8);
-        transition: 1.5s ease;
-        cursor: pointer;
 
-        width: 90%;
-        height: auto;
-        
+    }
+`
+
+const StyledReferencesPaper = styled(Paper)`
+    background: rgb(251,202,133);
+    background: linear-gradient(-45deg, rgba(251,202,133,1) 0%, rgba(240,173,78,1) 100%);
+
+    img {
         transform: rotateX(20deg) rotateY(-20deg) scale(0.8);
-        box-shadow: 50px 50px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-        &:hover {
-            transform: rotateX(0) rotateY(0) scale(1);
-            box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.2), -10px -10px 24px 0 rgba(0, 0, 0, 0.2);
-        }
     }
 `
 
@@ -101,18 +95,18 @@ function SixthDocumentsSection() {
                 <Container>
                     <Typography variant="h2" component='h3' color='text.secondary' my={3}>Some Reading Material</Typography>
 
-                    <Grid container >
-                        <Grid item md={4} >
-                            <StyledResumePaper elevation={10}>
+                    <Grid container px={{xs: 3}} spacing={{xs: 2, sm: 0}}>
+                        <Grid item sm={4} >
+                            <StyledResumePaper elevation={10} className='document-box'>
                                 <Typography variant="h4" component='h4' color='text.secondary'>Résumé</Typography>
 
                                 <img onClick={() => onClickImageHandler('resume')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/resume-onepage.jpg' alt='Resume' />
                             </StyledResumePaper>
                         </Grid>
-                        <Grid item md={1}></Grid>
+                        <Grid item sm={1}></Grid>
 
-                        <Grid item md={4}>
-                            <StyledReferencesPaper elevation={10}>
+                        <Grid item sm={4}>
+                            <StyledReferencesPaper elevation={10} className='document-box'>
                                 <Typography variant="h4" component='h4' color='text.secondary'>References</Typography>
 
                                 <img onClick={() => onClickImageHandler('reference')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/recommendation-letter-visual-edge.jpg' alt='Reference' />
