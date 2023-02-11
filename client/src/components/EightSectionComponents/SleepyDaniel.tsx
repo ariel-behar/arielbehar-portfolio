@@ -29,16 +29,16 @@ function SleepyDaniel({ onClickShowDanielHandler }: Props) {
             <Container sx={{ position: 'relative' }}>
                 <StyledCloseIcon onClick={() => onClickShowDanielHandler(false)} />
                 <Grid container >
-                    <Grid item md={7} p={7}>
-                        <Typography variant="h4" component='h4' color='text.primary' mb={7} textAlign='center'>{danielProject.title}</Typography>
+                    <Grid item xs={12} md={7} p={{xs: 0, md: 7}} textAlign='center'>
+                        <Typography variant="h4" component='h4' color='text.primary' mt={{xs: 4, md: 0}} mb={{xs: 1, md: 3}} textAlign='center'>{danielProject.title}</Typography>
 
                         <Link href={danielProject.url} target='_blank'>
-                            <img style={{ maxWidth: "100%", height: 'auto' }} src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${danielProject.image}`} alt="Sleepy Daniel" />
+                            <img style={{ maxWidth: '100%', maxHeight: '370px', margin: '0 auto'  }} src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${danielProject.image}`} alt="Sleepy Daniel" />
                         </Link>
-
+   
                     </Grid>
-                    <Grid item md={5}>
-                        <Stack>
+                    <Grid item xs={12} md={5}>
+                        <Stack pb={3}>
 
                             <Typography mt={2} variant='h6' component='h6' color='text.primary'>Project Description:</Typography>
                             <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>{danielProject.description}</Typography>

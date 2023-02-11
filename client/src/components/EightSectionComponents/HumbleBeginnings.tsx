@@ -4,6 +4,25 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
+import styled from '@mui/material/styles/styled'
+
+const StyledBonusImg = styled('img')` 
+    width: 100%;
+    height: auto;
+
+    @media (max-width: 599px) {
+        width: 50%;
+    }
+`
+const StyledSignatureImg = styled('img')` 
+    max-width: 50%;
+    height: auto;
+
+    @media (max-width: 599px) {
+        max-width: 300px;
+    }
+`
+
 interface Props {
     onClickShowDanielHandler: (bool: boolean) => void;
 }
@@ -12,13 +31,13 @@ function HumbleBeginnings({ onClickShowDanielHandler }: Props) {
     return (
         <Container sx={{ padding: "32px 0"}}>
             <Grid container>
-                <Grid item xs={12} md={4}>
-                    <Stack direction='row' alignItems='center' height='100%'>
-                        <img style={{width: '100%', height: 'auto'}} src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/bonus.png" alt="Bonus" />
+                <Grid item xs={12} sm={4}>
+                    <Stack direction='row' justifyContent='center' alignItems='center' height='100%' >
+                        <StyledBonusImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/bonus.png" alt="Bonus" />
                     </Stack>
                 </Grid>
-                <Grid item xs={12} md={8}>
-                    <Box>
+                <Grid item xs={12} sm={8}>
+                    <Box px={2}>
                         <Typography variant="h2" component='h4' color='text.secondary' mb={2} textAlign='center'>Humble Beginnings</Typography>
 
                         <Typography
@@ -54,15 +73,13 @@ function HumbleBeginnings({ onClickShowDanielHandler }: Props) {
                         </Typography>
 
                         <Stack direction='row' alignItems='center' flexWrap='wrap' px={3}>
-                            <img 
-                                src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/signature.png" alt="Ariel Behar Signature" 
-                                style={{ maxWidth: '300px', height: 'auto' }} />
-
+                            <StyledSignatureImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/signature.png" alt="Ariel Behar Signature" />
+                                
                             <Stack sx={{ width: '50%', marginLeft: 'auto' }}>
                                 <Button
                                     sx={{
                                         backgroundColor: 'custom.blue.main',
-                                        margin: '0 auto',
+                                        margin: '10px auto 0',
                                         padding: "1rem 2.4rem",
                                         boxShadow: 7
                                     }}
