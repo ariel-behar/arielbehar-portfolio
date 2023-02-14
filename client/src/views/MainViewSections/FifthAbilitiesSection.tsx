@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 import skills from '../../data/skills.json'
@@ -44,8 +44,16 @@ const skillTitles: {title: string, proficiencyNum: 1 | 2 | 3}[] = [
 
 ]
 
-function FifthAbilitiesSection() {
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
+
+function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>(null)
+
+	useEffect(() => {
+        loadSectionHandler(6)
+    })
 
 	const onMouseEnterProficiencyTitleHandler = (skillProficiencyNum: 1 | 2 | 3) => {
 		setHoveredProficiency(skillProficiencyNum)

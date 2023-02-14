@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Document from '../../model/Document'
 
@@ -82,9 +82,18 @@ const StyledCertificatesPaper = styled(Paper)`
     }
 `
 
-function SixthDocumentsSection() {
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
+
+function SixthDocumentsSection({ loadSectionHandler }: Props) {
     const [showModal, setShowModal] = useState<boolean>(false)
     const [documentCategory, setDocumentCategory] = useState<Document['category'] | null>(null)
+    
+	useEffect(() => {
+        loadSectionHandler(7)
+    })
+
 
     const onClickImageHandler = (category: Document['category']) => {
         setDocumentCategory(category)

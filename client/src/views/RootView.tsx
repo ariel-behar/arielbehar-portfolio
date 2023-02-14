@@ -6,6 +6,7 @@ import HomeView from './HomeView'
 import styled from '@mui/material/styles/styled'
 
 import Box from '@mui/material/Box'
+import Loader from './Loader'
 
 const MainViewPromise = import('./MainView')
 const MainView = lazy(() => MainViewPromise)
@@ -79,9 +80,7 @@ function RootView() {
             <StyledMainViewBox
                 className={showMainView ? 'reveal' : 'hidden'}
             >
-                <Suspense fallback={'...loading'}>
-
-
+                <Suspense fallback={<Loader />}>
                     <MainView />
                 </Suspense>
             </StyledMainViewBox>

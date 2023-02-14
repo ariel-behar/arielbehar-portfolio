@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import projects from '../../data/projects.json'
 import Project from '../../model/Project'
@@ -11,8 +11,16 @@ import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 
 
-function ThirdProjectsSection() {
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
+
+function ThirdProjectsSection({ loadSectionHandler }: Props) {
 	const [ selectedProject, setSelectedProject ] = useState<Project | null>(null)
+	
+    useEffect(() => {
+        loadSectionHandler(4)
+    })
 
 	const onChangeSelectedProject = (projectId: Project['_id']) => {
 		let currentProject: Project | undefined = (projects as Project[]).find((project: Project) => project._id === Number(projectId))

@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import styled from '@mui/material/styles/styled'
 
 import ContactForm from '../../components/SeventhSectionComponents/ContactForm'
@@ -53,8 +55,16 @@ const StyledSocialIconStack = styled(Stack)`
     }
     
 `
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
 
-function SeventhContactSection() {
+function SeventhContactSection({ loadSectionHandler }: Props) {
+        
+	useEffect(() => {
+        loadSectionHandler(8)
+    })
+
     return (
         <StyledSectionBox component='section' id='seventh-section' py={4} > 
             <Container>

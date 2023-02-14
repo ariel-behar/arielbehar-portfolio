@@ -1,6 +1,10 @@
+import { useEffect } from 'react';
+
 import { v4 as uuidv4 } from 'uuid';
 
 import languages from '../../data/languages.json'
+
+import FlagCard from '../../components/MainViewComponents/FlagCard'
 
 import styled from '@mui/material/styles/styled'
 
@@ -8,8 +12,6 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import FlagCard from '../../components/MainViewComponents/FlagCard'
-import { spacing } from '@mui/system';
 
 const StyledBox = styled(Box)`
     background-color: ${({ theme }) => theme.palette.custom.black.main};
@@ -21,8 +23,16 @@ const StyledBox = styled(Box)`
 
     text-shadow: 1px 1px 7px #000;
 `
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
 
-function SecondAboutSection() {
+function SecondAboutSection({ loadSectionHandler }: Props) {
+
+    useEffect(() => {
+        loadSectionHandler(3)
+    })
+
     return (
         <StyledBox
             component='section'

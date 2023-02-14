@@ -2,6 +2,7 @@ import Box from "@mui/material/Box"
 import Stack from "@mui/material/Stack"
 import styled from "@mui/material/styles/styled"
 import Typography from "@mui/material/Typography"
+import { useEffect } from "react"
 
 const StyledBox = styled(Box)`
     background: rgb(64,150,238);
@@ -21,7 +22,15 @@ const StyledStack = styled(Stack)`
     background-repeat: no-repeat;
 `
 
-function FirstTitleSection() {
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
+
+function FirstTitleSection({ loadSectionHandler }: Props) {
+    useEffect(() => {
+        loadSectionHandler(2)
+    })
+
     return (
         <StyledBox component='section' id='first-section' >
 

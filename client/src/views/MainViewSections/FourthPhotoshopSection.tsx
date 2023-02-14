@@ -8,6 +8,7 @@ import styled from "@mui/material/styles/styled"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
+import { useEffect } from "react"
 
 const StyledBox = styled(Box)`
     border: 2px solid #2e2e2e;
@@ -19,8 +20,15 @@ const StyledBox = styled(Box)`
 	height: 100%;
 `
 
+interface Props {
+    loadSectionHandler: (sectionNum: number) => void
+}
 
-function FourthPhotoshopSection() {
+function FourthPhotoshopSection({ loadSectionHandler }: Props) {
+	useEffect(() => {
+        loadSectionHandler(5)
+    })
+
 	return (
 		<Grid container spacing={{md: 2}} py={7}>
 			<Grid item xs={12} md={6} px={{md: 2}}>
