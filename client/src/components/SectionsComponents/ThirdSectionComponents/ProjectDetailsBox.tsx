@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-import Project from "../../model/Project"
+import Project from "../../../model/Project"
 import ProjectCard from "./ProjectCard"
 
 import styled from "@mui/material/styles/styled"

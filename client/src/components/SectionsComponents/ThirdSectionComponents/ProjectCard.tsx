@@ -2,7 +2,7 @@ import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import Project from '../../model/Project'
+import Project from '../../../model/Project'
 
 interface Props {
     project: Project | null,

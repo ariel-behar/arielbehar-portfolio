@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-import Project from "../../model/Project"
-import Modal from "../Modal"
+import Project from "../../../model/Project"
+import Modal from "../../Modal/Modal"
 
 import Link from "@mui/material/Link"
 import Stack from "@mui/material/Stack"

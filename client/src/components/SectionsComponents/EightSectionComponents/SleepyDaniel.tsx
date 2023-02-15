@@ -1,4 +1,4 @@
-import danielProject from '../../data/danielProject.json'
+import danielProject from '../../../data/danielProject.json'
 
 import styled from "@mui/material/styles/styled"
 

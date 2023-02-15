@@ -1,4 +1,4 @@
-import Document from "../model/Document"
+import Document from "../../model/Document"
 
 import DialogContentText from '@mui/material/DialogContentText'
 import Link from '@mui/material/Link'

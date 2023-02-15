@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import styled from '@mui/material/styles/styled'
 
 import Box from '@mui/material/Box'
-import HumbleBeginnings from '../../components/EightSectionComponents/HumbleBeginnings'
-import SleepyDaniel from '../../components/EightSectionComponents/SleepyDaniel'
+import HumbleBeginnings from '../../components/SectionsComponents/EightSectionComponents/HumbleBeginnings'
+import SleepyDaniel from '../../components/SectionsComponents/EightSectionComponents/SleepyDaniel'
 
 const StyledSectionBox = styled(Box)`
     background: rgb(180,180,180);

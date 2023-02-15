@@ -12,8 +12,8 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import Chip from '../../components/FifthSectionComponents/Chip'
-import ProficiencyTitle from '../../components/FifthSectionComponents/ProficiencyTitle';
+import Chip from '../../components/SectionsComponents/FifthSectionComponents/Chip'
+import ProficiencyTitle from '../../components/SectionsComponents/FifthSectionComponents/ProficiencyTitle';
 
 const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
 	color: ${(({ theme }) => theme.palette.text.muted.light)};

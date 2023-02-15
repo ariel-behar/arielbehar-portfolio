@@ -3,8 +3,8 @@ import styled from "@mui/material/styles/styled"
 import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 
-import mockupProjects from '../../data/mockupProjects.json'
-import Project from "../../model/Project";
+import mockupProjects from '../../../data/mockupProjects.json'
+import Project from "../../../model/Project";
 import MockupProjectCarouselSlide from "./MockupProjectCarouselSlide";
 
 const StyledCarousel = styled(Carousel)`

@@ -1,4 +1,4 @@
-import getChipColor from "../../utils/getChipColor"
+import getChipColor from "../../../utils/getChipColor"
 
 import styled from "@mui/material/styles/styled"
 

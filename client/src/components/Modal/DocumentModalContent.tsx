@@ -1,6 +1,6 @@
-import Document from "../model/Document"
+import Document from "../../model/Document"
 
-import documents from '../data/documents.json'
+import documents from '../../data/documents.json'
 
 import styled from "@mui/material/styles/styled"
 

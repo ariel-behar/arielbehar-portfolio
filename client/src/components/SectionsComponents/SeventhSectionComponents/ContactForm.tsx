@@ -11,7 +11,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import MailIcon from '@mui/icons-material/Mail';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CreateIcon from '@mui/icons-material/Create';
-import contactFormSchema from '../../validations/contactFormSchema';
+import contactFormSchema from '../../../validations/contactFormSchema';
 import styled from '@mui/material/styles/styled';
 
 const StyledTextField = styled(TextField)`

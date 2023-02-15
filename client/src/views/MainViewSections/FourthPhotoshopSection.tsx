@@ -1,6 +1,6 @@
 
-import MockupProjectsCarousel from "../../components/FourthSectionComponents/MockupProjectsCarousel"
-import Television from "../../components/FourthSectionComponents/Television"
+import MockupProjectsCarousel from "../../components/SectionsComponents/FourthSectionComponents/MockupProjectsCarousel"
+import Television from "../../components/SectionsComponents/FourthSectionComponents/Television"
 
 
 import styled from "@mui/material/styles/styled"

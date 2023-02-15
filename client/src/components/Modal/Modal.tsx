@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 
-import Project from '../model/Project';
-import { Partial } from '../types/common-types';
+import Project from '../../model/Project';
+import { Partial } from '../../types/common-types';
 
 import styled from '@mui/material/styles/styled';
 import { TransitionProps } from '@mui/material/transitions';
@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
 import ProjectModalContent from './ProjectModalContent';
-import Document from '../model/Document';
+import Document from '../../model/Document';
 import DocumentModalContent from './DocumentModalContent';
 
 const Transition = forwardRef(function Transition(
