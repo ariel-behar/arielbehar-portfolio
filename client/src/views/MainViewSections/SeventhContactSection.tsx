@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import styled from '@mui/material/styles/styled'
 
@@ -18,7 +18,7 @@ const StyledSectionBox = styled(Box)`
     background-position: right center;
 `
 
-const StyledDarkBox = styled(Box)`
+const StyledDarkStack = styled(Stack)`
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 `
@@ -60,34 +60,46 @@ interface Props {
 }
 
 function SeventhContactSection({ loadSectionHandler }: Props) {
-        
-	useEffect(() => {
+    const [formSubmitSuccess, setFormSubmitSuccess] = useState<boolean>(false)
+
+    useEffect(() => {
         loadSectionHandler(8)
     })
 
+    const formSubmitSuccessHandler = (bool: boolean) => {
+        setFormSubmitSuccess(bool)
+    }
+
+
     return (
-        <StyledSectionBox component='section' id='seventh-section' py={4} > 
+        <StyledSectionBox component='section' id='seventh-section' py={4} >
             <Container>
-                <Grid container spacing={{xs: 2, md: 0}}>
+                <Grid container spacing={{ xs: 2, md: 0 }}>
                     <Grid item xs={12} md={7} lg={6}>
-                        <StyledDarkBox px={3} pb={2}>
+                        <StyledDarkStack px={3} pb={2} minHeight='392px' direction='column'>
                             <Stack direction='row' position='relative' justifyContent='center' alignItems='center' minHeight='120px'>
                                 <StyledLogoImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png" alt="logo" />
                                 <Typography variant='h4' component='h5' color='text.secondary'>CONTACT ME</Typography>
                             </Stack>
 
-                            <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>Remarks? Comments? Suggestions? Need a website done or just saying "hi"? Leave your input below and you'll get a response from me within the next 24 hours</Typography>
-
-                            <ContactForm />
-
-                        </StyledDarkBox>
-
+                            {
+                                !formSubmitSuccess
+                                    ? <>
+                                        <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>Remarks? Comments? Suggestions? Need a website done or just saying "hi"? Leave your input below and you'll get a response from me within the next 24 hours</Typography>
+                                        <ContactForm formSubmitSuccessHandler={formSubmitSuccessHandler} />
+                                    </>
+                                    : <Stack direction='column' justifyContent='center' alignItems='center' pt={4} spacing={2}>
+                                        <Typography variant='h3' component='p' textAlign='center' color='white'>Thank you!</Typography>
+                                        <Typography variant='h5' component='p' textAlign='center' color='success.light'>Your form has successfully been submitted!</Typography>
+                                    </Stack>
+                            }
+                        </StyledDarkStack>
                     </Grid>
 
                     <Grid item xs={12} md={1} lg={2}></Grid>
 
                     <Grid item xs={12} md={4}>
-                        <StyledDarkBox p={4} >
+                        <StyledDarkStack p={4} >
                             <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' mb={3}>FIND ME ON</Typography>
 
                             <StyledSocialIconStack direction='row' justifyContent='space-evenly' mb={3}>
@@ -103,7 +115,7 @@ function SeventhContactSection({ loadSectionHandler }: Props) {
 
                             <Typography variant='body1' component='p' color='text.secondary' textAlign='center' mb={3}>ariel.behar@hotmail.com</Typography>
 
-                        </StyledDarkBox>
+                        </StyledDarkStack>
                     </Grid>
                 </Grid>
             </Container>

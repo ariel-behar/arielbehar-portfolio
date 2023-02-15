@@ -57,4 +57,4 @@ router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     });
 }));
 export default router;
-//# sourceMappingURL=form.controller.js.map
+//# sourceMappingURL=formController.js.map

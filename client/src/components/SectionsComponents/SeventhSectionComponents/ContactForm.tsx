@@ -1,6 +1,11 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import FormData from '../../../model/FormData';
+import contactFormSchema from '../../../validations/contactFormSchema';
+import * as formService from '../../../services/formService'
+import styled from '@mui/material/styles/styled';
+
 import Box from "@mui/material/Box"
 import TextField from '@mui/material/TextField'
 import Stack from '@mui/material/Stack'
@@ -11,8 +16,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import MailIcon from '@mui/icons-material/Mail';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CreateIcon from '@mui/icons-material/Create';
-import contactFormSchema from '../../../validations/contactFormSchema';
-import styled from '@mui/material/styles/styled';
+
 
 const StyledTextField = styled(TextField)`
 	input, textarea, label.Mui-error, label.Mui-focused ,label.Mui-error span {
@@ -23,15 +27,11 @@ const StyledTextField = styled(TextField)`
 		color: ${(({theme}) => theme.palette.text.muted.light)};
 	}
 `
-
-interface FormData {
-	name: string,
-	email: string,
-	subject: string,
-	message: string
+interface Props {
+	formSubmitSuccessHandler: (bool: boolean) => void
 }
 
-function ContactForm() {
+function ContactForm({formSubmitSuccessHandler}:Props ) {
 	const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm<FormData>({
 		mode: 'onBlur',
 		resolver: yupResolver(contactFormSchema),
@@ -43,12 +43,23 @@ function ContactForm() {
 		}
 	});
 
-	const onFormSubmit = (data: FormData, e: React.BaseSyntheticEvent<object, any, any> | undefined) => {
+	const onFormSubmit = async (data: FormData, e: React.BaseSyntheticEvent<object, any, any> | undefined) => {
 		e?.preventDefault()
 
 		const {name, email, subject, message } = data;
 
-		// Need to handle form
+		try {
+			let formSubmissionResponse = await formService.submit({name, email, subject, message})
+			let formSubmissionData = await formSubmissionResponse.json();
+
+			if(formSubmissionData.success) {
+				formSubmitSuccessHandler(true)
+			}
+
+			console.log('formSubmissionData:', formSubmissionData)
+		} catch(err) {
+
+		}
 	}
 
 	return (

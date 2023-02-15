@@ -50,7 +50,7 @@ router.post('/', async (req: Request, res: Response) => {
             console.log(err);
         } else {
             console.log('Message sent: %s', info.messageId);
-            res.send({ok: true})
+            res.status(200).json({success: success})
         }
     });
 })

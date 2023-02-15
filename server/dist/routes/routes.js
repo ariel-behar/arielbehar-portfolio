@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import formController from '../controllers/form.controller.js';
+import formController from '../controllers/formController.js';
 const router = Router();
 router.use('/form', formController);
 export default router;
