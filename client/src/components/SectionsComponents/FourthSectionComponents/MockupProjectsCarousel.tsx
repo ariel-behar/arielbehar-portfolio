@@ -80,7 +80,7 @@ function MockupProjectsCarousel() {
 				showDots={true}
 				responsive={responsive}
 				infinite={true}
-				// autoPlay={true}
+				autoPlay={true}
 				autoPlaySpeed={4000}
 			>
 				{

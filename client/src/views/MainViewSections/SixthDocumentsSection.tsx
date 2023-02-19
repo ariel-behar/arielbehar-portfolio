@@ -59,7 +59,7 @@ const StyledResumePaper = styled(Paper)`
     background: linear-gradient(45deg, rgba(135,219,135,1) 0%, rgba(92,184,92,1) 100%);
 
     img {
-        transform: rotateX(20deg) rotateY(20deg) scale(0.8);
+        transform: rotateX(15deg) rotateY(15deg) scale(0.8);
 
     }
 `
@@ -69,7 +69,7 @@ background: rgb(116, 185, 255);
     background: linear-gradient(-45deg, rgb(148, 202, 250) 0%, rgba(64,150,238,1) 100%);
 
     img {
-        transform: scale(0.7);
+        transform: scale(0.73);
     }
 `
 
@@ -78,7 +78,7 @@ const StyledCertificatesPaper = styled(Paper)`
     background: linear-gradient(-45deg, rgba(251,202,133,1) 0%, rgba(240,173,78,1) 100%);
 
     img {
-        transform: rotateX(20deg) rotateY(-20deg) scale(0.8);
+        transform: rotateX(15deg) rotateY(-15deg) scale(0.8);
     }
 `
 
@@ -118,14 +118,14 @@ function SixthDocumentsSection({ loadSectionHandler }: Props) {
                             <StyledResumePaper elevation={10} className='document-box'>
                                 <Typography variant="h4" component='h4' color='text.secondary'>Résumé</Typography>
 
-                                <img onClick={() => onClickImageHandler('resume')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/resume-onepage.jpg' alt='Resume' />
+                                <img onClick={() => onClickImageHandler('resume')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/resume/resume1.jpg' alt='Resume' />
                             </StyledResumePaper>
                         </Grid>
                         <Grid item sm={4}>
                             <StyledReferencesPaper elevation={10} className='document-box'>
                                 <Typography variant="h4" component='h4' color='text.secondary'>References</Typography>
 
-                                <img onClick={() => onClickImageHandler('reference')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/recommendation-letter-visual-edge.jpg' alt='Reference' />
+                                <img onClick={() => onClickImageHandler('reference')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/reference/recommendation-letter-visual-edge.jpg' alt='Reference' />
                             </StyledReferencesPaper>
                         </Grid>
 
@@ -133,7 +133,7 @@ function SixthDocumentsSection({ loadSectionHandler }: Props) {
                             <StyledCertificatesPaper elevation={10} className='document-box'>
                                 <Typography variant="h4" component='h4' color='text.secondary'>Certificates</Typography>
 
-                                <img onClick={() => onClickImageHandler('certificate')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/softuni-react.jpg' alt='Reference' />
+                                <img onClick={() => onClickImageHandler('certificate')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/certificate/softuni-react.jpg' alt='Reference' />
                             </StyledCertificatesPaper>
                         </Grid>
                     </Grid>

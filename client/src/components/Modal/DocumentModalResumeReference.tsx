@@ -15,7 +15,7 @@ function DocumentModalResumeReference({documentCategory, filteredDocuments}:Prop
         <>
             {
                 (filteredDocuments as Document[]).map((document: Document) => {
-                    return <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/${document.image}`} alt={document.title} />
+                    return <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/${documentCategory}/${document.image}`} alt={document.title} />
                 })
             }
 

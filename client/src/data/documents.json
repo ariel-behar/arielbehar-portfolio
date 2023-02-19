@@ -2,13 +2,27 @@
     "resume": [{
         "_id": 1,
         "title": "Résumé - Ariel Behar",
-        "image": "resume-onepage.jpg",
+        "image": "resume1.jpg",
+        "category": "resume",
+        "firm": "",
+        "creator": "Ariel Behar"
+    }, {
+        "_id": 2,
+        "title": "Résumé - Ariel Behar",
+        "image": "resume2.jpg",
         "category": "resume",
         "firm": "",
         "creator": "Ariel Behar"
     }],
     "reference": [{
             "_id": 1,
+            "title": "Recommendation Letter - MSC 2",
+            "image": "recommendation-letter-msc2.jpg",
+            "category": "reference",
+            "firm": "MSC",
+            "creator": "Liran Neduva"
+        }, {
+            "_id": 2,
             "title": "Recommendation Letter - Visual Edge Design",
             "image": "recommendation-letter-visual-edge.jpg",
             "category": "reference",
@@ -16,12 +30,36 @@
             "creator": "Siouxie Boshoff"
         },
         {
-            "_id": 2,
+            "_id": 3,
             "title": "Recommendation Letter - Bovsi Studios",
-            "image": "recommendation-letter.jpg",
+            "image": "recommendation-letter-bovsi.jpg",
             "category": "reference",
             "firm": "Bovsi Studios",
             "creator": "Matthew A Parks"
+        },
+        {
+            "_id": 4,
+            "title": "Recommendation Letter - MSC 1",
+            "image": "recommendation-letter-msc1.jpg",
+            "category": "reference",
+            "firm": "Mano Security",
+            "creator": "Tomer Mazuz"
+        },
+        {
+            "_id": 5,
+            "title": "Recommendation Letter - The Venus Project",
+            "image": "recommendation-letter-tvp.jpg",
+            "category": "reference",
+            "firm": "The Venus Project",
+            "creator": "Michal Ziaja"
+        },
+        {
+            "_id": 6,
+            "title": "Recommendation Letter - eType",
+            "image": "recommendation-letter-etype.jpg",
+            "category": "reference",
+            "firm": "eType Omnitech",
+            "creator": "Hilla Erez"
         }
     ],
     "certificate": [{
