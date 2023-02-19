@@ -19,15 +19,15 @@
         "order": 1,
         "title": "Ariel Behar Portfolio",
         "image": "portfolio.jpg",
-        "description": "My personal portfolio. Version 2.0",
-        "myRole": "Although my original site was created in 2017, this version has undergone a thorough \"behind the scenes\" make-over. For one thing, Node & Express are now handling the back-end part. I've further incorporated various element generators throughout, resulting in the code optimization by half, while also offering the original functionalities and boosting overall performance.",
-        "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Node.js", "Express"],
-        "month": "May",
-        "year": 2020,
+        "description": "My personal portfolio. Version 3.0",
+        "myRole": "Although my original site was created in 2017, this version has undergone a thorough make-over with React. I've also made use of Typescript, which has contributed to the creation of an easily manageable codebase. All related assets have also been optimized, which has has resulted in a more pleasnt UX and boosted overall performance.",
+        "technologies": ["React", "TypeScript", "Material UI", "Node.js", "Express"],
+        "month": "February",
+        "year": 2023,
         "url": "http://www.arielbehar.com",
         "type": "Bootstrap",
         "category": "real",
-        "notes": [ "The site you're currently on" ]
+        "notes": [{ "note": "The site you are currently visiting" }  ]
     },
     {
         "_id": 3,
