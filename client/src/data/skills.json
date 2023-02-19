@@ -99,7 +99,7 @@
         "skill": "Illustrator",
         "proficiency": 3,
         "image": "illustrator.png",
-        "displaySkill": false
+        "displaySkill": true
     },
     {
         "skill": "Premiere",

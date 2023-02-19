@@ -94,7 +94,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{xs: 'none', md: 'block'}}>My Abilities</Typography>
 
 					<Stack direction='row' flexWrap='wrap' justifyContent='center'>
-						{skills.map((skill: Skill) => <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
+						{skills.map((skill: Skill) => skill.displaySkill === true && <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
 					</Stack>
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
