@@ -101,20 +101,12 @@ function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }
 			swipeable={false}
 			thumbWidth={166}
 		>
-			{/* {
-				selectedProject === null
-					? <div key={0}>
-						<img src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/slides/site-plan.jpg' alt='Site Plan' />
-					</div>
-					: ''
-			} */}
-
 			{
 				projects.map(project => {
 					return (
 						<div key={project._id} data-project-id={project._id} data-project-url={project.url}>
 							<img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${project.image}`} alt={`${project.title} || ${project._id}`} />
-							<p className="legend">{project.title}</p>
+							{/* <p className="legend">{project.title}</p> */}
 						</div>
 					)
 				})

@@ -1,8 +1,11 @@
+import { v4 as uuidv4 } from 'uuid';
+
+import Project from '../../../model/Project'
+
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
-import Project from '../../../model/Project'
 
 interface Props {
     project: Project | null,
@@ -21,7 +24,7 @@ function ProjectDetailsBox({ project, projectCategory, hideTitle }: Props) {
             {
                 projectCategory === 'real'
                 && project?.notes && project?.notes.map(note => {
-                    return <Typography variant='body1' component='p' color='text.muted.main' mt={0}>*{note.note}</Typography>
+                    return <Typography key={uuidv4()} variant='body1' component='p' color='text.muted.main' mt={0}>*{note.note}</Typography>
                 })
             }
 
@@ -30,7 +33,7 @@ function ProjectDetailsBox({ project, projectCategory, hideTitle }: Props) {
 
             <Box>
                 <Typography mt={2} variant='h6' component='h6' color='text.secondary'>Technologies Used:</Typography>
-                {project?.technologies && project?.technologies.map(technology => <Typography variant='body1' component='p' color='text.tertiary' display='inline-block'>•&nbsp;{technology}&nbsp;</Typography>)}
+                {project?.technologies && project?.technologies.map(technology => <Typography key={uuidv4()} variant='body1' component='p' color='text.tertiary' display='inline-block'>•&nbsp;{technology}&nbsp;</Typography>)}
             </Box>
 
             <Typography mt={1} variant='h6' component='h6' color='text.secondary'>Project Launched in:</Typography>
@@ -49,6 +52,7 @@ function ProjectDetailsBox({ project, projectCategory, hideTitle }: Props) {
                         component='p'
                         color='text.muted.main'
                         mt={1}
+                        key={uuidv4()}
                     >
                         *{note.note}&nbsp;
                         {note.hasLink && <Link href={note.hasLink} target='_blank'>here</Link>}

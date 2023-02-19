@@ -82,7 +82,7 @@ function Navigation({ showMainView }: Props) {
                         <ScrollLink className="nav-link" to="fifth-section" smooth={true} offset={-30} duration={500}>SKILLS</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
-                        <ScrollLink className="nav-link" to="sixth-section" smooth={true} offset={-50} duration={500}>RESUME</ScrollLink>
+                        <ScrollLink className="nav-link" to="sixth-section" smooth={true} offset={0} duration={500}>RESUME</ScrollLink>
                     </ListItem>
                     <ListItem className="nav-item">
                         <ScrollLink className="nav-link" to="seventh-section" smooth={true} offset={0} duration={500}>CONTACT</ScrollLink>

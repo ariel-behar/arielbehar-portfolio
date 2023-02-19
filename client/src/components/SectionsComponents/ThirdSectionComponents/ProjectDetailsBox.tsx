@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { v4 as uuidv4 } from 'uuid';
 
 import Project from "../../../model/Project"
 import ProjectCard from "./ProjectCard"
@@ -16,18 +17,20 @@ const StyledProjectBox = styled(Box)`
 	height: 100%;
 `
 interface Props {
-	selectedProject: Project | null
+	selectedProject: Project | null,
 }
 
 function ProjectDetailsBox({ selectedProject }: Props) {
+
 	return (
 		<StyledProjectBox>
 			{
 				selectedProject
-					? <ProjectCard project={(selectedProject as Project)} projectCategory='real'/>
+					? <ProjectCard project={(selectedProject as Project)} projectCategory='real' />
 					: (
 						<Stack direction='column' justifyContent='center' alignItems='center' height='100%'>
 							<Typography
+								key={uuidv4()}
 								variant='h4'
 								component={motion.h5}
 								textAlign='center'

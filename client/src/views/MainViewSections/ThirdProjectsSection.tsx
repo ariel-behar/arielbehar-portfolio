@@ -17,10 +17,10 @@ interface Props {
 
 function ThirdProjectsSection({ loadSectionHandler }: Props) {
 	const [ selectedProject, setSelectedProject ] = useState<Project | null>(null)
-	
-    useEffect(() => {
+
+	useEffect(() => {
         loadSectionHandler(4)
-    },[loadSectionHandler])
+    }, [loadSectionHandler])
 
 	const onChangeSelectedProject = (projectId: Project['_id']) => {
 		let currentProject: Project | undefined = (projects as Project[]).find((project: Project) => project._id === Number(projectId))
