@@ -64,7 +64,7 @@ function SeventhContactSection({ loadSectionHandler }: Props) {
 
     useEffect(() => {
         loadSectionHandler(8)
-    })
+    },[loadSectionHandler])
 
     const formSubmitSuccessHandler = (bool: boolean) => {
         setFormSubmitSuccess(bool)

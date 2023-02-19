@@ -53,7 +53,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 
 	useEffect(() => {
         loadSectionHandler(6)
-    })
+    },[loadSectionHandler])
 
 	const onMouseEnterProficiencyTitleHandler = (skillProficiencyNum: 1 | 2 | 3) => {
 		setHoveredProficiency(skillProficiencyNum)
@@ -90,6 +90,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 						</Stack>
 					</Stack>
 				</Grid>
+				
 				<Grid item xs={12} sm={12} md={10} >
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{xs: 'none', md: 'block'}}>My Abilities</Typography>
 

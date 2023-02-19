@@ -27,7 +27,7 @@ interface Props {
 function FourthPhotoshopSection({ loadSectionHandler }: Props) {
 	useEffect(() => {
         loadSectionHandler(5)
-    })
+    },[loadSectionHandler])
 
 	return (
 		<Grid container spacing={{md: 2}} py={7}>

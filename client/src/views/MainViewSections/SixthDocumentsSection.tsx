@@ -92,7 +92,7 @@ function SixthDocumentsSection({ loadSectionHandler }: Props) {
     
 	useEffect(() => {
         loadSectionHandler(7)
-    })
+    },[loadSectionHandler])
 
 
     const onClickImageHandler = (category: Document['category']) => {

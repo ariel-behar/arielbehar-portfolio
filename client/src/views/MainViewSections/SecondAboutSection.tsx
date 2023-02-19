@@ -31,7 +31,7 @@ function SecondAboutSection({ loadSectionHandler }: Props) {
 
     useEffect(() => {
         loadSectionHandler(3)
-    })
+    },[loadSectionHandler])
 
     return (
         <StyledBox

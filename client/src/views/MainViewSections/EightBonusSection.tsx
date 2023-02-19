@@ -22,7 +22,7 @@ function EightBonusSection({ loadSectionHandler }: Props) {
 
     useEffect(() => {
         loadSectionHandler(9)
-    })
+    },[loadSectionHandler])
 
 
     const onClickShowDanielHandler = (bool: boolean) => {

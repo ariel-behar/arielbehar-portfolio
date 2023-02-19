@@ -20,11 +20,10 @@ function ThirdProjectsSection({ loadSectionHandler }: Props) {
 	
     useEffect(() => {
         loadSectionHandler(4)
-    })
+    },[loadSectionHandler])
 
 	const onChangeSelectedProject = (projectId: Project['_id']) => {
 		let currentProject: Project | undefined = (projects as Project[]).find((project: Project) => project._id === Number(projectId))
-		console.log('currentProject:', currentProject)
 
 		if(currentProject) {
 			setSelectedProject(currentProject)

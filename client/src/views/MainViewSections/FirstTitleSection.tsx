@@ -29,7 +29,7 @@ interface Props {
 function FirstTitleSection({ loadSectionHandler }: Props) {
     useEffect(() => {
         loadSectionHandler(2)
-    })
+    },[loadSectionHandler])
 
     return (
         <StyledBox component='section' id='first-section' >
