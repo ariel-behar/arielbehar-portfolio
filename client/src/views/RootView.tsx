@@ -71,11 +71,11 @@ function RootView() {
 
 
             {/* Delete the below BOX when done with the DEVELOPMENT PROCESS. Leave only the HomeView */}
-            {/* <Box sx={showMainView ? { opacity: 0 } : {}} > */}
+            <Box sx={showMainView ? { opacity: 0 } : {}} >
                 <StyledHomeViewBox className={showMainView ? 'hide' : ''}>
                     <HomeView showMainViewHandler={showMainViewHandler} />
                 </StyledHomeViewBox>
-            {/* </Box> */}
+            </Box>
 
             <StyledMainViewBox
                 className={showMainView ? 'reveal' : 'hidden'}

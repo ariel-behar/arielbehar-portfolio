@@ -57,7 +57,7 @@ function HomeView({ showMainViewHandler }: Props) {
                         component={motion.button}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 2.5, delay: 3 }}
+                        transition={{ duration: 1, delay: 5 }}
 
                     >
                         EXPLORE SITE

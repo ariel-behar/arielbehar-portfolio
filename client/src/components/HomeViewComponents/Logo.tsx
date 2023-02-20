@@ -13,7 +13,7 @@ function Logo() {
             alt='Ariel Behar Logo'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2.5, delay: 3 }}
+            transition={{ duration: 2, delay: 2 }}
         />
     )
 }
