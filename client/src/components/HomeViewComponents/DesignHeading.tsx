@@ -20,6 +20,7 @@ function DesignHeading() {
         >
             <StyledTypography
                 variant="h1"
+                textAlign='center'
             >
                 ARIEL BEHAR WEB DESIGN
             </StyledTypography>
