@@ -29,7 +29,7 @@ const Transition = forwardRef(function Transition(
 });
 
 const StyledDialogTitle = styled(DialogTitle)`
-    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg');
+    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/dark-pattern.jpg');
     background-repeat: repeat;
 
     position: relative;
@@ -53,7 +53,7 @@ const StyledDialogTitle = styled(DialogTitle)`
 `
 
 const StyledDialogActions = styled(DialogActions)`
-    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/pattern1.jpg');
+    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/dark-pattern.jpg');
     background-repeat: repeat;
 
     border-top: 1px solid white;
