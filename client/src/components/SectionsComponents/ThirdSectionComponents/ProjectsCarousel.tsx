@@ -5,48 +5,72 @@ import Project from "../../../model/Project"
 import styled from '@mui/material/styles/styled';
 
 const StyledCarousel = styled(Carousel)`
-	.carousel.carousel-slider {
-		margin-bottom: 20px;
-	}
-
-	li.slide {
-		&.selected {
-			cursor: pointer;
+	.carousel {
+		&.carousel-slider {
+			margin-bottom: 20px;
 		}
-	}
-	ul.thumbs {
-		padding-left: 0;
-		li.thumb {
-			opacity: 0.7;
-			
-			cursor: pointer;
-			border: none;
-			
-			&:hover{
-				border: none;
-				opacity: 1;
-				transform: scale(1.1);
-			}
-
+		
+		li.slide {
 			&.selected {
-				transform: scale(1.1);
-				opacity: 1;
-				border: none;
+				cursor: pointer;
+			}
+		}
+		
+		.thumbs-wrapper {
+			position: relative;
+			margin: 0;
+
+			button.control-arrow {
+				background-color: rgba(0,0,0,1);
+				opacity: 0.7;
+				height: 100%;
+				top: 0;
+				margin-top: 0;
+				
+				&:hover {
+					opacity: 1;
+				} 
+ 
+				&::before {
+					transform: scale(1.2);
+					display: inline-block;
+					animation: pulse 1s infinite!important;
+				}
+			}
+
+			ul.thumbs {
+				padding-left: 0;
+				li.thumb {
+					opacity: 0.7;
+					
+					cursor: pointer;
+					border: none;
+					
+					&:hover{
+						border: none;
+						opacity: 1;
+						transform: scale(1.1);
+					}
+
+					&.selected {
+						transform: scale(1.1);
+						opacity: 1;
+						border: none;
+					}
+				}
 			}
 		}
 	}
-	
 
-	.carousel .thumbs-wrapper {
-		position: relative;
-		margin: 0;
-
-		button.control-arrow {
-			background-color: rgba(0,0,0,1);
-			height: 100%;
-			top: 0;
-			margin-top: 0;
-
+	@keyframes pulse {
+		0% {
+			transform: scale(1.2);
+		}
+		50% {
+			transform: scale(1.5);
+		}
+		100% {
+			transform: scale(1.2);
 		}
 	}
 

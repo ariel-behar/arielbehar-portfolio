@@ -26,21 +26,21 @@ router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     `;
     const transporter = nodemailer.createTransport({
         service: 'hotmail',
-        host: 'smtp-mail.outlook.com',
+        host: 'smtp.live.com',
         port: 587,
         secure: false,
         auth: {
-            user: 'archi_bg@hotmail.com',
-            pass: 'tranzistor1224',
+            user: process.env.EMAILFROM,
+            pass: process.env.PASSWORD,
         },
-        from: 'archi_bg@hotmail.com',
+        from: process.env.EMAILFROM,
         tls: {
             rejectUnauthorized: false,
         },
     });
     const options = {
-        from: '"www.arielbehar.com" PORTFOLIO SITE',
-        to: 'ariel.behar@hotmail.com',
+        from: `PORTFOLIO SITE <${process.env.EMAILFROM}>`,
+        to: process.env.EMAILTO,
         subject: 'PORTFOLIO SITE SUBMISSION',
         text: 'PORTFOLIO FORM SUBMISSION',
         html: output,
@@ -48,6 +48,7 @@ router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const info = yield transporter.sendMail(options);
     transporter.verify(function (err, success) {
         if (err) {
+            res.status(500).send({ message: 'An error occurred while attempting to process your message.' });
             console.log(err);
         }
         else {

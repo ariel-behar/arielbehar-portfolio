@@ -16,6 +16,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import MailIcon from '@mui/icons-material/Mail';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import CreateIcon from '@mui/icons-material/Create';
+import { useState } from 'react';
+import Typography from '@mui/material/Typography';
 
 
 const StyledTextField = styled(TextField)`
@@ -32,6 +34,7 @@ interface Props {
 }
 
 function ContactForm({formSubmitSuccessHandler}:Props ) {
+	const [errorDuringProcessing, setErrorDuringProcessing ] = useState<boolean>(false)
 	const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm<FormData>({
 		mode: 'onBlur',
 		resolver: yupResolver(contactFormSchema),
@@ -54,11 +57,12 @@ function ContactForm({formSubmitSuccessHandler}:Props ) {
 
 			if(formSubmissionData.success) {
 				formSubmitSuccessHandler(true)
+				setErrorDuringProcessing(false)
+			} else {
+				setErrorDuringProcessing(true)
 			}
-
-			console.log('formSubmissionData:', formSubmissionData)
-		} catch(err) {
-
+		} catch(err: any) {
+			setErrorDuringProcessing(true)
 		}
 	}
 
@@ -124,6 +128,8 @@ function ContactForm({formSubmitSuccessHandler}:Props ) {
 
 						/>
 					</Stack>
+
+					{ errorDuringProcessing && <Typography variant='body1' component='p' color='error.light' textAlign='center' style={{backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '20px'}}>An error occurred while attempting to process your message.</Typography>}
 
 					<Stack direction='row' justifyContent='center'>
 						<Button
