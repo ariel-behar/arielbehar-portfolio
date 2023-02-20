@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import designMP4 from '../../../assets/video/design.mp4'
 import designWEBM from '../../../assets/video/design.webm'
@@ -35,7 +35,6 @@ const StyledBox = styled(Box)`
         left: 50%;
         z-index: 4;
     }
-
     .tv-image {
         position: absolute;
         top: -20px;
@@ -55,6 +54,11 @@ const StyledBox = styled(Box)`
         color: ${({ theme }) => theme.palette.text.secondary};
     }
 
+    .psdToHtmlPoster-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .tvOn {
         color: ${({ theme }) => theme.palette.custom.green.main};
     }
@@ -67,11 +71,15 @@ const StyledBox = styled(Box)`
 
 function Television() {
     const [isTvOn, setIsTvOn] = useState<boolean>(true)
+    const videoRef = useRef<HTMLVideoElement>(null)
+
+    const onVideoEndedHandler = async (e: React.SyntheticEvent<HTMLVideoElement>) => {
+        videoRef.current?.load()
+    }
 
     const turnTvOnHandler = () => {
         setIsTvOn(true)
     }
-
 
     const turnTvOffHandler = () => {
         setIsTvOn(false)
@@ -79,25 +87,27 @@ function Television() {
 
     return (
         <>
-            <StyledBox sx={{width: {xs: '100%',sm: '80%', md: '100%'}}}>
-                <Box className="tv-background"></Box>
+            <StyledBox sx={{ width: { xs: '100%', sm: '80%', md: '100%' } }}>
+                <Box display={{ xs: 'none', sm: 'none', lg: 'block' }}>
+                    <Box className="tv-background" ></Box>
 
-                <video loop muted autoPlay style={isTvOn ? {} : { opacity: 0 }}>
-                    <source className="embed-responsive-item" src={designMP4} type="video/mp4" />
-                    <source className="embed-responsive-item" src={designWEBM} type="video/webm" />
-                    <source className="embed-responsive-item" src={designOGV} type="video/ogv" />
-                </video>
-                {/* 
-            <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/psd-to-html5.png" alt="PSD TO HTML Poster" className="hidden-md-up img-fluid mb-3 mt-2" /> */}
+                    <video ref={videoRef} autoPlay muted style={isTvOn ? {} : { opacity: 0 }} onEnded={onVideoEndedHandler} poster="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/tv-designer-poster.jpg">
+                        <source className="embed-responsive-item" src={designMP4} type="video/mp4" />
+                        <source className="embed-responsive-item" src={designWEBM} type="video/webm" />
+                        <source className="embed-responsive-item" src={designOGV} type="video/ogv" />
+                    </video>
 
-                <img className='tv-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/tv.png" alt="Television" />
+                    <img className='tv-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/tv.png" alt="Television" />
 
-                <Box className="tv-buttons">
-                    <span onClick={turnTvOnHandler} className={isTvOn ? "tvOn" : ''} >ON </span>|<span className={isTvOn ? "" : 'tvOff'} onClick={turnTvOffHandler}> OFF</span>
+                    <Box className="tv-buttons">
+                        <span onClick={turnTvOnHandler} className={isTvOn ? "tvOn" : ''} >ON </span>|<span className={isTvOn ? "" : 'tvOff'} onClick={turnTvOffHandler}> OFF</span>
+                    </Box>
+                </Box>
+
+                <Box display={{ xs: 'block', sm: 'block', lg: 'none' }} textAlign="center">
+                    <img className='psdToHtmlPoster-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/psd-to-html5.png" alt="PSD TO HTML Poster" />
                 </Box>
             </StyledBox>
-
-
         </>
     )
 }
