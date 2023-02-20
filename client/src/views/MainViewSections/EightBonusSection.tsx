@@ -22,7 +22,7 @@ function EightBonusSection({ loadSectionHandler }: Props) {
 
     useEffect(() => {
         loadSectionHandler(9)
-    },[loadSectionHandler])
+    }, [loadSectionHandler])
 
 
     const onClickShowDanielHandler = (bool: boolean) => {
@@ -37,7 +37,7 @@ function EightBonusSection({ loadSectionHandler }: Props) {
                     : <HumbleBeginnings onClickShowDanielHandler={onClickShowDanielHandler} />
             }
 
-        </StyledSectionBox>
+        </StyledSectionBox >
     )
 }
 
