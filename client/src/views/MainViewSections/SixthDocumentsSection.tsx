@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography'
 import Modal from '../../components/Modal/Modal'
 
 const StyledSectionBox = styled(Box)`
-    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/chalkboard.jpg');
+    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/chalkboard.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

@@ -12,7 +12,7 @@ import Stack from '@mui/material/Stack'
 import Link from '@mui/material/Link'
 
 const StyledSectionBox = styled(Box)`
-    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/phone-blurred.jpg');
+    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/phone-blurred.jpg');
     background-attachment: fixed; 
     background-size: cover;
     background-position: right center;
