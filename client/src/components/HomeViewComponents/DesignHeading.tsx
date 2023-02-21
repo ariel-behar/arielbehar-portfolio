@@ -16,7 +16,7 @@ function DesignHeading() {
             component={motion.div}
             initial={{ opacity: 0, scale: 0.1 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2.5, delay: 2 }}
+            transition={{ type: 'tween', duration: 3.5, delay: 1 }}
         >
             <StyledTypography
                 variant="h1"
