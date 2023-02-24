@@ -29,6 +29,7 @@ const StyledSectionBox = styled(Box)`
         border-radius: 20px;
 
         img {
+            margin-top: 20px;
             transition: 1.5s ease;
             cursor: pointer;
 
@@ -45,9 +46,10 @@ const StyledSectionBox = styled(Box)`
 
     @media (max-width: 1199px) {
         img {
-            transform: initial;
+            transform: none!important;
+            box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.2), -10px -10px 24px 0 rgba(0, 0, 0, 0.2)!important;
             &:hover {
-                transform: initial;
+                transform: none;
               
             }
         }
@@ -60,7 +62,6 @@ const StyledResumePaper = styled(Paper)`
 
     img {
         transform: rotateX(15deg) rotateY(15deg) scale(0.8);
-
     }
 `
 

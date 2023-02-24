@@ -12,6 +12,10 @@ const StyledBox = styled(Box)`
     position: relative;
 
     height: 37vh;
+   
+    @media (max-width: 576px) { 
+        height: 70vh;
+    }
 `
 
 const StyledStack = styled(Stack)`

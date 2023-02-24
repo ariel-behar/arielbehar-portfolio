@@ -74,6 +74,16 @@ const StyledCarousel = styled(Carousel)`
 		}
 	}
 
+	@media (max-width: 499px) { 
+		.thumbs-wrapper {
+			ul.thumbs {
+				li.thumb {
+					width: 120px!important;
+				}
+			}
+		}
+    }
+
 	@media only screen and (min-width: 599px) and ( max-width: 899px) {
 		.carousel {
 			padding: 0 40px
