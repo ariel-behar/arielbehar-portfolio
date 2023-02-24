@@ -59,7 +59,7 @@ const StyledMainViewBox = styled(Box)`
 `
 
 function RootView() {
-    const [showMainView, setShowMainView] = useState<boolean>(false)
+    const [showMainView, setShowMainView] = useState<boolean>(true)
 
     const showMainViewHandler = () => {
         setShowMainView(true)

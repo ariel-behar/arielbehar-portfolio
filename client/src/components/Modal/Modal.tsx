@@ -9,7 +9,6 @@ import { TransitionProps } from '@mui/material/transitions';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 
-import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -18,6 +17,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ProjectModalContent from './ProjectModalContent';
 import Document from '../../model/Document';
 import DocumentModalContent from './DocumentModalContent';
+import Box from '@mui/material/Box';
 
 const Transition = forwardRef(function Transition(
     props: TransitionProps & {
@@ -28,10 +28,11 @@ const Transition = forwardRef(function Transition(
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const StyledDialogTitle = styled(DialogTitle)`
+const StyledDialogTitleBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/dark-pattern.jpg');
     background-repeat: repeat;
 
+    padding: 16px 24px;
     position: relative;
     text-align: center;
     border-bottom: 1px solid white;
@@ -91,14 +92,14 @@ function Modal({ project, documentCategory, showModal, handleCloseModal }: Props
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
-            <StyledDialogTitle id="alert-dialog-title">
+            <StyledDialogTitleBox id="alert-dialog-title">
                 <CloseIcon className='close-icon' onClick={() => handleCloseModal()} />
 
-                {project && <Typography variant='h5' component='h5'>{project?.title}</Typography>}
+                {project && <Typography variant='h5'>{project?.title}</Typography>}
 
-                {documentCategory && <Typography variant='h5' component='h5'>{getDocumentTitle(documentCategory)}</Typography>}
+                {documentCategory && <Typography variant='h5'>{getDocumentTitle(documentCategory)}</Typography>}
 
-            </StyledDialogTitle>
+            </StyledDialogTitleBox>
 
             { project && <ProjectModalContent project={project}/> }
 

@@ -1,9 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import Document from "../../model/Document"
 
-import DialogContentText from '@mui/material/DialogContentText'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-
+import Stack from '@mui/material/Stack';
 
 interface Props {
 	documentCategory: Document['category']
@@ -15,14 +16,14 @@ function DocumentModalResumeReference({documentCategory, filteredDocuments}:Prop
         <>
             {
                 (filteredDocuments as Document[]).map((document: Document) => {
-                    return <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/${documentCategory}/${document.image}`} alt={document.title} />
+                    return <img key={uuidv4()} src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/${documentCategory}/${document.image}`} alt={document.title} />
                 })
             }
 
             {
                 documentCategory === 'resume'
                 && <>
-                    <DialogContentText
+                    <Stack
                         id="alert-dialog-description"
                         p={3}
                         px={5}
@@ -34,7 +35,7 @@ function DocumentModalResumeReference({documentCategory, filteredDocuments}:Prop
                             <img style={{ height: '118px', width: 'auto', border: 'none' }} src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/pdf.png" alt="PDF icon" />
                         </Link>
 
-                    </DialogContentText>
+                    </Stack>
                 </>
             }
         </>
