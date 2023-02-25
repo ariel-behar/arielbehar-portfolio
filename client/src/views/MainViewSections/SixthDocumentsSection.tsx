@@ -24,6 +24,7 @@ const StyledSectionBox = styled(Box)`
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-shadow: 1px 1px 5px #245485;
         
         padding: 20px 0;
         border-radius: 20px;
@@ -82,7 +83,6 @@ const StyledCertificatesPaper = styled(Paper)`
         transform: rotateX(15deg) rotateY(-15deg) scale(0.8);
     }
 `
-
 interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
