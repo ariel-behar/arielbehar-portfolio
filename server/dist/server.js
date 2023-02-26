@@ -1,5 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+// import cors from 'cors';
 import express from 'express';
 // import logger from 'morgan/index.js'
 import routes from './routes/routes.js';
