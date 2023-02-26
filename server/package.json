@@ -7,12 +7,13 @@
   "scripts": {
     "dev": "concurrently \"npx tsc -w\" \"nodemon ./dist/server.js\"",
     "start": "node ./dist/server.js",
-    "build": "rimraf dist && npx tsc"
+    "build": "rimraf dist && npx tsc && cp -r src/public dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "copy-files": "^0.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
