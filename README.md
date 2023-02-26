@@ -1,12 +1,7 @@
-# ARIEL BEHAR WEB DESIGN (personal portfolio)
+# ARIEL BEHAR WEB DESIGN
 
-Version 3.0 
-
-## URL
-
+Personal Portfolio - Version 3.0 
 [www.arielbehar.com](www.arielbehar.com)
-
-In the project directory, you can run:
 
 ## Description
 
