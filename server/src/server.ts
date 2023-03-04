@@ -19,8 +19,9 @@ app.use(express.static(path.join(__dirname + '/public')))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-    origin: 'http://www.arielbehar.com/',
-    methods: ['POST']
+    origin: ['http://www.arielbehar.com/', 'https://arielbehar.herokuapp.com/', 'http://localhost:3000', 'http://localhost:3001'],
+    // origin: 'http://www.arielbehar.com/',
+    methods: ['POST', 'GET']
 }));
 
 // app.use(logger('dev'))
