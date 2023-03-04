@@ -1,6 +1,6 @@
 import path from 'path'
 import { fileURLToPath } from 'url';
-// import cors from 'cors';
+import cors from 'cors';
 import express, { Application } from 'express';
 // import logger from 'morgan/index.js'
 
@@ -18,10 +18,10 @@ app.use(express.static(path.join(__dirname + '/public')))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(cors({
-//     origin: 'http://localhost:3000',
-//     methods: ['POST']
-// }));
+app.use(cors({
+    origin: 'http://www.arielbehar.com/',
+    methods: ['POST']
+}));
 
 // app.use(logger('dev'))
 
