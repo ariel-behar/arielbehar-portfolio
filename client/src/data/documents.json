@@ -62,8 +62,17 @@
             "creator": "Hilla Erez"
         }
     ],
-    "certificate": [{
+    "certificate": [
+        {
             "_id": 1,
+            "title": "Three JS Journey - WEBGL development with Three.js and R3F",
+            "image": "threejs-journey.jpg",
+            "category": "certificate",
+            "firm": "THREE JS Journey",
+            "creator": "Bruno Simon"
+        },
+        {
+            "_id": 2,
             "title": "Modis Certificate - Full-Stack React, Express and Typescript Academy",
             "image": "modis-full-stack.jpg",
             "category": "certificate",
@@ -71,7 +80,7 @@
             "creator": "Phillippe Rouvrais"
         },
         {
-            "_id": 2,
+            "_id": 3,
             "title": "SoftUni Certificate - React",
             "image": "softuni-react.jpg",
             "category": "certificate",
@@ -79,7 +88,7 @@
             "creator": "Svetlin Nakov"
         },
         {
-            "_id": 3,
+            "_id": 4,
             "title": "SoftUni Certificate - JS Back-End",
             "image": "softuni-js-backend.jpg",
             "category": "certificate",
@@ -87,7 +96,7 @@
             "creator": "Svetlin Nakov"
         },
         {
-            "_id": 4,
+            "_id": 5,
             "title": "SoftUni Certificate - JS Applications",
             "image": "softuni-js-applications.jpg",
             "category": "certificate",
@@ -95,7 +104,7 @@
             "creator": "Svetlin Nakov"
         },
         {
-            "_id": 5,
+            "_id": 6,
             "title": "SoftUni Certificate - JS Advanced",
             "image": "softuni-js-advanced.jpg",
             "category": "certificate",
@@ -103,7 +112,7 @@
             "creator": "Svetlin Nakov"
         },
         {
-            "_id": 6,
+            "_id": 7,
             "title": "SoftUni Certificate - Programming Fundamentals with JS",
             "image": "softuni-programming-fundamentals.jpg",
             "category": "certificate",
@@ -111,7 +120,7 @@
             "creator": "Svetlin Nakov"
         },
         {
-            "_id": 7,
+            "_id": 8,
             "title": "SoftUni Certificate - HTML & CSS",
             "image": "softuni-html-css.jpg",
             "category": "certificate",
@@ -119,7 +128,7 @@
             "creator": "Svetlin Nakov"
         },
         {
-            "_id": 8,
+            "_id": 9,
             "title": "SoftUni Honorable Mention - Programming Basics",
             "image": "softuni-programming-basics.jpg",
             "category": "certificate",

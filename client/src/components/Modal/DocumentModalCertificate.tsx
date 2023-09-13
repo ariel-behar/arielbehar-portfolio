@@ -12,7 +12,7 @@ function DocumentModalCertificate({ filteredDocuments }: Props) {
         <Grid container spacing={2} p={2}>
             {
                 filteredDocuments.map((document, index) => {
-                    return <Grid key={uuidv4()} item xs={index === 0 || index === filteredDocuments.length - 1 ? 12 : 6} display='flex' flexDirection='column' justifyContent='center'>
+                    return <Grid key={uuidv4()} item xs={index === 0 || index == 1 || index === filteredDocuments.length - 1 ? 12 : 6} display='flex' flexDirection='column' justifyContent='center'>
                         <img className='certificate-image' src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/certificate/${document.image}`} alt={document.title} />
                     </Grid>
                 })
