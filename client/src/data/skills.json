@@ -90,9 +90,39 @@
         "displaySkill": true
     },
     {
+        "skill": "Three JS",
+        "proficiency": 2,
+        "image": "three-js.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "R3F",
+        "proficiency": 2,
+        "image": "react-three-fiber.png",
+        "displaySkill": true
+    },
+    {
         "skill": "TypeScript",
         "proficiency": 2,
         "image": "typescript.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Shopify",
+        "proficiency": 2,
+        "image": "shopify.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Liquid",
+        "proficiency": 2,
+        "image": "liquid.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Blender",
+        "proficiency": 3,
+        "image": "blender.png",
         "displaySkill": true
     },
     {
