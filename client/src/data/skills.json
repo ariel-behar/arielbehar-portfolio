@@ -36,6 +36,12 @@
         "displaySkill": true
     },
     {
+        "skill": "Tailwind",
+        "proficiency": 1,
+        "image": "tailwind.png",
+        "displaySkill": true
+    },
+    {
         "skill": "Material UI",
         "proficiency": 1,
         "image": "materialui.png",
