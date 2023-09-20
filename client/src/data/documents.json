@@ -2,14 +2,7 @@
     "resume": [{
         "_id": 1,
         "title": "Résumé - Ariel Behar",
-        "image": "resume1.jpg",
-        "category": "resume",
-        "firm": "",
-        "creator": "Ariel Behar"
-    }, {
-        "_id": 2,
-        "title": "Résumé - Ariel Behar",
-        "image": "resume2.jpg",
+        "image": "resume.jpg",
         "category": "resume",
         "firm": "",
         "creator": "Ariel Behar"

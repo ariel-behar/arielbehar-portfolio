@@ -119,7 +119,7 @@ function SixthDocumentsSection({ loadSectionHandler }: Props) {
                             <StyledResumePaper elevation={10} className='document-box'>
                                 <Typography variant="h4" component='h4' color='text.secondary'>Résumé</Typography>
 
-                                <img onClick={() => onClickImageHandler('resume')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/resume/resume1.jpg' alt='Resume' />
+                                <img onClick={() => onClickImageHandler('resume')} src='https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/resume/resume.jpg' alt='Resume' />
                             </StyledResumePaper>
                         </Grid>
                         <Grid item sm={4}>
