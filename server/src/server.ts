@@ -1,7 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url';
 import cors from 'cors';
-import express, { Application } from 'express';
+import express, { Application, Request, Response } from 'express';
 import logger from 'morgan/index.js'
 
 import routes from './routes/routes.js';
@@ -29,6 +29,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use("/api", routes)
+
+app.get('*', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname + '/public/index.html'))
+ })
 
 app.listen(PORT, () => {
     console.log(`App is running on: http://localhost:${PORT}`);
