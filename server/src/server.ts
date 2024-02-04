@@ -2,9 +2,10 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 import cors from 'cors';
 import express, { Application } from 'express';
-// import logger from 'morgan/index.js'
+import logger from 'morgan/index.js'
 
 import routes from './routes/routes.js';
+import allowedOrigins from './config/cors-config.js';
 
 const PORT = process.env.PORT || 3030;
 
@@ -19,12 +20,13 @@ app.use(express.static(path.join(__dirname + '/public')))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-    origin: ['http://www.arielbehar.com/', 'https://arielbehar.herokuapp.com/', 'http://localhost:3000', 'http://localhost:3001'],
-    // origin: 'http://www.arielbehar.com/',
-    methods: ['POST', 'GET']
+    origin: allowedOrigins,
+    methods: 'GET'
 }));
 
-// app.use(logger('dev'))
+if (process.env.NODE_ENV === 'development') {
+    app.use(logger('dev'))
+}
 
 app.use("/api", routes)
 
