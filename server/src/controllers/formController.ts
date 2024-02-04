@@ -13,10 +13,10 @@ router.post('/', async (req: Request, res: Response) => {
         <h2>You have a new form submission on Ariel Behar's portfolio site!</h2>
         <h3>Submission Details</h3>
         <ul>
-            <li>Name: ${name}</li>
-            <li>Email: ${email}</li>
-            <li>Subject: ${subject}</li>
-            <li>Message: ${message}</li>
+            <li><b>Name:</b> ${name}</li>
+            <li><b>Email:</b> ${email}</li>
+            <li><b>Subject:</b> ${subject}</li>
+            <li><b>Message:</b> ${message}</li>
         </ul>
     `;
 
@@ -26,18 +26,18 @@ router.post('/', async (req: Request, res: Response) => {
         port: 587,
         secure: false,
         auth: {
-            user: process.env.EMAILFROM,
+            user: process.env.EMAIL_FROM,
             pass: process.env.PASSWORD,
         },
-        from: process.env.EMAILFROM, 
+        from: process.env.EMAIL_FROM, 
         tls: {
             rejectUnauthorized: false,
         },
     });
 
     const options = {
-        from: `PORTFOLIO SITE <${process.env.EMAILFROM}>`,
-        to: process.env.EMAILTO,
+        from: `PORTFOLIO SITE <${process.env.EMAIL_FROM}>`,
+        to: process.env.EMAIL_TO,
         subject: 'PORTFOLIO SITE SUBMISSION',
         text: 'PORTFOLIO FORM SUBMISSION',
         html: output,
