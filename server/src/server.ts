@@ -31,8 +31,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use("/api", routes)
 
 app.get('*', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname + '/public/index.html'))
- })
+    res.redirect('/')
+})
 
 app.listen(PORT, () => {
     console.log(`App is running on: http://localhost:${PORT}`);
