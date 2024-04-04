@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 import skills from '../../data/skills.json'
-import Skill from "../../model/Skill"
+import { Skill, Technology } from "../../model/Skill"
 
 import styled from "@mui/material/styles/styled"
 
@@ -28,7 +28,7 @@ const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
 	}
 `
 
-const skillTitles: {title: string, proficiencyNum: 1 | 2 | 3}[] = [
+const skillTitles: { title: string, proficiencyNum: 1 | 2 | 3 }[] = [
 	{
 		title: 'PROFICIENT',
 		proficiencyNum: 1
@@ -45,15 +45,15 @@ const skillTitles: {title: string, proficiencyNum: 1 | 2 | 3}[] = [
 ]
 
 interface Props {
-    loadSectionHandler: (sectionNum: number) => void
+	loadSectionHandler: (sectionNum: number) => void
 }
 
 function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>(null)
 
 	useEffect(() => {
-        loadSectionHandler(6)
-    },[loadSectionHandler])
+		loadSectionHandler(6)
+	}, [loadSectionHandler])
 
 	const onMouseEnterProficiencyTitleHandler = (skillProficiencyNum: 1 | 2 | 3) => {
 		setHoveredProficiency(skillProficiencyNum)
@@ -65,15 +65,15 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 
 	return (
 		<Box component='section' id="fifth-section">
-			<Typography mt={3} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{xs: 'block', md: 'none'}}>My Abilities</Typography>
-			<Grid container spacing={{xs: 1, lg: 5}} py={{xs: 2, lg: 5}}>
+			<Typography mt={3} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{ xs: 'block', md: 'none' }}>My Abilities</Typography>
+			<Grid container spacing={{ xs: 1, lg: 5 }} py={{ xs: 2, lg: 5 }}>
 				<Grid item xs={12} sm={12} md={2} textAlign="center">
-					<Stack pt={{xs: 0, lg: 3}} direction="column" alignItems='center'>
-						<Typography variant="body1" component='p' color="text.muted.light" display={{xs: 'none', lg: 'block'}}>HOVER</Typography>
+					<Stack pt={{ xs: 0, lg: 3 }} direction="column" alignItems='center'>
+						<Typography variant="body1" component='p' color="text.muted.light" display={{ xs: 'none', lg: 'block' }}>HOVER</Typography>
 
-						<StyledKeyboardArrowDownIcon sx={{ display: {xs: 'none', lg: 'block'} }} />
+						<StyledKeyboardArrowDownIcon sx={{ display: { xs: 'none', lg: 'block' } }} />
 
-						<Stack direction={{xs: 'row', md: 'column'}} justifyContent='space-around' mt={{xs: 0, md: 12, lg: 3}}>
+						<Stack direction={{ xs: 'row', md: 'column' }} justifyContent='space-around' mt={{ xs: 0, md: 12, lg: 3 }}>
 							{
 								skillTitles.map(skillTitle => {
 									return <ProficiencyTitle
@@ -90,13 +90,25 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 						</Stack>
 					</Stack>
 				</Grid>
-				
-				<Grid item xs={12} sm={12} md={10} >
-					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{xs: 'none', md: 'block'}}>My Abilities</Typography>
 
-					<Stack direction='row' flexWrap='wrap' justifyContent='center'>
-						{skills.map((skill: Skill) => skill.displaySkill === true && <Chip key={uuidv4()} skill={skill} hoveredProficiency={hoveredProficiency} />)}
-					</Stack>
+				<Grid item xs={12} sm={12} md={10} >
+					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{ xs: 'none', md: 'block' }}>My Abilities</Typography>
+
+					{
+						skills.map((skill: Skill) => {
+							return <Box mt={2}>
+								<Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()}>{skill.title}</Typography>
+
+								<Stack direction='row' flexWrap='wrap' justifyContent='left'>
+								{
+									skill['technologies'].map((technology: Technology) => {
+										return technology.displayTechnology === true && <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} /> 
+									})
+								}
+								</Stack>
+							</Box>
+						})
+					}
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
 				</Grid>
