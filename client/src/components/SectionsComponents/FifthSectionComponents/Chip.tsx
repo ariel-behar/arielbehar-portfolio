@@ -2,7 +2,7 @@ import getChipColor from '../../../utils/getChipColor'
 
 import Box from '@mui/material/Box'
 import styled from '@mui/material/styles/styled'
-import Skill from '../../../model/Skill'
+import {Technology} from '../../../model/Skill'
 import Typography from '@mui/material/Typography/Typography'
 
 const StyledChipBox = styled(Box)`
@@ -33,22 +33,22 @@ const StyledChipBox = styled(Box)`
 `
 
 interface Props {
-    skill: Skill,
+    technology: Technology,
     hoveredProficiency: 1 | 2 | 3 | null
 }
 
-function Chip({skill, hoveredProficiency}: Props) {
+function Chip({technology, hoveredProficiency}: Props) {
     return (
         <StyledChipBox
            
             sx={{
-                backgroundColor: getChipColor(skill.proficiency),
-                opacity: hoveredProficiency ? hoveredProficiency === skill.proficiency ? 1 : 0.5 : 1
+                backgroundColor: getChipColor(technology.proficiency),
+                opacity: hoveredProficiency ? hoveredProficiency === technology.proficiency ? 1 : 0.5 : 1
             }}
         >
-            <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/${skill.image}`} alt={`${skill.skill} logo`} />
+            <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/${technology.image}`} alt={`${technology.technology} logo`} />
 
-            <Typography variant='body1' component='p' fontWeight='bold'>{skill.skill}</Typography>
+            <Typography variant='body1' component='p' fontWeight='bold'>{technology.technology}</Typography>
         </StyledChipBox>
     )
 }
