@@ -87,7 +87,7 @@
         "url": "http://esportmarketinggroup.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": []
+        "notes": [{"note": "The site is no longer live"}]
     },
     {
         "_id": 7,
@@ -147,7 +147,7 @@
         "url": "http://thomasandthomascustoms.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": []
+        "notes": [{"note": "The site is no longer live"}]
     },
     {
         "_id": 11,
@@ -162,7 +162,7 @@
         "url": "http://thecreditscore.guru/",
         "type": "Wordpress",
         "category": "real",
-        "notes": []
+        "notes": [{"note": "The site is no longer live"}]
     },
     {
         "_id": 12,
@@ -192,6 +192,6 @@
         "url": "http://www.bodywrapspalon.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": []
+        "notes": [{"note": "The site is no longer live"}]
     }
 ]
