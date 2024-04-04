@@ -1,5 +1,11 @@
 [
     {
+        "skill": "Next JS",
+        "proficiency": 2,
+        "image": "nextjs.png",
+        "displaySkill": true
+    },
+    {
         "skill": "React",
         "proficiency": 1,
         "image": "react.png",
@@ -96,6 +102,12 @@
         "displaySkill": true
     },
     {
+        "skill": "Figma",
+        "proficiency": 2,
+        "image": "figma.png",
+        "displaySkill": true
+    },
+    {
         "skill": "Three JS",
         "proficiency": 2,
         "image": "three-js.png",
@@ -141,6 +153,30 @@
         "skill": "Premiere",
         "proficiency": 3,
         "image": "premiere.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Heroku",
+        "proficiency": 1,
+        "image": "heroku.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Vercel",
+        "proficiency": 1,
+        "image": "vercel.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Render",
+        "proficiency": 1,
+        "image": "render.png",
+        "displaySkill": true
+    },
+    {
+        "skill": "Hostgator",
+        "proficiency": 1,
+        "image": "hostgator.png",
         "displaySkill": true
     }
 ]
