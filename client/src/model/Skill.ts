@@ -1,8 +1,12 @@
-interface Skill {
-    skill: string,
+
+export interface Technology {
+    technology: string,
     proficiency: number,
     image: string,
-    displaySkill: boolean
+    displayTechnology: boolean
 }
 
-export default Skill;
+export interface Skill {
+    title: string,
+    technologies: Technology[]
+}
