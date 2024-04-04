@@ -30,6 +30,21 @@
         "notes": [{ "note": "The site is currently under development" }]
     },
     {
+        "_id": 7,
+        "order": 6,
+        "title": "VX Aviation",
+        "image": "vx-aviation.jpg",
+        "description": "Company site for a Tampa Bay area based personal flight training school aiming for new student recruitement.",
+        "myRole": "Sole designer and developer from conceptualization to execution. The development of this project was rather fast and enjoyable because of how comfortable I was feeling working with the Bootstrap framework at this point.",
+        "technologies": ["HTML", "CSS", "SASS", "Bootstrap", "JavaScript", "jQuery", "PHP"],
+        "month": "Aug",
+        "year": 2017,
+        "url": "http://vxaviation.arielbehar.com/",
+        "type": "Bootstrap",
+        "category": "real",
+        "notes": []
+    },
+    {
         "_id": 3,
         "order": 2,
         "title": "Brasileirão 2019",
@@ -74,36 +89,8 @@
         "category": "real",
         "notes": [ { "note": "The site's language is Bulgarian." }, { "note": "Optimized for large screen sizes only." }]
     },
-    {
-        "_id": 6,
-        "order": 5,
-        "title": "eSports Marketing Group",
-        "image": "esports.jpg",
-        "description": "Online marketing firm for eSports competitors. The site is a hub for people to receive representation, guorderance and marketing tools on a professional level.",
-        "myRole": "Lead developer from conceptualization to execution. It was the first site I ever built with Wordpress and served me as an introduction to the CMS platform. It was an interesting concept to work on and I am very happy with the final result.",
-        "technologies": ["Wordpress", "HTML", "CSS"],
-        "month": "Aug",
-        "year": 2017,
-        "url": "http://esportmarketinggroup.com/",
-        "type": "Wordpress",
-        "category": "real",
-        "notes": [{"note": "The site is no longer live"}]
-    },
-    {
-        "_id": 7,
-        "order": 6,
-        "title": "VX Aviation",
-        "image": "vx-aviation.jpg",
-        "description": "Company site for a Tampa Bay area based personal flight training school aiming for new student recruitement.",
-        "myRole": "Sole designer and developer from conceptualization to execution. The development of this project was rather fast and enjoyable because of how comfortable I was feeling working with the Bootstrap framework at this point.",
-        "technologies": ["HTML", "CSS", "SASS", "Bootstrap", "JavaScript", "jQuery", "PHP"],
-        "month": "Aug",
-        "year": 2017,
-        "url": "http://vxaviation.arielbehar.com/",
-        "type": "Bootstrap",
-        "category": "real",
-        "notes": []
-    },
+
+
     {
         "_id": 8,
         "order": 7,
@@ -133,6 +120,21 @@
         "type": "Bootstrap",
         "category": "real",
         "notes": []
+    },
+    {
+        "_id": 6,
+        "order": 5,
+        "title": "eSports Marketing Group",
+        "image": "esports.jpg",
+        "description": "Online marketing firm for eSports competitors. The site is a hub for people to receive representation, guorderance and marketing tools on a professional level.",
+        "myRole": "Lead developer from conceptualization to execution. It was the first site I ever built with Wordpress and served me as an introduction to the CMS platform. It was an interesting concept to work on and I am very happy with the final result.",
+        "technologies": ["Wordpress", "HTML", "CSS"],
+        "month": "Aug",
+        "year": 2017,
+        "url": "http://esportmarketinggroup.com/",
+        "type": "Wordpress",
+        "category": "real",
+        "notes": [{"note": "The site is no longer live"}]
     },
     {
         "_id": 10,
