@@ -2,6 +2,21 @@
     {
         "_id": 1,
         "order": 0,
+        "title": "Candy Catz",
+        "image": "candy-catz.jpg",
+        "description": "Official web store of the Candy Catz fashion clothing manufacturer",
+        "myRole": "Co-designer and sole developer of the current face-lift that the store has undergone. The site is Shopify-based and the brand targets a US audience with an interest in the rave culture. This was a very exciting project to work on and the final product came out to be gratifying, to say the least.",
+        "technologies": ["Shopify", "Liquid", "CSS"],
+        "month": "April",
+        "year": 2024,
+        "url": "https://www.candycatz.com/",
+        "type": "MPA",
+        "category": "real",
+        "notes": []
+    },
+    {
+        "_id": 1,
+        "order": 0,
         "title": "Stitch Sense",
         "image": "stitch-sense.jpg",
         "description": "Official web site of the Stitch Sense clothing manufacturer",
