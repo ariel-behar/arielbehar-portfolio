@@ -5,7 +5,7 @@
         "title": "Candy Catz",
         "image": "candy-catz.jpg",
         "description": "Official web store of the Candy Catz fashion clothing manufacturer",
-        "myRole": "I played a key role as the exclusive developer responsible for the recent renovation of the store's appearance. I worked closely with the client to ensure that the new design aligned perfectly with their vision and brand identity. The website now boasts full functionality as a Shopify store, tailored to appeal to a US demographic fascinated by rave culture. Engaging in this project was exhilarating, and the end result has brought immense satisfaction to myself and the client.",
+        "myRole": "I played a key role as the exclusive developer responsible for the recent renovation of the store's appearance. I worked closely with the client to ensure that the new design aligned perfectly with their vision and brand identity. The website now boasts the full functionality of a Shopify store, tailored to appeal to a US demographic fascinated by rave culture. Engaging in this project was exciting, and the end result has brought immense satisfaction to myself and the client.",
         "technologies": ["Shopify", "Liquid", "CSS"],
         "month": "March",
         "year": 2024,
@@ -58,7 +58,7 @@
         "url": "http://ivylu.arielbehar.com/",
         "type": "SPA",
         "category": "real",
-        "notes": [{ "note": "The site is currently under development" }]
+        "notes": [{ "note": "The site's functionality has not been finalized" }]
     },
     {
         "_id": 5,
@@ -82,7 +82,7 @@
         "image": "brasileirao.jpg",
         "description": "A fictional website on the topic of the \"Brasileirão\" 2019 Soccer Championship",
         "myRole": "Sole designer and developer from conceptualization to execution. The original web app had been written as a MPA in 2020 with Node and hbs, but now it has been rewritten and optimized as a SPA in React (with TypeScript). The functionality to change languages has been implemented using the i18next library. The project presents fast and visually pleasant results.",
-        "technologies": ["React", "TypeScript", "CSS", "SASS", " Bootstrap", "i18next"],
+        "technologies": ["React", "TypeScript", "SASS", " Bootstrap", "i18next"],
         "month": "February",
         "year": 2024,
         "url": "http://brasileirao.arielbehar.com/",
