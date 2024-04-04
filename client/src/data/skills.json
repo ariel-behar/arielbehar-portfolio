@@ -1,182 +1,223 @@
 [
     {
-        "skill": "Next JS",
-        "proficiency": 2,
-        "image": "nextjs.png",
-        "displaySkill": true
+        "title": "Design",
+        "technologies":  [
+            {
+                "technology": "Photoshop",
+                "proficiency": 1,
+                "image": "photoshop.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Figma",
+                "proficiency": 2,
+                "image": "figma.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Blender",
+                "proficiency": 3,
+                "image": "blender.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Illustrator",
+                "proficiency": 3,
+                "image": "illustrator.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Premiere",
+                "proficiency": 3,
+                "image": "premiere.png",
+                "displayTechnology": true
+            }
+        ]
     },
     {
-        "skill": "React",
-        "proficiency": 1,
-        "image": "react.png",
-        "displaySkill": true
+        "title": "Front End",
+        "technologies": [
+            {
+                "technology": "React",
+                "proficiency": 1,
+                "image": "react.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Javascript",
+                "proficiency": 1,
+                "image": "javascript.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Three JS",
+                "proficiency": 2,
+                "image": "three-js.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "R3F",
+                "proficiency": 2,
+                "image": "react-three-fiber.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "TypeScript",
+                "proficiency": 2,
+                "image": "typescript.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "jQuery",
+                "proficiency": 1,
+                "image": "jquery.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "HTML",
+                "proficiency": 1,
+                "image": "html.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "CSS",
+                "proficiency": 1,
+                "image": "css.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Sass",
+                "proficiency": 1,
+                "image": "sass.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Tailwind",
+                "proficiency": 1,
+                "image": "tailwind.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Material UI",
+                "proficiency": 1,
+                "image": "materialui.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Bootstrap",
+                "proficiency": 1,
+                "image": "bootstrap.jpg",
+                "displayTechnology": true
+            },
+            {
+                "technology": "MDBootstrap",
+                "proficiency": 1,
+                "image": "mdbootstrap.jpg",
+                "displayTechnology": true
+            }
+        ]
     },
     {
-        "skill": "Node",
-        "proficiency": 1,
-        "image": "node.png",
-        "displaySkill": true
+        "title": "Back End",
+        "technologies":  [
+            {
+                "technology": "Next JS",
+                "proficiency": 2,
+                "image": "nextjs.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Node",
+                "proficiency": 1,
+                "image": "node.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Express",
+                "proficiency": 1,
+                "image": "express.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "MongoDB",
+                "proficiency": 1,
+                "image": "mongodb.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Mongoose",
+                "proficiency": 1,
+                "image": "mongoose.png",
+                "displayTechnology": true
+            }
+        ]
     },
     {
-        "skill": "Express",
-        "proficiency": 1,
-        "image": "express.png",
-        "displaySkill": true
+        "title": "CMS",
+        "technologies": [
+            {
+                "technology": "Wordpress",
+                "proficiency": 1,
+                "image": "wordpress.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Shopify",
+                "proficiency": 2,
+                "image": "shopify.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Liquid",
+                "proficiency": 2,
+                "image": "liquid.png",
+                "displayTechnology": true
+            }
+        ]
     },
     {
-        "skill": "HTML",
-        "proficiency": 1,
-        "image": "html.png",
-        "displaySkill": true
+        "title": "Deployment",
+        "technologies": [
+            {
+                "technology": "Heroku",
+                "proficiency": 1,
+                "image": "heroku.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Vercel",
+                "proficiency": 1,
+                "image": "vercel.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Render",
+                "proficiency": 1,
+                "image": "render.png",
+                "displayTechnology": true
+            }
+        ]
     },
     {
-        "skill": "CSS",
-        "proficiency": 1,
-        "image": "css.png",
-        "displaySkill": true
+        "title": "Hosting",
+        "technologies": [
+            {
+                "technology": "Hostgator",
+                "proficiency": 1,
+                "image": "hostgator.png",
+                "displayTechnology": true
+            }
+        ]
     },
     {
-        "skill": "Sass",
-        "proficiency": 1,
-        "image": "sass.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Tailwind",
-        "proficiency": 1,
-        "image": "tailwind.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Material UI",
-        "proficiency": 1,
-        "image": "materialui.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Bootstrap",
-        "proficiency": 1,
-        "image": "bootstrap.jpg",
-        "displaySkill": true
-    },
-    {
-        "skill": "MDBootstrap",
-        "proficiency": 1,
-        "image": "mdbootstrap.jpg",
-        "displaySkill": true
-    },
-    {
-        "skill": "Javascript",
-        "proficiency": 1,
-        "image": "javascript.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "jQuery",
-        "proficiency": 1,
-        "image": "jquery.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Wordpress",
-        "proficiency": 1,
-        "image": "wordpress.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Git",
-        "proficiency": 1,
-        "image": "git.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "MongoDB",
-        "proficiency": 1,
-        "image": "mongodb.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Photoshop",
-        "proficiency": 1,
-        "image": "photoshop.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Figma",
-        "proficiency": 2,
-        "image": "figma.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Three JS",
-        "proficiency": 2,
-        "image": "three-js.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "R3F",
-        "proficiency": 2,
-        "image": "react-three-fiber.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "TypeScript",
-        "proficiency": 2,
-        "image": "typescript.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Shopify",
-        "proficiency": 2,
-        "image": "shopify.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Liquid",
-        "proficiency": 2,
-        "image": "liquid.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Blender",
-        "proficiency": 3,
-        "image": "blender.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Illustrator",
-        "proficiency": 3,
-        "image": "illustrator.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Premiere",
-        "proficiency": 3,
-        "image": "premiere.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Heroku",
-        "proficiency": 1,
-        "image": "heroku.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Vercel",
-        "proficiency": 1,
-        "image": "vercel.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Render",
-        "proficiency": 1,
-        "image": "render.png",
-        "displaySkill": true
-    },
-    {
-        "skill": "Hostgator",
-        "proficiency": 1,
-        "image": "hostgator.png",
-        "displaySkill": true
+        "title": "Version Control",
+        "technologies": [
+            {
+                "technology": "Git",
+                "proficiency": 1,
+                "image": "git.png",
+                "displayTechnology": true
+            }
+        ]
     }
 ]
