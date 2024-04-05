@@ -14,16 +14,11 @@ interface Props {
 
 function GroupedSkills({ skills, hoveredProficiency }: Props) {
     return (
-        <Stack direction='row' flexWrap='wrap' justifyContent='left'>
+        <>
             {
                 skills.map((skill: Skill, index) => {
                     return (
-                        <Box mt={index !== 0 ? 0.2 : 0}
-                            key={uuidv4()}
-                            width='100%'
-                            // borderLeft={{ xs: 'none', md: '1px dashed #e0e0e070' }}
-                            // pl={{ xs: 0, md: 1 }}
-                        >
+                        <Box mt={index !== 0 ? 0.2 : 0} key={uuidv4()} width='100%' >
                             <Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()}>{skill.title}</Typography>
 
                             <Stack direction='row' flexWrap='wrap' justifyContent='left'>
@@ -37,7 +32,7 @@ function GroupedSkills({ skills, hoveredProficiency }: Props) {
                     )
                 })
             }
-        </Stack>
+        </>
     )
 }
 
