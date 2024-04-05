@@ -31,13 +31,29 @@ function ProficiencyTitle({
 }: Props
 ) {
     return (
-        <Stack direction='column' alignItems='center' mx={2}
-            onMouseEnter={() => onMouseEnterProficiencyTitleHandler(skillProficiencyNum)}
-            onMouseLeave={() => onMouseLeaveProficiencyTitleHandler()}
-            sx={{ opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.5 : 1 }}
-        >
-            <Typography variant="body1" component='p' color="text.secondary">{children}</Typography>
-            <StyledHoverableButtonBox sx={{ backgroundColor: getChipColor(skillProficiencyNum) }} />
+        <Stack direction='column' alignItems='center' mx={1}>
+            <Typography
+                variant="body1"
+                component='p'
+                color="text.secondary"
+                onMouseEnter={() => onMouseEnterProficiencyTitleHandler(skillProficiencyNum)}
+                onMouseLeave={() => onMouseLeaveProficiencyTitleHandler()}
+                sx={{
+                    '&:hover': { cursor: 'crosshair' },
+                    opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.5 : 1
+                }}
+            >
+                {children}
+            </Typography>
+            <StyledHoverableButtonBox
+                onMouseEnter={() => onMouseEnterProficiencyTitleHandler(skillProficiencyNum)}
+                onMouseLeave={() => onMouseLeaveProficiencyTitleHandler()}
+                sx={{
+                    '&:hover': { cursor: 'crosshair' },
+                    backgroundColor: getChipColor(skillProficiencyNum),
+                    opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.5 : 1
+                }}
+            />
         </Stack>
     )
 }
