@@ -69,7 +69,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 
 				<Typography variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
 
-				<Stack direction='row' justifyContent='space-around' >
+				<Stack direction='row' justifyContent='space-around' alignItems='center'>
 					<Stack direction='column' justifyContent='center' alignItems='center' pr={2} display={{ xs: 'none', lg: 'block' }}>
 						<Typography variant="body2" component='p' color="text.muted.light">HOVER</Typography>
 						<StyledKeyboardArrowRightIcon />
