@@ -70,9 +70,9 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 				<Typography variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
 
 				<Stack direction='row' justifyContent='space-around' >
-					<Stack direction='column' justifyContent='center' alignItems='center' pr={2}>
-						<Typography variant="body2" component='p' color="text.muted.light" display={{ xs: 'none', lg: 'block' }}>HOVER</Typography>
-						<StyledKeyboardArrowRightIcon sx={{ display: { xs: 'none', lg: 'block' } }} />
+					<Stack direction='column' justifyContent='center' alignItems='center' pr={2} display={{ xs: 'none', lg: 'block' }}>
+						<Typography variant="body2" component='p' color="text.muted.light">HOVER</Typography>
+						<StyledKeyboardArrowRightIcon />
 					</Stack>
 
 					{
@@ -96,7 +96,6 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'right bottom',
 				}}
-
 			>
 				<GroupedSkills skills={skills} hoveredProficiency={hoveredProficiency} />
 
