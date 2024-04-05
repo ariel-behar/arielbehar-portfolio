@@ -65,7 +65,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 	return (
 		<Box component='section' id="fifth-section">
 
-			<Stack pt={{ xs: 2, md: 3 }} pb={{ xs: 0, md: 3 }} direction={{ xs: 'column', md: 'row' }} justifyContent={{ xs: 'center', md: 'space-between' }} alignItems='center'>
+			<Stack pt={{ xs: 2, md: 3 }} pb={{ xs: 0, md: 3 }} px={{xs: 2, md: 5}} direction={{ xs: 'column', md: 'row' }} justifyContent={{ xs: 'center', md: 'space-between' }} alignItems='center'>
 
 				<Typography variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
 
@@ -92,7 +92,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 			</Stack>
 			<Box
 				sx={{
-					backgroundImage: "url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/curved-arrow.png')",
+					backgroundImage: {xs: 'none', sm: "url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/curved-arrow.png')"} ,
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'right bottom',
 				}}
