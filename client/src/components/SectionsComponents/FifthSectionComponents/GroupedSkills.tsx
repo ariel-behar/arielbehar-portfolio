@@ -18,8 +18,9 @@ function GroupedSkills({ skills, hoveredProficiency }: Props) {
             {
                 skills.map((skill: Skill, index) => {
                     return (
-                        <Box mt={index !== 0 ? 1 : 0}
+                        <Box mt={index !== 0 ? 0.2 : 0}
                             key={uuidv4()}
+                            width='100%'
                             // borderLeft={{ xs: 'none', md: '1px dashed #e0e0e070' }}
                             // pl={{ xs: 0, md: 1 }}
                         >
