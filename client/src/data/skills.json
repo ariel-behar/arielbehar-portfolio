@@ -16,6 +16,30 @@
                 "displayTechnology": true
             },
             {
+                "technology": "Tailwind",
+                "proficiency": 1,
+                "image": "tailwind.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Material UI",
+                "proficiency": 1,
+                "image": "materialui.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Bootstrap",
+                "proficiency": 1,
+                "image": "bootstrap.jpg",
+                "displayTechnology": true
+            },
+            {
+                "technology": "MDBootstrap",
+                "proficiency": 1,
+                "image": "mdbootstrap.jpg",
+                "displayTechnology": true
+            },
+            {
                 "technology": "Three JS",
                 "proficiency": 2,
                 "image": "three-js.png",
@@ -56,31 +80,8 @@
                 "proficiency": 1,
                 "image": "sass.png",
                 "displayTechnology": true
-            },
-            {
-                "technology": "Tailwind",
-                "proficiency": 1,
-                "image": "tailwind.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Material UI",
-                "proficiency": 1,
-                "image": "materialui.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Bootstrap",
-                "proficiency": 1,
-                "image": "bootstrap.jpg",
-                "displayTechnology": true
-            },
-            {
-                "technology": "MDBootstrap",
-                "proficiency": 1,
-                "image": "mdbootstrap.jpg",
-                "displayTechnology": true
             }
+            
         ]
     },
     {
