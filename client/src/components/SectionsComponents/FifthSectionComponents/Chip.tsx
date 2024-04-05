@@ -6,20 +6,19 @@ import {Technology} from '../../../model/Skill'
 import Typography from '@mui/material/Typography/Typography'
 
 const StyledChipBox = styled(Box)`
- 	margin: 10px 7px;
+ 	margin: 10px 25px 15px 0;
 	color: black;
 	text-align: center;
-	min-width: 170px;
+	min-width: 160px;
     border-radius: 16px;
-	transform: scale(0.90);
+	/* transform: scale(0.95); */
 
 	img {
 		transform: scale(1.5);
 
 		float: left;
-		margin-left:-8px;
-		height: 32px;
-		width: 32px;
+		height: 27px;
+		width: 27px;
 		border-radius: 50%;
 	}
 
