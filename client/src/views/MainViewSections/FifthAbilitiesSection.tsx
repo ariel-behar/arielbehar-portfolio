@@ -16,7 +16,6 @@ import Chip from '../../components/SectionsComponents/FifthSectionComponents/Chi
 import ProficiencyTitle from '../../components/SectionsComponents/FifthSectionComponents/ProficiencyTitle';
 import AllSkills from '../../components/SectionsComponents/FifthSectionComponents/AllSkills';
 import GroupedSkills from '../../components/SectionsComponents/FifthSectionComponents/GroupedSkills';
-import AccordionSkills from '../../components/SectionsComponents/FifthSectionComponents/AccordionSkills';
 
 const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
 	color: ${(({ theme }) => theme.palette.text.muted.light)};
@@ -95,14 +94,9 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 				</Grid>
 
 				<Grid item xs={12} sm={12} md={10} >
-					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{ xs: 'none', md: 'block' }}>My Abilities</Typography>
+					<Typography variant="h2" component='h3' color="text.secondary" textAlign='center' display={{ xs: 'none', md: 'block' }}>My Abilities</Typography>
 
-
-					{/* <GroupedSkills skills={skills} hoveredProficiency={hoveredProficiency} /> */}
-
-					{/* <AllSkills skills={skills} hoveredProficiency={hoveredProficiency}/> */}
-
-					<AccordionSkills skills={skills} hoveredProficiency={hoveredProficiency} />
+					<GroupedSkills skills={skills} hoveredProficiency={hoveredProficiency} />
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
 				</Grid>
