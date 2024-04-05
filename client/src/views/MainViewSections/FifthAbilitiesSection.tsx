@@ -14,6 +14,9 @@ import Typography from "@mui/material/Typography"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Chip from '../../components/SectionsComponents/FifthSectionComponents/Chip'
 import ProficiencyTitle from '../../components/SectionsComponents/FifthSectionComponents/ProficiencyTitle';
+import AllSkills from '../../components/SectionsComponents/FifthSectionComponents/AllSkills';
+import GroupedSkills from '../../components/SectionsComponents/FifthSectionComponents/GroupedSkills';
+import AccordionSkills from '../../components/SectionsComponents/FifthSectionComponents/AccordionSkills';
 
 const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)`
 	color: ${(({ theme }) => theme.palette.text.muted.light)};
@@ -94,39 +97,12 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 				<Grid item xs={12} sm={12} md={10} >
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{ xs: 'none', md: 'block' }}>My Abilities</Typography>
 
-					<Stack direction='row' flexWrap='wrap' justifyContent='left'>
-						{
-							skills.map((skill: Skill) => {
-								return (
-									<Box mt={1} borderLeft={{xs: 'none', md: '1px dashed #e0e0e070'}} pl={{xs: 0, md: 1}}>
-										<Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()}>{skill.title}</Typography>
 
-										<Stack direction='row' flexWrap='wrap' justifyContent='left'>
-											{
-												skill['technologies'].map((technology: Technology) => {
-													return technology.displayTechnology === true && <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} />
-												})
-											}
-										</Stack>
-									</Box>
-								)
-							})
-						}
+					{/* <GroupedSkills skills={skills} hoveredProficiency={hoveredProficiency} /> */}
 
-						{/* {
-							skills.map((skill: Skill) => {
-								return (
-									<>
-										{
-											skill['technologies'].map((technology: Technology) => {
-												return technology.displayTechnology === true && <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} />
-											})
-										}
-									</>
-								)
-							})
-						} */}
-					</Stack>
+					{/* <AllSkills skills={skills} hoveredProficiency={hoveredProficiency}/> */}
+
+					<AccordionSkills skills={skills} hoveredProficiency={hoveredProficiency} />
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
 				</Grid>

@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { Skill, Technology } from "../../../model/Skill"
 import Chip from './Chip';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
@@ -13,7 +14,7 @@ interface Props {
 
 function GroupedSkills({ skills, hoveredProficiency }: Props) {
     return (
-        <>
+        <Stack direction='row' flexWrap='wrap' justifyContent='left'>
             {
                 skills.map((skill: Skill) => {
                     return (
@@ -31,7 +32,7 @@ function GroupedSkills({ skills, hoveredProficiency }: Props) {
                     )
                 })
             }
-        </>
+        </Stack>
     )
 }
 
