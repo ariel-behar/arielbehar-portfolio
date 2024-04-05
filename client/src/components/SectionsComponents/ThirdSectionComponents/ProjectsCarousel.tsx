@@ -129,7 +129,7 @@ function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }
 			onClickItem={onClickItemHandler}
 			onClickThumb={onClickThumbHandler}
 			autoPlay={false}
-			showStatus={false}
+			showStatus={true}
 			showIndicators={false}
 			showArrows={false}
 			swipeable={false}
