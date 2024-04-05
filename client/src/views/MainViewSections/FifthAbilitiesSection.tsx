@@ -94,21 +94,39 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 				<Grid item xs={12} sm={12} md={10} >
 					<Typography mb={2} variant="h2" component='h3' color="text.secondary" textAlign='center' display={{ xs: 'none', md: 'block' }}>My Abilities</Typography>
 
-					{
-						skills.map((skill: Skill) => {
-							return <Box mt={2}>
-								<Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()}>{skill.title}</Typography>
+					<Stack direction='row' flexWrap='wrap' justifyContent='left'>
+						{
+							skills.map((skill: Skill) => {
+								return (
+									<Box mt={1} borderLeft={{xs: 'none', md: '1px dashed #e0e0e070'}} pl={{xs: 0, md: 1}}>
+										<Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()}>{skill.title}</Typography>
 
-								<Stack direction='row' flexWrap='wrap' justifyContent='left'>
-								{
-									skill['technologies'].map((technology: Technology) => {
-										return technology.displayTechnology === true && <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} /> 
-									})
-								}
-								</Stack>
-							</Box>
-						})
-					}
+										<Stack direction='row' flexWrap='wrap' justifyContent='left'>
+											{
+												skill['technologies'].map((technology: Technology) => {
+													return technology.displayTechnology === true && <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} />
+												})
+											}
+										</Stack>
+									</Box>
+								)
+							})
+						}
+
+						{/* {
+							skills.map((skill: Skill) => {
+								return (
+									<>
+										{
+											skill['technologies'].map((technology: Technology) => {
+												return technology.displayTechnology === true && <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} />
+											})
+										}
+									</>
+								)
+							})
+						} */}
+					</Stack>
 
 					<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
 				</Grid>
