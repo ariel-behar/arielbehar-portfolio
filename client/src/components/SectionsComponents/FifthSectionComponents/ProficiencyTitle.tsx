@@ -40,7 +40,7 @@ function ProficiencyTitle({
                 onMouseLeave={() => onMouseLeaveProficiencyTitleHandler()}
                 sx={{
                     '&:hover': { cursor: 'crosshair' },
-                    opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.5 : 1
+                    opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.2 : 1
                 }}
             >
                 {children}
@@ -51,7 +51,7 @@ function ProficiencyTitle({
                 sx={{
                     '&:hover': { cursor: 'crosshair' },
                     backgroundColor: getChipColor(skillProficiencyNum),
-                    opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.5 : 1
+                    opacity: hoveredProficiency ? hoveredProficiency === skillProficiencyNum ? 1 : 0.2 : 1
                 }}
             />
         </Stack>

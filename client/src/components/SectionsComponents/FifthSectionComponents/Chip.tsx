@@ -42,7 +42,7 @@ function Chip({technology, hoveredProficiency}: Props) {
            
             sx={{
                 backgroundColor: getChipColor(technology.proficiency),
-                opacity: hoveredProficiency ? hoveredProficiency === technology.proficiency ? 1 : 0.5 : 1
+                opacity: hoveredProficiency ? hoveredProficiency === technology.proficiency ? 1 : 0.2 : 1
             }}
         >
             <img src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/${technology.image}`} alt={`${technology.technology} logo`} />
