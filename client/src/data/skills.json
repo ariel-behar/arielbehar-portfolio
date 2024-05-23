@@ -1,9 +1,8 @@
 [
-    
+
     {
         "title": "Javascript Frameworks & Superscript",
-        "technologies": [
-            {
+        "technologies": [{
                 "technology": "Next JS",
                 "proficiency": 2,
                 "image": "nextjs.png",
@@ -21,7 +20,7 @@
                 "image": "typescript.png",
                 "displayTechnology": true
             },
-           
+
             {
                 "technology": "jQuery",
                 "proficiency": 1,
@@ -31,8 +30,8 @@
         ]
     },
     {
-        "title": "Back End",
-        "technologies":  [
+        "title": "Javascript Runtime & Server Side Scripting",
+        "technologies": [
 
             {
                 "technology": "Node",
@@ -45,8 +44,13 @@
                 "proficiency": 1,
                 "image": "express.png",
                 "displayTechnology": true
-            },
-            {
+            }
+
+        ]
+    },
+    {
+        "title": "Databases",
+        "technologies": [{
                 "technology": "MongoDB",
                 "proficiency": 1,
                 "image": "mongodb.png",
@@ -62,8 +66,7 @@
     },
     {
         "title": "CSS Frameworks",
-        "technologies":  [
-            {
+        "technologies": [{
                 "technology": "Tailwind",
                 "proficiency": 1,
                 "image": "tailwind.png",
@@ -97,8 +100,7 @@
     },
     {
         "title": "Web Foundations",
-        "technologies":  [
-            {
+        "technologies": [{
                 "technology": "HTML",
                 "proficiency": 1,
                 "image": "html.png",
@@ -126,8 +128,7 @@
     },
     {
         "title": "WebGL",
-        "technologies":  [
-            {
+        "technologies": [{
                 "technology": "Three JS",
                 "proficiency": 3,
                 "image": "three-js.png",
@@ -143,8 +144,7 @@
     },
     {
         "title": "Design, 3D Modeling & Video Production",
-        "technologies":  [
-            {
+        "technologies": [{
                 "technology": "Photoshop",
                 "proficiency": 1,
                 "image": "photoshop.png",
@@ -178,8 +178,7 @@
     },
     {
         "title": "CMS",
-        "technologies": [
-            {
+        "technologies": [{
                 "technology": "Shopify",
                 "proficiency": 1,
                 "image": "shopify.png",
@@ -201,8 +200,7 @@
     },
     {
         "title": "Deployment & Hosting",
-        "technologies": [
-            {
+        "technologies": [{
                 "technology": "Heroku",
                 "proficiency": 1,
                 "image": "heroku.png",
@@ -236,8 +234,7 @@
     },
     {
         "title": "Cloud Storage",
-        "technologies": [
-            {
+        "technologies": [{
                 "technology": "Google Cloud",
                 "proficiency": 3,
                 "image": "google-cloud.png",
@@ -253,8 +250,7 @@
     },
     {
         "title": "Artificial Intelligence",
-        "technologies": [
-            {
+        "technologies": [{
                 "technology": "ChatGPT",
                 "proficiency": 1,
                 "image": "chat-gpt.png",
@@ -270,8 +266,7 @@
     },
     {
         "title": "Version Control",
-        "technologies": [
-            {
+        "technologies": [{
                 "technology": "Git",
                 "proficiency": 1,
                 "image": "git.png",
