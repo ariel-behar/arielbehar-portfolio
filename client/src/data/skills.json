@@ -40,36 +40,11 @@
                 "displayTechnology": true
             },
             {
-                "technology": "Javascript",
-                "proficiency": 1,
-                "image": "javascript.png",
-                "displayTechnology": true
-            },
-            {
                 "technology": "jQuery",
                 "proficiency": 1,
                 "image": "jquery.png",
                 "displayTechnology": true
-            },
-            {
-                "technology": "HTML",
-                "proficiency": 1,
-                "image": "html.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "CSS",
-                "proficiency": 1,
-                "image": "css.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Sass",
-                "proficiency": 1,
-                "image": "sass.png",
-                "displayTechnology": true
             }
-            
         ]
     },
     {
@@ -103,6 +78,35 @@
                 "technology": "Mongoose",
                 "proficiency": 1,
                 "image": "mongoose.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
+        "title": "Web Foundations",
+        "technologies":  [
+            {
+                "technology": "HTML",
+                "proficiency": 1,
+                "image": "html.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "CSS",
+                "proficiency": 1,
+                "image": "css.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Sass",
+                "proficiency": 1,
+                "image": "sass.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Javascript",
+                "proficiency": 1,
+                "image": "javascript.png",
                 "displayTechnology": true
             }
         ]
