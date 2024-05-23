@@ -11,7 +11,7 @@
             },
             {
                 "technology": "TypeScript",
-                "proficiency": 2,
+                "proficiency": 1,
                 "image": "typescript.png",
                 "displayTechnology": true
             },
@@ -208,6 +208,23 @@
                 "technology": "cPanel",
                 "proficiency": 2,
                 "image": "cpanel.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
+        "title": "Cloud Storage",
+        "technologies": [
+            {
+                "technology": "Google Cloud",
+                "proficiency": 3,
+                "image": "google-cloud.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "AWS S3",
+                "proficiency": 2,
+                "image": "aws-s3.png",
                 "displayTechnology": true
             }
         ]
