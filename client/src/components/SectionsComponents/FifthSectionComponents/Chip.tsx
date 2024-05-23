@@ -9,8 +9,9 @@ const StyledChipBox = styled(Box)`
  	margin: 10px 25px 15px 0;
 	color: black;
 	text-align: center;
-	min-width: 160px;
+	min-width: 165px;
     border-radius: 16px;
+	
 	/* transform: scale(0.95); */
 
 	img {
@@ -23,6 +24,7 @@ const StyledChipBox = styled(Box)`
 
 	p {
 		margin: 3px 0 0 0;
+		font-size: 0.9rem;
 	}
 
 	@media (max-width: 600px){

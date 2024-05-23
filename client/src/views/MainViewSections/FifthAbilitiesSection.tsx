@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 import skills from '../../data/skills.json'
-import arrowRight from '../../assets/curved-arrow.png'
 
 import styled from "@mui/material/styles/styled"
 
@@ -90,13 +89,7 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 					}
 				</Stack>
 			</Stack>
-			<Box
-				sx={{
-					backgroundImage: {xs: 'none', sm: "url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/curved-arrow.png')"} ,
-					backgroundRepeat: 'no-repeat',
-					backgroundPosition: 'right bottom',
-				}}
-			>
+			<Box>
 				<GroupedSkills skills={skills} hoveredProficiency={hoveredProficiency} />
 
 				<Typography mt={1} variant="body1" component='p' color="text.muted.main" textAlign='center' >*In constant learning of new skills and improvement on already existing ones</Typography>
