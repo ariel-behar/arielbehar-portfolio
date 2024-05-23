@@ -40,18 +40,6 @@
                 "displayTechnology": true
             },
             {
-                "technology": "Three JS",
-                "proficiency": 2,
-                "image": "three-js.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "R3F",
-                "proficiency": 2,
-                "image": "react-three-fiber.png",
-                "displayTechnology": true
-            },
-            {
                 "technology": "Javascript",
                 "proficiency": 1,
                 "image": "javascript.png",
@@ -115,6 +103,23 @@
                 "technology": "Mongoose",
                 "proficiency": 1,
                 "image": "mongoose.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
+        "title": "WebGL",
+        "technologies":  [
+            {
+                "technology": "Three JS",
+                "proficiency": 3,
+                "image": "three-js.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "R3F",
+                "proficiency": 3,
+                "image": "react-three-fiber.png",
                 "displayTechnology": true
             }
         ]
