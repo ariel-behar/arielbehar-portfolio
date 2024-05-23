@@ -230,6 +230,23 @@
         ]
     },
     {
+        "title": "Artificial Intelligence",
+        "technologies": [
+            {
+                "technology": "ChatGPT",
+                "proficiency": 1,
+                "image": "chat-gpt.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Github Copilot",
+                "proficiency": 1,
+                "image": "github-copilot.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
         "title": "Version Control",
         "technologies": [
             {
