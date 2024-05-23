@@ -120,7 +120,7 @@
         ]
     },
     {
-        "title": "Design",
+        "title": "Design, 3D Modeling & Video Production",
         "technologies":  [
             {
                 "technology": "Photoshop",
@@ -145,13 +145,8 @@
                 "proficiency": 3,
                 "image": "illustrator.png",
                 "displayTechnology": true
-            }
-        ]
-    },
-    {
-        "title": "Video Production",
-        "technologies":  [
-                        {
+            },
+            {
                 "technology": "Premiere",
                 "proficiency": 3,
                 "image": "premiere.png",
