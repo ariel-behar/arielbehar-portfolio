@@ -183,7 +183,7 @@
         ]
     },
     {
-        "title": "Deployment",
+        "title": "Deployment & Hosting",
         "technologies": [
             {
                 "technology": "Heroku",
@@ -202,16 +202,17 @@
                 "proficiency": 1,
                 "image": "render.png",
                 "displayTechnology": true
-            }
-        ]
-    },
-    {
-        "title": "Hosting",
-        "technologies": [
+            },
             {
                 "technology": "Hostgator",
                 "proficiency": 1,
                 "image": "hostgator.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "cPanel",
+                "proficiency": 2,
+                "image": "cpanel.png",
                 "displayTechnology": true
             }
         ]
@@ -223,6 +224,12 @@
                 "technology": "Git",
                 "proficiency": 1,
                 "image": "git.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Github",
+                "proficiency": 1,
+                "image": "github.png",
                 "displayTechnology": true
             }
         ]
