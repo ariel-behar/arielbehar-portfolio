@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { lazy, useEffect, useState } from 'react'
 
 import styled from '@mui/material/styles/styled'
 
-import Box from '@mui/material/Box'
 import HumbleBeginnings from '../../components/SectionsComponents/EightSectionComponents/HumbleBeginnings'
-import SleepyDaniel from '../../components/SectionsComponents/EightSectionComponents/SleepyDaniel'
+const LazySleepyDaniel = lazy(() => import('../../components/SectionsComponents/EightSectionComponents/SleepyDaniel'))
+
+import Box from '@mui/material/Box'
 
 const StyledSectionBox = styled(Box)`
     background: rgb(180,180,180);
@@ -33,7 +34,7 @@ function EightBonusSection({ loadSectionHandler }: Props) {
         <StyledSectionBox component='section' id='eight-section'>
             {
                 showDaniel
-                    ? <SleepyDaniel onClickShowDanielHandler={onClickShowDanielHandler} />
+                    ? <LazySleepyDaniel onClickShowDanielHandler={onClickShowDanielHandler} />
                     : <HumbleBeginnings onClickShowDanielHandler={onClickShowDanielHandler} />
             }
 
