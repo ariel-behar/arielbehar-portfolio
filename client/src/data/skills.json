@@ -1,8 +1,14 @@
 [
     
     {
-        "title": "Front End",
+        "title": "Javascript Frameworks & Superscript",
         "technologies": [
+            {
+                "technology": "Next JS",
+                "proficiency": 2,
+                "image": "nextjs.png",
+                "displayTechnology": true
+            },
             {
                 "technology": "React",
                 "proficiency": 1,
@@ -15,30 +21,7 @@
                 "image": "typescript.png",
                 "displayTechnology": true
             },
-            {
-                "technology": "Tailwind",
-                "proficiency": 1,
-                "image": "tailwind.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Material UI",
-                "proficiency": 1,
-                "image": "materialui.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Bootstrap",
-                "proficiency": 1,
-                "image": "bootstrap.jpg",
-                "displayTechnology": true
-            },
-            {
-                "technology": "MDBootstrap",
-                "proficiency": 1,
-                "image": "mdbootstrap.jpg",
-                "displayTechnology": true
-            },
+           
             {
                 "technology": "jQuery",
                 "proficiency": 1,
@@ -50,12 +33,7 @@
     {
         "title": "Back End",
         "technologies":  [
-            {
-                "technology": "Next JS",
-                "proficiency": 2,
-                "image": "nextjs.png",
-                "displayTechnology": true
-            },
+
             {
                 "technology": "Node",
                 "proficiency": 1,
@@ -78,6 +56,41 @@
                 "technology": "Mongoose",
                 "proficiency": 1,
                 "image": "mongoose.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
+        "title": "CSS Frameworks",
+        "technologies":  [
+            {
+                "technology": "Tailwind",
+                "proficiency": 1,
+                "image": "tailwind.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Daisy UI",
+                "proficiency": 1,
+                "image": "daisy-ui.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Material UI",
+                "proficiency": 1,
+                "image": "materialui.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Bootstrap",
+                "proficiency": 1,
+                "image": "bootstrap.jpg",
+                "displayTechnology": true
+            },
+            {
+                "technology": "MDBootstrap",
+                "proficiency": 1,
+                "image": "mdbootstrap.jpg",
                 "displayTechnology": true
             }
         ]
