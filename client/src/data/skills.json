@@ -85,6 +85,12 @@
                 "displayTechnology": true
             },
             {
+                "technology": "Material-Tailwind",
+                "proficiency": 2,
+                "image": "material-tailwind.png",
+                "displayTechnology": true
+            },
+            {
                 "technology": "Bootstrap",
                 "proficiency": 1,
                 "image": "bootstrap.jpg",
@@ -143,6 +149,44 @@
         ]
     },
     {
+        "title": "Internationalization",
+        "technologies": [{
+                "technology": "i18next",
+                "proficiency": 2,
+                "image": "i18next.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Next-Intl",
+                "proficiency": 2,
+                "image": "next-intl.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
+        "title": "CMS",
+        "technologies": [{
+                "technology": "Shopify",
+                "proficiency": 1,
+                "image": "shopify.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Liquid",
+                "proficiency": 2,
+                "image": "liquid.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Wordpress",
+                "proficiency": 1,
+                "image": "wordpress.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
         "title": "Design, 3D Modeling & Video Production",
         "technologies": [{
                 "technology": "Photoshop",
@@ -176,40 +220,20 @@
             }
         ]
     },
-    {
-        "title": "CMS",
-        "technologies": [{
-                "technology": "Shopify",
-                "proficiency": 1,
-                "image": "shopify.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Liquid",
-                "proficiency": 2,
-                "image": "liquid.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Wordpress",
-                "proficiency": 1,
-                "image": "wordpress.png",
-                "displayTechnology": true
-            }
-        ]
-    },
+
     {
         "title": "Deployment & Hosting",
-        "technologies": [{
-                "technology": "Heroku",
-                "proficiency": 1,
-                "image": "heroku.png",
-                "displayTechnology": true
-            },
+        "technologies": [
             {
                 "technology": "Vercel",
                 "proficiency": 1,
                 "image": "vercel.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Heroku",
+                "proficiency": 1,
+                "image": "heroku.png",
                 "displayTechnology": true
             },
             {
@@ -276,6 +300,34 @@
                 "technology": "Github",
                 "proficiency": 1,
                 "image": "github.png",
+                "displayTechnology": true
+            }
+        ]
+    },
+    {
+        "title": "Miscellaneous",
+        "technologies": [{
+                "technology": "Atlas/Compass",
+                "proficiency": 1,
+                "image": "atlas-compass.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Postman",
+                "proficiency": 1,
+                "image": "postman.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "Jira",
+                "proficiency": 3,
+                "image": "jira.png",
+                "displayTechnology": true
+            },
+            {
+                "technology": "FileZilla",
+                "proficiency": 2,
+                "image": "filezilla.png",
                 "displayTechnology": true
             }
         ]
