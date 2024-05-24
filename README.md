@@ -127,7 +127,7 @@ npm start
 
 <br />
 
-<h2>Technologies' Stack</h2>
+<h2>Tech Stack</h2>
 
 <h3>Javascript Framework</h3> 
 
