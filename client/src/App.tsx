@@ -6,7 +6,7 @@ import theme from "./theme/theme";
 import CssBaseline from "@mui/material/CssBaseline";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 
-import Loader from "./views/Loader";
+import Loader from "./components/Loader";
 const RootView = lazy(() => import("./views/RootView")) 
 
 if(process.env.NODE_ENV === 'production') disableReactDevTools();

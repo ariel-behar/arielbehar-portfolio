@@ -2,20 +2,20 @@ import { Suspense, lazy, useState } from 'react'
 import { Element } from 'react-scroll'
 
 import styled from "@mui/material/styles/styled"
-import Loader from './Loader'
+import Loader from '../components/Loader'
 
 import Box from "@mui/material/Box"
 import Container from '@mui/material/Container'
 
-import TitleSection from "./MainView/TitleSection"
-const LazyAboutSection = lazy(() => import("./MainView/AboutSection"))
-const LazyProjectsSection = lazy(() => import('./MainView/ProjectsSection'))
-const LazyThreeJSProjects = lazy(() => import('./MainView/ThreeJsProjects'))
-const LazyPhotoshopSection = lazy(() => import('./MainView/PhotoshopSection'))
-const LazySkillsSection = lazy(() => import('./MainView/SkillsSection'))
-const LazyDocumentsSection = lazy(() => import('./MainView/DocumentsSection'))
-const LazyContactSection = lazy(() => import('./MainView/ContactSection'))
-const LazyBonusSection = lazy(() => import('./MainView/BonusSection'))
+import TitleSection from "../components/MainViewSections/TitleSection"
+const LazyAboutSection = lazy(() => import("../components/MainViewSections/AboutSection"))
+const LazyProjectsSection = lazy(() => import('../components/MainViewSections/ProjectsSection'))
+const LazyThreeJSProjects = lazy(() => import('../components/MainViewSections/ThreeJsProjects'))
+const LazyPhotoshopSection = lazy(() => import('../components/MainViewSections/PhotoshopSection'))
+const LazySkillsSection = lazy(() => import('../components/MainViewSections/SkillsSection'))
+const LazyDocumentsSection = lazy(() => import('../components/MainViewSections/DocumentsSection'))
+const LazyContactSection = lazy(() => import('../components/MainViewSections/ContactSection'))
+const LazyBonusSection = lazy(() => import('../components/MainViewSections/BonusSection'))
 
 const Footer = lazy(() => import('../components/Footer'))
 

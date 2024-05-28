@@ -4,8 +4,8 @@ import { useMediaQuery, useTheme } from '@mui/material'
 import projects from '../../data/projects.json'
 import Project from '../../model/Project'
 
-import ProjectDetailsBox from "../../components/Sections/Projects/ProjectDetailsBox"
-import ProjectsCarousel from "../../components/Sections/Projects/ProjectsCarousel"
+import ProjectDetailsBox from "../Sections/Projects/ProjectDetailsBox"
+import ProjectsCarousel from "../Sections/Projects/ProjectsCarousel"
 
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"

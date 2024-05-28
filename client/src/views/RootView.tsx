@@ -6,7 +6,7 @@ import HomeView from './HomeView'
 import styled from '@mui/material/styles/styled'
 
 import Box from '@mui/material/Box'
-import Loader from './Loader'
+import Loader from '../components/Loader'
 
 const MainViewPromise = import('./MainView')
 const MainView = lazy(() => MainViewPromise)
