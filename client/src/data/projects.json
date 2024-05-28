@@ -1,5 +1,4 @@
-[
-    {
+[{
         "_id": 1,
         "order": 0,
         "title": "Baby Journal",
@@ -7,7 +6,7 @@
         "description": "The ultimate web app designed for mothers to document their baby's activities, milestones, and precious moments.",
         "myRole": "Sole designer and developer from conceptualization to execution. This Next.js app combines Next-Auth for authentication, Next-Intl for internationalization, and MongoDB as its database",
         "technologies": ["NextJS", "Typescript", "Tailwind", "DaisyUI", "MongoDB", "Mongoose", "Next Auth", "Next Intl"],
-        "month": "March",
+        "month": "July",
         "year": 2024,
         "url": "https://baby-journal.arielbehar.com/",
         "type": "MPA",
@@ -58,11 +57,28 @@
         "url": "https://www.stitch-sense.com/",
         "type": "SPA",
         "category": "real",
-        "notes": [{ "note": "Loading may lag as the web app is deployed on Render.com's free tier" }]
+        "notes": []
     },
     {
         "_id": 5,
         "order": 4,
+        "title": "Travel@Style",
+        "image": "travel.jpg",
+        "description": "eCommerce platform for a New York based store focusing on travel apparel and hand-held steamer irons.",
+        "myRole": "Sole designer and developer from conceptualization to execution. T@S is my first more complex extracurricular Bootstrap/JavaScript project. It took 2 months of sporadic work to finish it, but it was all worth it, because the client and myself were very happy with the final result.",
+        "technologies": ["NextJS", "TypeScript", "SCSS", "Bootstrap", "React-Bootstrap", "Mongoose"],
+        "month": "May",
+        "year": 2024,
+        "url": "http://travelatstyle.biz/",
+        "type": "NextJ",
+        "category": "real",
+        "notes": [{
+            "note": "The shop's functionality was never fully implemented."
+        }]
+    },
+    {
+        "_id": 6,
+        "order": 5,
         "title": "IvyLu - Art & Beauty",
         "image": "ivylu.jpg",
         "description": "Official web app of the IvyLu beauty salon",
@@ -73,11 +89,13 @@
         "url": "http://ivylu.arielbehar.com/",
         "type": "SPA",
         "category": "real",
-        "notes": [{ "note": "The site's functionality has not been finalized" }]
+        "notes": [{
+            "note": "The site's functionality has not been finalized"
+        }]
     },
     {
-        "_id": 6,
-        "order": 5,
+        "_id": 7,
+        "order": 6,
         "title": "VX Aviation",
         "image": "vx-aviation.jpg",
         "description": "Company site for a Tampa Bay area based personal flight training school.",
@@ -91,13 +109,13 @@
         "notes": []
     },
     {
-        "_id": 7,
-        "order": 6,
+        "_id": 8,
+        "order": 7,
         "title": "Brasileirão 2019",
         "image": "brasileirao.jpg",
         "description": "A fictional website on the topic of the \"Brasileirão\" 2019 Soccer Championship",
         "myRole": "Sole designer and developer from conceptualization to execution. The original web app had been written as a MPA in 2020 with Node and hbs, but now it has been rewritten and optimized as a SPA in React (with TypeScript). The functionality to change languages has been implemented using the i18next library. The project presents fast and visually pleasant results.",
-        "technologies": ["React", "TypeScript", "Bootstrap","SASS", "i18next"],
+        "technologies": ["React", "TypeScript", "Bootstrap", "SASS", "i18next"],
         "month": "February",
         "year": 2024,
         "url": "http://brasileirao.arielbehar.com/",
@@ -106,8 +124,8 @@
         "notes": []
     },
     {
-        "_id": 8,
-        "order": 7,
+        "_id": 9,
+        "order": 8,
         "title": "Ariel Behar Portfolio",
         "image": "portfolio.jpg",
         "description": "My personal portfolio. Version 3.0",
@@ -118,11 +136,13 @@
         "url": "http://www.arielbehar.com",
         "type": "Bootstrap",
         "category": "real",
-        "notes": [{ "note": "The site you are currently visiting" }  ]
+        "notes": [{
+            "note": "The site you are currently visiting"
+        }]
     },
     {
-        "_id": 9,
-        "order": 8,
+        "_id": 10,
+        "order": 9,
         "title": "A&M GameHub",
         "image": "am-gamehub.jpg",
         "description": "A desktop based web application to assist my little sisters learn English, European geography and Hebrew.",
@@ -133,13 +153,17 @@
         "url": "http://www.am-gamehub.arielbehar.com/",
         "type": "SPA",
         "category": "real",
-        "notes": [ { "note": "The site's language is Bulgarian." }, { "note": "Optimized for large screen sizes only." }]
+        "notes": [{
+            "note": "The site's language is Bulgarian."
+        }, {
+            "note": "Optimized for large screen sizes only."
+        }]
     },
 
 
     {
-        "_id": 10,
-        "order": 9,
+        "_id": 11,
+        "order": 10,
         "title": "Blago-darya",
         "image": "blago-darya.jpg",
         "description": "Voluntary initiative to help shelter homeless and wounded animals in Bulgaria. The organization gathers funds through direct donations and product sales.",
@@ -150,22 +174,9 @@
         "url": "http://my-dummy-site.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": [ { "note": "The site's language is Bulgarian." } ]
-    },
-    {
-        "_id": 11,
-        "order": 10,
-        "title": "Travel@Style",
-        "image": "travel.jpg",
-        "description": "eCommerce platform for a New York based store focusing on travel apparel and hand-held steamer irons.",
-        "myRole": "Sole designer and developer from conceptualization to execution. T@S is my first more complex extracurricular Bootstrap/JavaScript project. It took 2 months of sporadic work to finish it, but it was all worth it, because the client and myself were very happy with the final result.",
-        "technologies": ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "PHP"],
-        "month": "August",
-        "year": 2017,
-        "url": "http://travelatstyle.biz/",
-        "type": "Bootstrap",
-        "category": "real",
-        "notes": [{"note": "The shop's functionality was never fully implemented."}]
+        "notes": [{
+            "note": "The site's language is Bulgarian."
+        }]
     },
     {
         "_id": 12,
@@ -180,7 +191,9 @@
         "url": "http://esportmarketinggroup.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": [{"note": "The site is no longer live"}]
+        "notes": [{
+            "note": "The site is no longer live"
+        }]
     },
     {
         "_id": 13,
@@ -195,7 +208,9 @@
         "url": "http://thomasandthomascustoms.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": [{"note": "The site is no longer live"}]
+        "notes": [{
+            "note": "The site is no longer live"
+        }]
     },
     {
         "_id": 14,
@@ -210,7 +225,9 @@
         "url": "http://thecreditscore.guru/",
         "type": "Wordpress",
         "category": "real",
-        "notes": [{"note": "The site is no longer live"}]
+        "notes": [{
+            "note": "The site is no longer live"
+        }]
     },
     {
         "_id": 15,
@@ -240,6 +257,8 @@
         "url": "http://www.bodywrapspalon.com/",
         "type": "Wordpress",
         "category": "real",
-        "notes": [{"note": "The site is no longer live"}]
+        "notes": [{
+            "note": "The site is no longer live"
+        }]
     }
 ]
