@@ -1,11 +1,15 @@
+import { useState } from "react";
+import { v4 as uuid } from 'uuid';
 import styled from "@mui/material/styles/styled"
 
-import Carousel from "react-multi-carousel";
+
+import Carousel, { StateCallBack } from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 
 import mockupProjects from '../../../data/mockupProjects.json'
 import Project from "../../../model/Project";
 import MockupProjectCarouselSlide from "./MockupProjectCarouselSlide";
+import CarouselStatus from "./CarouselStatus";
 
 const StyledCarousel = styled(Carousel)`
 	min-height: 460px;
@@ -73,8 +77,24 @@ const responsive = {
 };
 
 function MockupProjectsCarousel() {
+	const [currentSlide, setCurrentSlide] = useState<number>(1)
+
+
+	const handleSlideChange = (previousSlide: number, state: StateCallBack) => {
+		if(state.currentSlide === 0) {
+			setCurrentSlide(1)
+		} else if(state.currentSlide > mockupProjects.length + 1) {
+			setCurrentSlide(1)
+		} else if(state.currentSlide > mockupProjects.length + 2) {
+			setCurrentSlide(2)
+		} else {
+			setCurrentSlide(state.currentSlide -1)
+		}
+	}
+
 	return (
 		<>
+			<CarouselStatus currentSlide={currentSlide} totalSlides={mockupProjects.length} />
 			<StyledCarousel
 				swipeable={true}
 				showDots={true}
@@ -82,10 +102,14 @@ function MockupProjectsCarousel() {
 				infinite={true}
 				autoPlay={true}
 				autoPlaySpeed={4000}
+				afterChange={handleSlideChange}
 			>
 				{
-					mockupProjects.map(project => {
-						return <MockupProjectCarouselSlide key={project._id} project={project as Project} />
+					mockupProjects.map((project, index) => {
+						return <MockupProjectCarouselSlide
+							key={uuid()}
+							project={project as Project}
+						/>
 					})
 				}
 			</StyledCarousel>
