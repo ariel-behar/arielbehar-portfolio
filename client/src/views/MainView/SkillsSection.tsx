@@ -50,7 +50,7 @@ function SkillsSection({ loadSectionHandler }: Props) {
 	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>(null)
 
 	useEffect(() => {
-		loadSectionHandler(6)
+		loadSectionHandler(7)
 	}, [loadSectionHandler])
 
 	const onMouseEnterProficiencyTitleHandler = (skillProficiencyNum: 1 | 2 | 3) => {

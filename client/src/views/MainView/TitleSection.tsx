@@ -1,8 +1,9 @@
+import { useEffect } from "react"
+import styled from "@mui/material/styles/styled"
+
 import Box from "@mui/material/Box"
 import Stack from "@mui/material/Stack"
-import styled from "@mui/material/styles/styled"
 import Typography from "@mui/material/Typography"
-import { useEffect } from "react"
 
 const StyledBox = styled(Box)`
     background: rgb(64,150,238);
@@ -30,7 +31,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function FirstTitleSection({ loadSectionHandler }: Props) {
+function TitleSection({ loadSectionHandler }: Props) {
     useEffect(() => {
         loadSectionHandler(2)
     },[loadSectionHandler])
@@ -46,4 +47,4 @@ function FirstTitleSection({ loadSectionHandler }: Props) {
     )
 }
 
-export default FirstTitleSection
+export default TitleSection

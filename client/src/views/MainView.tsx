@@ -7,14 +7,15 @@ import Loader from './Loader'
 import Box from "@mui/material/Box"
 import Container from '@mui/material/Container'
 
-import FirstTitleSection from "./MainView/FirstTitleSection"
-const SecondAboutSection = lazy(() => import("./MainView/AboutSection"))
-const ThirdProjectsSection = lazy(() => import('./MainView/ProjectsSection'))
-const FourthPhotoshopSection = lazy(() => import('./MainView/PhotoshopSection'))
-const FifthAbilitiesSection = lazy(() => import('./MainView/SkillsSection'))
-const SixthDocumentsSection = lazy(() => import('./MainView/DocumentsSection'))
-const SeventhContactSection = lazy(() => import('./MainView/ContactSection'))
-const EightBonusSection = lazy(() => import('./MainView/BonusSection'))
+import TitleSection from "./MainView/TitleSection"
+const LazyAboutSection = lazy(() => import("./MainView/AboutSection"))
+const LazyProjectsSection = lazy(() => import('./MainView/ProjectsSection'))
+const LazyThreeJSProjects = lazy(() => import('./MainView/ThreeJsProjects'))
+const LazyPhotoshopSection = lazy(() => import('./MainView/PhotoshopSection'))
+const LazySkillsSection = lazy(() => import('./MainView/SkillsSection'))
+const LazyDocumentsSection = lazy(() => import('./MainView/DocumentsSection'))
+const LazyContactSection = lazy(() => import('./MainView/ContactSection'))
+const LazyBonusSection = lazy(() => import('./MainView/BonusSection'))
 
 const Footer = lazy(() => import('../components/Footer'))
 
@@ -35,36 +36,67 @@ function MainView() {
 
 	return (
 		<Box>
-			<FirstTitleSection loadSectionHandler={loadSectionHandler} />
+			<TitleSection loadSectionHandler={loadSectionHandler} />
 
-			{loadSection >= 2 && <Suspense fallback={<Loader />}><SecondAboutSection loadSectionHandler={loadSectionHandler} /></Suspense>}
+			{loadSection >= 2 && <Suspense fallback={<Loader />}>
+				<LazyAboutSection loadSectionHandler={loadSectionHandler} />
+			</Suspense>
+			}
 
 			<StyledBox>
 				<Container>
 					<Element name="projects-photoshop-container-section">
-						{loadSection >= 3 && <Suspense fallback={<Loader />}><ThirdProjectsSection loadSectionHandler={loadSectionHandler} /></Suspense>}
+						{loadSection >= 3 && <Suspense fallback={<Loader />}>
+							<LazyProjectsSection loadSectionHandler={loadSectionHandler} />
+						</Suspense>
+						}
 
 						<hr />
 
-						{loadSection >= 4 && <Suspense fallback={<Loader />}><FourthPhotoshopSection loadSectionHandler={loadSectionHandler} /></Suspense>}
+						{loadSection >= 4 && <Suspense fallback={<Loader />}>
+							<LazyThreeJSProjects loadSectionHandler={loadSectionHandler} />
+						</Suspense>
+						}
+
+						<hr />
+
+						{loadSection >= 5 && <Suspense fallback={<Loader />}>
+							<LazyPhotoshopSection loadSectionHandler={loadSectionHandler} />
+						</Suspense>
+						}
 					</Element>
 
 					<hr />
 
-					{loadSection >= 5 && <Suspense fallback={<Loader />}><FifthAbilitiesSection loadSectionHandler={loadSectionHandler} /></Suspense>}
+					{loadSection >= 6 && <Suspense fallback={<Loader />}>
+						<LazySkillsSection loadSectionHandler={loadSectionHandler} />
+					</Suspense>
+					}
 
 					<hr />
 
 					<Box py={3}></Box>
 				</Container>
 
-				{loadSection >= 6 && <Suspense fallback={<Loader />}><SixthDocumentsSection loadSectionHandler={loadSectionHandler}/></Suspense>}
+				{loadSection >= 7 && <Suspense fallback={<Loader />}>
+					<LazyDocumentsSection loadSectionHandler={loadSectionHandler} />
+				</Suspense>
+				}
 
-				{loadSection >= 7 && <Suspense fallback={<Loader />}><SeventhContactSection loadSectionHandler={loadSectionHandler}/></Suspense>}
+				{loadSection >= 8 && <Suspense fallback={<Loader />}>
+					<LazyContactSection loadSectionHandler={loadSectionHandler} />
+				</Suspense>
+				}
 
-				{loadSection >= 8 && <Suspense fallback={<Loader />}><EightBonusSection loadSectionHandler={loadSectionHandler}/></Suspense>}
+				{loadSection >= 9 && <Suspense fallback={<Loader />}>
+					<LazyBonusSection loadSectionHandler={loadSectionHandler} />
+				</Suspense>
+				}
 
-				{loadSection >= 9 && <Suspense fallback={<Loader />}><Footer /></Suspense>}
+				{loadSection >= 10 && <Suspense fallback={<Loader />}>
+					<Footer />
+				</Suspense>
+				}
 			</StyledBox>
 		</Box>
 	)

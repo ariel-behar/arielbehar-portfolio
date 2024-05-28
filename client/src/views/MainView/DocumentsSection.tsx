@@ -92,7 +92,7 @@ function DocumentsSection({ loadSectionHandler }: Props) {
     const [documentCategory, setDocumentCategory] = useState<Document['category'] | null>(null)
     
 	useEffect(() => {
-        loadSectionHandler(7)
+        loadSectionHandler(8)
     },[loadSectionHandler])
 
 

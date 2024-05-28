@@ -22,7 +22,7 @@ function BonusSection({ loadSectionHandler }: Props) {
     const [showDaniel, setShowDaniel] = useState<boolean>(false)
 
     useEffect(() => {
-        loadSectionHandler(9)
+        loadSectionHandler(10)
     }, [loadSectionHandler])
 
 

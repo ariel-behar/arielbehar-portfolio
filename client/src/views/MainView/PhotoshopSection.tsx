@@ -24,7 +24,7 @@ interface Props {
 
 function PhotoshopSection({ loadSectionHandler }: Props) {
 	useEffect(() => {
-        loadSectionHandler(5)
+        loadSectionHandler(6)
     },[loadSectionHandler])
 
 	return (
