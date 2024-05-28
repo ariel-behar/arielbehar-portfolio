@@ -8,6 +8,10 @@ const StyledCarousel = styled(Carousel)`
 	.carousel {
 		&.carousel-slider {
 			margin-bottom: 20px;
+
+			.carousel-status {
+				font-size: 16px;
+			}
 		}
 		
 		li.slide {
