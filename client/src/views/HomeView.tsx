@@ -1,6 +1,3 @@
-import Box from "@mui/material/Box"
-import Button from "@mui/material/Button"
-import Stack from "@mui/material/Stack"
 import { motion } from "framer-motion"
 
 import DesignHeading from "../components/HomeView/DesignHeading"
@@ -8,6 +5,10 @@ import FlyInText from "../components/HomeView/FlyInText"
 import Logo from "../components/HomeView/Logo"
 import Overlay from "../components/HomeView/Overlay"
 import VideoBackground from "../components/HomeView/VideoBackground"
+
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Stack from "@mui/material/Stack"
 
 interface Props {
     showMainViewHandler: () => void

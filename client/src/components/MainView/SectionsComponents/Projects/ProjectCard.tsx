@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import Project from '../../../model/Project'
+import Project from '../../../../model/Project'
 
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'

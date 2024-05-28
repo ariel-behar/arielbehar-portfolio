@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { v4 as uuidv4 } from 'uuid';
 
-import Project from "../../../model/Project"
+import Project from "../../../../model/Project"
 import ProjectCard from "./ProjectCard"
 
 import styled from "@mui/material/styles/styled"

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import Document from '../../model/Document'
+import Document from '../../../model/Document'
 
 import styled from "@mui/material/styles/styled"
 
@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import Modal from '../Modal/Modal'
+import Modal from '../../Modal/Modal'
 
 const StyledSectionBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/chalkboard.jpg');

@@ -1,8 +1,8 @@
-import getChipColor from '../../../utils/getChipColor'
+import getChipColor from '../../../../utils/getChipColor'
 
 import Box from '@mui/material/Box'
 import styled from '@mui/material/styles/styled'
-import { Technology } from '../../../model/Skill'
+import { Technology } from '../../../../model/Skill'
 import Typography from '@mui/material/Typography/Typography'
 
 const StyledChipBox = styled(Box)`

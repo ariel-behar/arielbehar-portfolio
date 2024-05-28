@@ -1,5 +1,5 @@
 import Project from "../../model/Project"
-import ProjectCard from "../Sections/Projects/ProjectCard"
+import ProjectCard from "../MainView/SectionsComponents/Projects/ProjectCard"
 import { Partial } from "../../types/common-types"
 
 import styled from "@mui/material/styles/styled"

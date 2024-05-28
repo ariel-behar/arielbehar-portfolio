@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import languages from '../../data/languages.json'
+import languages from '../../../data/languages.json'
 
-import FlagCard from '../MainView/FlagCard'
+import FlagCard from '../SectionsComponents/About/FlagCard'
 
 import styled from '@mui/material/styles/styled'
 

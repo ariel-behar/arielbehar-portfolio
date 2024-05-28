@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import styled from "@mui/material/styles/styled"
 
-import MockupProjectsCarousel from "../Sections/Photoshop/MockupProjectsCarousel"
-import Television from "../Sections/Photoshop/Television"
+import MockupProjectsCarousel from "../SectionsComponents/Photoshop/MockupProjectsCarousel"
+import Television from "../SectionsComponents/Photoshop/Television"
 
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"

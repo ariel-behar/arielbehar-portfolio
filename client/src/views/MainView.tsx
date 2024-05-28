@@ -1,21 +1,21 @@
 import { Suspense, lazy, useState } from 'react'
 import { Element } from 'react-scroll'
-
 import styled from "@mui/material/styles/styled"
+
 import Loader from '../components/Loader'
 
 import Box from "@mui/material/Box"
 import Container from '@mui/material/Container'
 
-import TitleSection from "../components/MainViewSections/TitleSection"
-const LazyAboutSection = lazy(() => import("../components/MainViewSections/AboutSection"))
-const LazyProjectsSection = lazy(() => import('../components/MainViewSections/ProjectsSection'))
-const LazyThreeJSProjects = lazy(() => import('../components/MainViewSections/ThreeJsProjects'))
-const LazyPhotoshopSection = lazy(() => import('../components/MainViewSections/PhotoshopSection'))
-const LazySkillsSection = lazy(() => import('../components/MainViewSections/SkillsSection'))
-const LazyDocumentsSection = lazy(() => import('../components/MainViewSections/DocumentsSection'))
-const LazyContactSection = lazy(() => import('../components/MainViewSections/ContactSection'))
-const LazyBonusSection = lazy(() => import('../components/MainViewSections/BonusSection'))
+import TitleSection from "../components/MainView/Sections/TitleSection"
+const LazyAboutSection = lazy(() => import("../components/MainView/Sections/AboutSection"))
+const LazyProjectsSection = lazy(() => import('../components/MainView/Sections/ProjectsSection'))
+const LazyThreeJSProjects = lazy(() => import('../components/MainView/Sections/ThreeJsProjects'))
+const LazyPhotoshopSection = lazy(() => import('../components/MainView/Sections/PhotoshopSection'))
+const LazySkillsSection = lazy(() => import('../components/MainView/Sections/SkillsSection'))
+const LazyDocumentsSection = lazy(() => import('../components/MainView/Sections/DocumentsSection'))
+const LazyContactSection = lazy(() => import('../components/MainView/Sections/ContactSection'))
+const LazyBonusSection = lazy(() => import('../components/MainView/Sections/BonusSection'))
 
 const Footer = lazy(() => import('../components/Footer'))
 

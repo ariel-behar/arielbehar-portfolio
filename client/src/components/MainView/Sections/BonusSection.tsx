@@ -2,8 +2,8 @@ import { lazy, useEffect, useState } from 'react'
 
 import styled from '@mui/material/styles/styled'
 
-import HumbleBeginnings from '../Sections/Bonus/HumbleBeginnings'
-const LazySleepyDaniel = lazy(() => import('../Sections/Bonus/SleepyDaniel'))
+import HumbleBeginnings from '../SectionsComponents/Bonus/HumbleBeginnings'
+const LazySleepyDaniel = lazy(() => import('../SectionsComponents/Bonus/SleepyDaniel'))
 
 import Box from '@mui/material/Box'
 

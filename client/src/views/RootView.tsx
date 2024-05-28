@@ -1,12 +1,11 @@
 import { lazy, useState, Suspense } from 'react'
+import styled from '@mui/material/styles/styled'
 
 import Navigation from '../components/Navigation/Navigation'
 import HomeView from './HomeView'
-
-import styled from '@mui/material/styles/styled'
+import Loader from '../components/Loader'
 
 import Box from '@mui/material/Box'
-import Loader from '../components/Loader'
 
 const MainViewPromise = import('./MainView')
 const MainView = lazy(() => MainViewPromise)

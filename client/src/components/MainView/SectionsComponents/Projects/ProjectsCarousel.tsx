@@ -1,7 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import Project from "../../../model/Project"
+import Project from "../../../../model/Project"
 import styled from '@mui/material/styles/styled';
 
 const StyledCarousel = styled(Carousel)`

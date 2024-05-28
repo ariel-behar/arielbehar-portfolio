@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box"
 
 import Typography from "@mui/material/Typography"
-import Project from "../../../model/Project"
+import Project from "../../../../model/Project"
 
 interface Props {
     currentSlide: number,

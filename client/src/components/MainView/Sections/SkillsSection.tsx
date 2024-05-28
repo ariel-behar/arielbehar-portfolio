@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-import skills from '../../data/skills.json'
+import skills from '../../../data/skills.json'
 
 import styled from "@mui/material/styles/styled"
 
@@ -10,8 +10,8 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import ProficiencyTitle from '../Sections/Skills/ProficiencyTitle';
-import GroupedSkills from '../Sections/Skills/GroupedSkills';
+import ProficiencyTitle from '../SectionsComponents/Skills/ProficiencyTitle';
+import GroupedSkills from '../SectionsComponents/Skills/GroupedSkills';
 
 const StyledKeyboardArrowRightIcon = styled(KeyboardArrowRightIcon)`
 	color: ${(({ theme }) => theme.palette.text.muted.light)};

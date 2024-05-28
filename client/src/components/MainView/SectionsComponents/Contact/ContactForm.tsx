@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import FormData from '../../../model/FormData';
-import contactFormSchema from '../../../validations/contactFormSchema';
-import * as formService from '../../../services/formService'
+import FormData from '../../../../model/FormData';
+import contactFormSchema from '../../../../validations/contactFormSchema';
+import * as formService from '../../../../services/formService'
 import styled from '@mui/material/styles/styled';
 
 import Box from "@mui/material/Box"

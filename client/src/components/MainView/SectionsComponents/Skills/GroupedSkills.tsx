@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { Skill, Technology } from "../../../model/Skill"
+import { Skill, Technology } from "../../../../model/Skill"
 import Chip from './Chip';
 
 import Box from '@mui/material/Box';

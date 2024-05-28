@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import styled from '@mui/material/styles/styled'
 
-import ContactForm from '../Sections/Contact/ContactForm'
+import ContactForm from '../SectionsComponents/Contact/ContactForm'
 
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
