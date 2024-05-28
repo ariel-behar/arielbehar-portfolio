@@ -31,9 +31,9 @@ function PhotoshopSection({ loadSectionHandler }: Props) {
 		<Grid container spacing={{md: 2}} py={7}>
 			<Grid item xs={12} md={6} px={{md: 2}}>
 				<Box px={{xs: 3, sm: 5, md: 7}} pb={{xs: 3, sm: 0, md: 0}}>
-					<Typography variant="h4" component='h4' textAlign='center' color='text.secondary'>PSD to HTML</Typography>
+					<Typography variant="h4" component='h4' textAlign='center' color='text.secondary'>PSD / FIG to HTML</Typography>
 
-					<Typography mt={2} variant="body1" component='p' textAlign='justify' color='text.secondary'>This section focuses on my ability to work with Adobe Photoshop and accurately recreate websites from a PSD file into HTML format.</Typography>
+					<Typography mt={2} variant="body1" component='p' textAlign='justify' color='text.secondary'>This section focuses on my ability to work with Adobe Photoshop / Figma and accurately recreate websites into HTML format.</Typography>
 				</Box>
 
 				<Television />
