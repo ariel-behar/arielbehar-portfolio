@@ -1,8 +1,6 @@
 import FormData from "../model/FormData"
 
-// const baseUrl = 'http://localhost:3030/api'
-// const baseUrl = 'https://arielbehar.herokuapp.com/api'
-const baseUrl = 'http://www.arielbehar.com/api'
+import { baseUrl } from "../lib/base-url"
 
 export const submit = (formData: FormData) => fetch(`${baseUrl}/form`, {
     method: 'POST',
