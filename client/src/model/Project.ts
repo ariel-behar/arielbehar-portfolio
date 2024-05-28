@@ -11,7 +11,7 @@ interface Project extends Identifiable<IdType> {
     month: string,
     year: number,
     url: string,
-    type: "MPA" | "SPA" | "Bootstrap" | "Wordpress",
+    type: "Next" | "React" | "Wordpress" | "Shopify" | "Vanilla",
     category: "real" | "mockup",
     notes: [] | [
         {
