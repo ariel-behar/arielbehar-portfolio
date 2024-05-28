@@ -15,7 +15,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function ThirdProjectsSection({ loadSectionHandler }: Props) {
+function ProjectsSection({ loadSectionHandler }: Props) {
 	const [ selectedProject, setSelectedProject ] = useState<Project | null>(null)
 
 	useEffect(() => {
@@ -49,4 +49,4 @@ function ThirdProjectsSection({ loadSectionHandler }: Props) {
 	)
 }
 
-export default ThirdProjectsSection
+export default ProjectsSection

@@ -46,7 +46,7 @@ interface Props {
 	loadSectionHandler: (sectionNum: number) => void
 }
 
-function FifthAbilitiesSection({ loadSectionHandler }: Props) {
+function SkillsSection({ loadSectionHandler }: Props) {
 	const [hoveredProficiency, setHoveredProficiency] = useState<1 | 2 | 3 | null>(null)
 
 	useEffect(() => {
@@ -98,4 +98,4 @@ function FifthAbilitiesSection({ loadSectionHandler }: Props) {
 	)
 }
 
-export default FifthAbilitiesSection
+export default SkillsSection

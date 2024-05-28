@@ -27,7 +27,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function SecondAboutSection({ loadSectionHandler }: Props) {
+function AboutSection({ loadSectionHandler }: Props) {
 
     useEffect(() => {
         loadSectionHandler(3)
@@ -84,4 +84,4 @@ function SecondAboutSection({ loadSectionHandler }: Props) {
     )
 }
 
-export default SecondAboutSection
+export default AboutSection

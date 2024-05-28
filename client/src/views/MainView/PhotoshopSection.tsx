@@ -1,14 +1,12 @@
-
-import MockupProjectsCarousel from "../../components/Sections/PsdToHtml/MockupProjectsCarousel"
-import Television from "../../components/Sections/PsdToHtml/Television"
-
-
+import { useEffect } from "react"
 import styled from "@mui/material/styles/styled"
+
+import MockupProjectsCarousel from "../../components/Sections/Photoshop/MockupProjectsCarousel"
+import Television from "../../components/Sections/Photoshop/Television"
 
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import { useEffect } from "react"
 
 const StyledBox = styled(Box)`
     border: 2px solid #2e2e2e;
@@ -24,7 +22,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function FourthPhotoshopSection({ loadSectionHandler }: Props) {
+function PhotoshopSection({ loadSectionHandler }: Props) {
 	useEffect(() => {
         loadSectionHandler(5)
     },[loadSectionHandler])
@@ -52,4 +50,4 @@ function FourthPhotoshopSection({ loadSectionHandler }: Props) {
 	)
 }
 
-export default FourthPhotoshopSection
+export default PhotoshopSection

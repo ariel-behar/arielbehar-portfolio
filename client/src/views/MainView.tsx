@@ -7,14 +7,14 @@ import Loader from './Loader'
 import Box from "@mui/material/Box"
 import Container from '@mui/material/Container'
 
-import FirstTitleSection from "./MainViewSections/FirstTitleSection"
-const SecondAboutSection = lazy(() => import("./MainViewSections/SecondAboutSection"))
-const ThirdProjectsSection = lazy(() => import('./MainViewSections/ThirdProjectsSection'))
-const FourthPhotoshopSection = lazy(() => import('./MainViewSections/FourthPhotoshopSection'))
-const FifthAbilitiesSection = lazy(() => import('./MainViewSections/FifthAbilitiesSection'))
-const SixthDocumentsSection = lazy(() => import('./MainViewSections/SixthDocumentsSection'))
-const SeventhContactSection = lazy(() => import('./MainViewSections/SeventhContactSection'))
-const EightBonusSection = lazy(() => import('./MainViewSections/BonusSection'))
+import FirstTitleSection from "./MainView/FirstTitleSection"
+const SecondAboutSection = lazy(() => import("./MainView/AboutSection"))
+const ThirdProjectsSection = lazy(() => import('./MainView/ProjectsSection'))
+const FourthPhotoshopSection = lazy(() => import('./MainView/PhotoshopSection'))
+const FifthAbilitiesSection = lazy(() => import('./MainView/SkillsSection'))
+const SixthDocumentsSection = lazy(() => import('./MainView/DocumentsSection'))
+const SeventhContactSection = lazy(() => import('./MainView/ContactSection'))
+const EightBonusSection = lazy(() => import('./MainView/BonusSection'))
 
 const Footer = lazy(() => import('../components/Footer'))
 

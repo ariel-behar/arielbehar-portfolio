@@ -59,7 +59,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function SeventhContactSection({ loadSectionHandler }: Props) {
+function ContactSection({ loadSectionHandler }: Props) {
     const [formSubmitSuccess, setFormSubmitSuccess] = useState<boolean>(false)
 
     useEffect(() => {
@@ -123,4 +123,4 @@ function SeventhContactSection({ loadSectionHandler }: Props) {
     )
 }
 
-export default SeventhContactSection
+export default ContactSection

@@ -87,7 +87,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function SixthDocumentsSection({ loadSectionHandler }: Props) {
+function DocumentsSection({ loadSectionHandler }: Props) {
     const [showModal, setShowModal] = useState<boolean>(false)
     const [documentCategory, setDocumentCategory] = useState<Document['category'] | null>(null)
     
@@ -144,4 +144,4 @@ function SixthDocumentsSection({ loadSectionHandler }: Props) {
     )
 }
 
-export default SixthDocumentsSection
+export default DocumentsSection
