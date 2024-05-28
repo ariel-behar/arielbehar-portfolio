@@ -22,7 +22,7 @@ function DesignHeading() {
                 variant="h1"
                 textAlign='center'
             >
-                ARIEL BEHAR WEB DESIGN
+                ARIEL BEHAR<br/> Web Design & Development
             </StyledTypography>
         </Box>
 

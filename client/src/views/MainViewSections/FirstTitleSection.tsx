@@ -39,8 +39,8 @@ function FirstTitleSection({ loadSectionHandler }: Props) {
         <StyledBox component='section' id='first-section' >
 
             <StyledStack direction='column' justifyContent='center' alignItems='center'  >
-                <Typography variant="h3" component='h1' textAlign='center'>ARIEL BEHAR WEB DESIGN </Typography>
-                <Typography variant="h5" component='h2' fontStyle='italic' textAlign='center'>Design Done Differently</Typography>
+                <Typography variant="h3" component='h1' textAlign='center'>ARIEL BEHAR WEB PORTFOLIO</Typography>
+                <Typography variant="h5" component='h2' fontStyle='italic' textAlign='center'>Design & Development Done Differently</Typography>
             </StyledStack>
         </StyledBox>
     )
