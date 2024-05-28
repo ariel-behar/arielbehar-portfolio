@@ -14,7 +14,7 @@ const FourthPhotoshopSection = lazy(() => import('./MainViewSections/FourthPhoto
 const FifthAbilitiesSection = lazy(() => import('./MainViewSections/FifthAbilitiesSection'))
 const SixthDocumentsSection = lazy(() => import('./MainViewSections/SixthDocumentsSection'))
 const SeventhContactSection = lazy(() => import('./MainViewSections/SeventhContactSection'))
-const EightBonusSection = lazy(() => import('./MainViewSections/EightBonusSection'))
+const EightBonusSection = lazy(() => import('./MainViewSections/BonusSection'))
 
 const Footer = lazy(() => import('../components/Footer'))
 

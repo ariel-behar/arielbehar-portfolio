@@ -10,8 +10,8 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import ProficiencyTitle from '../../components/SectionsComponents/FifthSectionComponents/ProficiencyTitle';
-import GroupedSkills from '../../components/SectionsComponents/FifthSectionComponents/GroupedSkills';
+import ProficiencyTitle from '../../components/Sections/Skills/ProficiencyTitle';
+import GroupedSkills from '../../components/Sections/Skills/GroupedSkills';
 
 const StyledKeyboardArrowRightIcon = styled(KeyboardArrowRightIcon)`
 	color: ${(({ theme }) => theme.palette.text.muted.light)};

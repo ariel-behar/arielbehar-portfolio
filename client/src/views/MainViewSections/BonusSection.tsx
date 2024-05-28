@@ -2,8 +2,8 @@ import { lazy, useEffect, useState } from 'react'
 
 import styled from '@mui/material/styles/styled'
 
-import HumbleBeginnings from '../../components/SectionsComponents/EightSectionComponents/HumbleBeginnings'
-const LazySleepyDaniel = lazy(() => import('../../components/SectionsComponents/EightSectionComponents/SleepyDaniel'))
+import HumbleBeginnings from '../../components/Sections/Bonus/HumbleBeginnings'
+const LazySleepyDaniel = lazy(() => import('../../components/Sections/Bonus/SleepyDaniel'))
 
 import Box from '@mui/material/Box'
 
@@ -18,7 +18,7 @@ interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
 
-function EightBonusSection({ loadSectionHandler }: Props) {
+function BonusSection({ loadSectionHandler }: Props) {
     const [showDaniel, setShowDaniel] = useState<boolean>(false)
 
     useEffect(() => {
@@ -42,4 +42,4 @@ function EightBonusSection({ loadSectionHandler }: Props) {
     )
 }
 
-export default EightBonusSection
+export default BonusSection

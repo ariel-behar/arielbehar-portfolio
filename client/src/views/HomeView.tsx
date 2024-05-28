@@ -3,11 +3,11 @@ import Button from "@mui/material/Button"
 import Stack from "@mui/material/Stack"
 import { motion } from "framer-motion"
 
-import DesignHeading from "../components/HomeViewComponents/DesignHeading"
-import FlyInText from "../components/HomeViewComponents/FlyInText"
-import Logo from "../components/HomeViewComponents/Logo"
-import Overlay from "../components/HomeViewComponents/Overlay"
-import VideoBackground from "../components/HomeViewComponents/VideoBackground"
+import DesignHeading from "../components/HomeView/DesignHeading"
+import FlyInText from "../components/HomeView/FlyInText"
+import Logo from "../components/HomeView/Logo"
+import Overlay from "../components/HomeView/Overlay"
+import VideoBackground from "../components/HomeView/VideoBackground"
 
 interface Props {
     showMainViewHandler: () => void

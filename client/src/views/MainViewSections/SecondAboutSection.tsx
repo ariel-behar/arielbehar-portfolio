@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import languages from '../../data/languages.json'
 
-import FlagCard from '../../components/MainViewComponents/FlagCard'
+import FlagCard from '../../components/MainView/FlagCard'
 
 import styled from '@mui/material/styles/styled'
 
