@@ -136,6 +136,7 @@ function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }
 			showStatus={true}
 			showIndicators={false}
 			showArrows={false}
+			showThumbs={true}
 			swipeable={false}
 			thumbWidth={166}
 		>
