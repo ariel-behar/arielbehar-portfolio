@@ -10,7 +10,7 @@ import Container from '@mui/material/Container'
 import TitleSection from "../components/MainView/Sections/TitleSection"
 const LazyAboutSection = lazy(() => import("../components/MainView/Sections/AboutSection"))
 const LazyProjectsSection = lazy(() => import('../components/MainView/Sections/ProjectsSection'))
-const LazyThreeJSProjects = lazy(() => import('../components/MainView/Sections/ThreeJsProjects'))
+const LazyThreeJSProjects = lazy(() => import('../components/MainView/Sections/ThreeJsSection'))
 const LazyPhotoshopSection = lazy(() => import('../components/MainView/Sections/PhotoshopSection'))
 const LazySkillsSection = lazy(() => import('../components/MainView/Sections/SkillsSection'))
 const LazyDocumentsSection = lazy(() => import('../components/MainView/Sections/DocumentsSection'))

@@ -4,7 +4,7 @@ interface Props {
   loadSectionHandler: (sectionNum: number) => void
 }
 
-function ThreeJsProjects({
+function ThreeJsSection({
   loadSectionHandler
 }: Props) {
 
@@ -17,4 +17,4 @@ function ThreeJsProjects({
   )
 }
 
-export default ThreeJsProjects
+export default ThreeJsSection
