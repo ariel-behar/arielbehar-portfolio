@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography"
 const StyledBox = styled(Box)`
     border: 2px solid #2e2e2e;
     border-radius: 20px;
+	position: relative;
 
 	background: rgb(36,35,35);
 	background: linear-gradient(-45deg, rgba(36,35,35,0.7175245098039216) 0%, rgba(78,75,76,0.8071603641456583) 100%);
