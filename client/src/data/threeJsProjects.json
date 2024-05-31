@@ -13,7 +13,7 @@
     {
         "_id": 2,
         "order": 1,
-        "title": "Post Processing Effects Demo",
+        "title": "Post Processing Effects",
         "image": "post-processing.jpg",
         "description": "Advanced post-processing techniques for enhanced visuals",
         "technologies": ["Three", "React", "React Three Fiber", "React Three Drei", "React Three Post Processing"],
@@ -86,7 +86,7 @@
         "_id": 8,
         "order": 7,
         "title": "Physics Simulation",
-        "image": "physics-simulation.jpg",
+        "image": "physics.jpg",
         "description": "Simple physics-based simulation",
         "technologies": ["Three", "Cannon JS", "JavaScript"],
         "month": "May",
