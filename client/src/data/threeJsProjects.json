@@ -73,7 +73,7 @@
     {
         "_id": 7,
         "order": 6,
-        "title": "Fairy tale Portal",
+        "title": "Fairy Tale Portal",
         "image": "blender-scene-export.jpg",
         "description": "Blender scene export to Three.js",
         "technologies": ["Three", "Blender", "Shaders GLSL", "JavaScript"],
@@ -91,7 +91,7 @@
         "technologies": ["Three", "Cannon JS", "JavaScript"],
         "month": "May",
         "year": 2023,
-        "url": "https://simple-portfolio.arielbehar.com/",
+        "url": "https://physics.arielbehar.com/",
         "notes": []
     },
     {
