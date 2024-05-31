@@ -7,7 +7,7 @@
         "technologies": ["Three", "React", "React Three Fiber", "React Three Drei", "React Three Rapier"],
         "month": "August",
         "year": 2023,
-        "url": "https://marble-race-game.vercel.app/",
+        "url": "https://marble-race.arielbehar.com/",
         "notes": []
     },
     {
@@ -19,7 +19,7 @@
         "technologies": ["Three", "React", "React Three Fiber", "React Three Drei", "React Three Post Processing"],
         "month": "June",
         "year": 2023,
-        "url": "https://post-processing-sigma.vercel.app/",
+        "url": "https://post-processing.arielbehar.com/",
         "notes": []
     },
     {
@@ -31,7 +31,7 @@
         "technologies": ["Three", "Shaders GLSL", "JavaScript"],
         "month": "May",
         "year": 2023,
-        "url": "https://particles-tau.vercel.app/",
+        "url": "https://waving-particles.arielbehar.com/",
         "notes": []
     },
     {
@@ -43,7 +43,7 @@
         "technologies": ["Three", "Shaders GLSL", "JavaScript"],
         "month": "June",
         "year": 2023,
-        "url": "https://raging-sea-pied.vercel.app/",
+        "url": "https://raging-sea.arielbehar.com/",
         "notes": []
     },
     {
@@ -55,7 +55,7 @@
         "technologies": ["Three", "React", "React Three Fiber", "Shaders GLSL"],
         "month": "June",
         "year": 2023,
-        "url": "https://animated-galaxy-olive.vercel.app/",
+        "url": "https://animated-galaxy.arielbehar.com/",
         "notes": []
     },
     {
@@ -67,7 +67,7 @@
         "technologies": ["Three", "React", "React Three Fiber", "React Three Drei"],
         "month": "July",
         "year": 2023,
-        "url": "https://simple-portfolio-theta.vercel.app/",
+        "url": "https://simple-portfolio.arielbehar.com/",
         "notes": []
     },
     {
@@ -79,7 +79,7 @@
         "technologies": ["Three", "Blender", "Shaders GLSL", "JavaScript"],
         "month": "June",
         "year": 2023,
-        "url": "https://blender-scene-export.vercel.app/",
+        "url": "https://fairy-tale-portal.arielbehar.com/",
         "notes": []
     },
     {
@@ -91,7 +91,7 @@
         "technologies": ["Three", "Cannon JS", "JavaScript"],
         "month": "May",
         "year": 2023,
-        "url": "https://physics-alpha.vercel.app/",
+        "url": "https://simple-portfolio.arielbehar.com/",
         "notes": []
     },
     {
@@ -103,7 +103,7 @@
         "technologies": ["Three", "JavaScript"],
         "month": "May",
         "year": 2023,
-        "url": "https://haunted-house-ashen.vercel.app/",
+        "url": "https://haunted-house.arielbehar.com/",
         "notes": []
     },
     {
@@ -115,7 +115,7 @@
         "technologies": ["Three", "React Three Fiber", "Shaders"],
         "month": "June",
         "year": 2023,
-        "url": "https://modified-materials-lyart.vercel.app/",
+        "url": "https://modified-materials.arielbehar.com/",
         "notes": []
     }
 ]
