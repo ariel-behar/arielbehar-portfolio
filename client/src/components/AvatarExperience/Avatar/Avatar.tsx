@@ -6,10 +6,10 @@ Command: npx gltfjsx@6.4.1 public/models/650745a68a5f0e10f77629cd.glb --types
 import * as THREE from 'three'
 import React from 'react'
 import { useGraph } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
+import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
 
-type ActionName = 'actionNameOne' | 'actionNameTwo';
+type ActionName = 'wavingGesture' | 'breathingIdle' | "crouchToStand";
 
 interface GLTFAction extends THREE.AnimationClip {
 	name: ActionName;
@@ -45,6 +45,17 @@ export function Avatar(props: JSX.IntrinsicElements['group']) {
 	const { scene } = useGLTF('models/650745a68a5f0e10f77629cd.glb')
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	const { nodes, materials } = useGraph(clone) as GLTFResult
+
+	const { animations: wavingGesture } = useFBX("animations/waving-gesture.fbx")
+	const { animations: breathingIdle } = useFBX("animations/breathing-idle.fbx")
+	const { animations: crouchToStand } = useFBX("animations/crouch-to-stand.fbx")
+
+	wavingGesture[0].name = 'wavingGesture'
+	breathingIdle[0].name = 'breathingIdle'
+	crouchToStand[0].name = 'crouchToStand'
+
+	const { actions } = useAnimations(wavingGesture,)
+
 	return (
 		<group {...props} dispose={null}>
 			<primitive object={nodes.Hips} />
