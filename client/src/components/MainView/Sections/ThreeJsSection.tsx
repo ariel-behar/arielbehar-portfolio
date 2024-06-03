@@ -11,8 +11,7 @@ import ThreeJsCard from "../SectionsComponents/ThreeJs/ThreeJsCard"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
-import { Canvas } from "@react-three/fiber"
-import Experience from "../../Experience/Experience"
+import AvatarExperience from "../../AvatarExperience/AvatarExperience"
 
 interface Props {
 	loadSectionHandler: (sectionNum: number) => void
@@ -33,29 +32,26 @@ function ThreeJsSection({
 
 				<CarouselStatus totalSlides={projects.length} currentSlide={projects.length} />
 
-				<Grid container columnSpacing={1} rowSpacing={2} my={3}>
-					<Grid item lg={6}>
-						<Canvas 
-							camera={{
-								fov: 75,
-								near: 0.1,
-								far: 1000,
-								position: [0, 0, 5]
-							}}
-						
-						>
-							<Experience />
-						</Canvas>
+				<Grid container>
+					<Grid item xs={12} md={3}>
+						<AvatarExperience />
 					</Grid>
-					{
-						(projects as ThreeJsProject[]).map((project, index) => {
-							return (
-								<Grid item xs={6} sm={6} md={4} lg={3} key={uuiqd()}>
-									<ThreeJsCard project={project} />
-								</Grid>
-							)
-						}
-						)}
+
+					<Grid item xs={12} md={9}>
+
+						<Grid container columnSpacing={1} rowSpacing={2} my={3}>
+							{
+								(projects as ThreeJsProject[]).map((project, index) => {
+									return (
+										<Grid item xs={6} sm={6} md={4} lg={3} key={uuiqd()}>
+											<ThreeJsCard project={project} />
+										</Grid>
+									)
+								}
+								)}
+						</Grid>
+
+					</Grid>
 				</Grid>
 			</Box>
 		</Box>
