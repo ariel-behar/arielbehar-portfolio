@@ -20,12 +20,19 @@ function Experience({
 		// config={{ mass: 2, tension: 400 }}
 		// snap={{ mass: 4, tension: 400 }}
 		>
-			<Avatar isInView={isInView} position={new THREE.Vector3(0.4, -1 , -0.6)}/>
-			<Harley position={[-0.6, -0.5 , -0.6]} rotation={[0, Math.PI - 0.8, 0]} scale={1} />
+			<Avatar
+				isInView={isInView}
+				position={new THREE.Vector3(0.4, -1, -0.6)}
+			/>
+			<Harley
+				position={new THREE.Vector3(-0.6, -0.5, -0.6)}
+				rotation={new THREE.Euler(0, Math.PI - 0.8, 0)}
+				scale={new THREE.Vector3(1)}
+			/>
 
 			{/* <ambientLight intensity={4} /> */}
 
-			<Environment preset="warehouse" environmentIntensity={1.5}  />
+			<Environment preset="warehouse" environmentIntensity={1.5} />
 		</PresentationControls>
 	)
 }
