@@ -74,10 +74,10 @@ export function Avatar({
 		}
 	})
 
-	const { animations: wavingGesture } = useFBX("animations/waving.fbx")
-	const { animations: breathingIdle } = useFBX("animations/breathing-idle.fbx")
-	const { animations: crouchToStand } = useFBX("animations/crouch-to-stand.fbx")
-	const { animations: salute } = useFBX("animations/salute.fbx")
+	const { animations: wavingGesture } = useFBX("animations/avatar/waving.fbx")
+	const { animations: breathingIdle } = useFBX("animations/avatar/breathing-idle.fbx")
+	const { animations: crouchToStand } = useFBX("animations/avatar/crouch-to-stand.fbx")
+	const { animations: salute } = useFBX("animations/avatar/salute.fbx")
 
 	wavingGesture[0].name = 'Wave'
 	breathingIdle[0].name = 'Idle'
@@ -95,7 +95,7 @@ export function Avatar({
 			setTimeout(() => {
 				actions["Idle"].crossFadeFrom(actions["Salute"], 1, true).play()
 			}, 2800);
-        }, 1500);
+        }, 2500);
 
 	}, [isInView])
 
