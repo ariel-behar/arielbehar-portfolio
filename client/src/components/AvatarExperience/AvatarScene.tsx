@@ -16,7 +16,7 @@ function AvatarScene() {
         <Stack height='100%'>
             <Stack direction="row" width='100%' justifyContent='space-around' px={1}>
                 {
-                    animationsNames.map((name) => {
+                    animationsNames.slice(2).map((name) => {
                         return (
                             <Button
                                 key={uuid()}
