@@ -1,7 +1,7 @@
 
-import { Suspense, useEffect } from 'react'
+import { Suspense } from 'react'
 
-import { Environment } from '@react-three/drei'
+import { Environment, Float, Text } from '@react-three/drei'
 
 import Avatar, { ActionName } from './Avatar/Avatar'
 import Harley from './Harley/Harley'
@@ -18,17 +18,13 @@ function AvatarExperience({
 }: Props) {
 
 	useFrame((state, delta) => {
-		const angle = state.clock.elapsedTime
-		// state.camera.position.x = Math.sin(angle)
-		// state.camera.position.z = Math.cos(angle)
 		state.camera.lookAt(0, 0, 0)
-		// state.camera.position.z -= 0.01
 
-		if(state.camera.position.z > 3.5) {
+		if (state.camera.position.z > 3.5) {
 			state.camera.position.z -= 0.02
-		} 
+		}
 
-		if(state.camera.position.x > 1) {
+		if (state.camera.position.x > 1) {
 			state.camera.position.x -= 0.02
 		}
 
@@ -55,6 +51,20 @@ function AvatarExperience({
 					<Harley />
 				</group>
 			</Suspense>
+
+			<Float rotationIntensity={0.5}>
+				<Text
+					font="./fonts/bangers-v20-latin-regular.woff"
+					fontSize={0.4}
+					lineHeight={1.1}
+					position={[-0.75, 0.7, -1.5]}
+					rotation-y={1.25}
+					maxWidth={1.5}
+					textAlign="center"
+				>
+					I ♥ THREE JS
+				</Text>
+			</Float>
 
 			<Environment preset="warehouse" />
 		</>
