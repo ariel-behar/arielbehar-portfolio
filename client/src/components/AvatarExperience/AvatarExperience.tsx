@@ -30,7 +30,6 @@ function AvatarExperience({
 
 	})
 
-
 	return (
 		<>
 			<PresentationControls
@@ -67,7 +66,7 @@ function AvatarExperience({
 					fontSize={0.4}
 					lineHeight={1.1}
 					position={[-0.75, 0.7, -1.5]}
-					rotation-y={1.25}
+					rotation-y={1}
 					maxWidth={1.5}
 					textAlign="center"
 				>
