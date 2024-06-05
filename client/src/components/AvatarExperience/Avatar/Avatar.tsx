@@ -88,7 +88,7 @@ export function Avatar({
 
 			setTimeout(() => {
 				actions["Idle"].crossFadeFrom(actions["Salute"], 1, true).play()
-			}, 1500);
+			}, 2800);
         }, 1500);
 
 	}, [isInView])
@@ -111,7 +111,6 @@ export function Avatar({
 			groupRef.current.getObjectByName("Head").lookAt(target)
 			groupRef.current.getObjectByName("Spine2").lookAt(target)
 		}
-
 	})
 
 	return (
