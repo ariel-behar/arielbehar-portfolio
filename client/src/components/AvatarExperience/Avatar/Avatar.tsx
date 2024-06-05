@@ -94,8 +94,8 @@ export function Avatar({
 
 			setTimeout(() => {
 				actions["Idle"].crossFadeFrom(actions["Salute"], 1, true).play()
-			}, 2800);
-        }, 2500);
+			}, 1500);
+        }, 1000);
 
 	}, [isInView])
 
