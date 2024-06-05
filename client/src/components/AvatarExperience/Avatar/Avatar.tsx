@@ -10,7 +10,7 @@ import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
 import { useControls } from 'leva'
 
-export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute'
+export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute' | "Dance"
 
 interface GLTFAction extends THREE.AnimationClip {
 	name: ActionName;
@@ -43,14 +43,16 @@ type GLTFResult = GLTF & {
 }
 
 interface Props {
-	isInView: boolean;
-	position?: THREE.Vector3
-    rotation?: THREE.Euler
-    scale?: THREE.Vector3
+	isInView: boolean,
+	animation?: ActionName | '',
+	position?: THREE.Vector3,
+	rotation?: THREE.Euler,
+	scale?: THREE.Vector3,
 }
 
 export function Avatar({
 	isInView,
+	animation = 'Idle',
 	position,
 	rotation,
 	scale,
@@ -67,45 +69,52 @@ export function Avatar({
 		cursorFollow: false
 	})
 
-	const { animation } = useControls({
-		animation: {
-			value: 'Idle',
-			options: ['Crouch', 'Idle', 'Wave', 'Salute']
-		}
-	})
-
-	const { animations: wavingGesture } = useFBX("animations/avatar/waving.fbx")
-	const { animations: breathingIdle } = useFBX("animations/avatar/breathing-idle.fbx")
+	const { animations: waving } = useFBX("animations/avatar/waving.fbx")
+	const { animations: idle } = useFBX("animations/avatar/breathing-idle.fbx")
 	const { animations: crouchToStand } = useFBX("animations/avatar/crouch-to-stand.fbx")
 	const { animations: salute } = useFBX("animations/avatar/salute.fbx")
+	const { animations: dance } = useFBX("animations/avatar/wave-hip-hop-dance.fbx")
 
-	wavingGesture[0].name = 'Wave'
-	breathingIdle[0].name = 'Idle'
+	waving[0].name = 'Wave'
+	idle[0].name = 'Idle'
 	crouchToStand[0].name = 'Crouch'
 	salute[0].name = 'Salute'
+	dance[0].name = "Dance"
 
-	const { actions } = useAnimations([wavingGesture[0], breathingIdle[0], crouchToStand[0], salute[0]], groupRef)
+	const { actions, mixer } = useAnimations([
+		crouchToStand[0],
+		salute[0],
+		idle[0],
+		waving[0],
+		dance[0]
+	], groupRef)
 
 	useEffect(() => {
-		actions["Crouch"].reset().play()
-
-		setTimeout(() => {
-            actions["Salute"].crossFadeFrom(actions["Crouch"], 1, true).play()
+		console.log(isInView, animation);
+		if (!animation) {
+			
+			actions["Crouch"].play()
 
 			setTimeout(() => {
-				actions["Idle"].crossFadeFrom(actions["Salute"], 1, true).play()
-			}, 1500);
-        }, 1000);
+				actions["Salute"].crossFadeFrom(actions["Crouch"], 0.5, true).play()
 
-	}, [isInView])
+				setTimeout(() => {
+					actions["Idle"].crossFadeFrom(actions["Salute"], 0.5, true).play()
 
-	// useEffect(() => {
-	// 	actions[animation].reset().fadeIn(0.5).play()
+				}, actions["Salute"].getClip().duration * 1000 - 500);
 
-	// 	return () => {
-	// 		actions[animation].reset().fadeOut(0.5)
-	// 	}
-	// }, [animation])
+			}, actions["Crouch"].getClip().duration * 1000 - 500);
+
+		} else {
+			actions[animation].fadeIn(0.5).play()
+
+			setTimeout(() => {
+				actions["Idle"].crossFadeFrom(actions[animation], 0.5, true).play()
+
+			}, actions[animation].getClip().duration * 1000);
+		}
+
+	}, [isInView, animation])
 
 	useFrame(state => {
 		if (headFollow) {
