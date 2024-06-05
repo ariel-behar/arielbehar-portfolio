@@ -44,7 +44,7 @@ type GLTFResult = GLTF & {
 
 interface Props {
 	isInView: boolean,
-	animation?: ActionName | '',
+	animationName?: ActionName | '',
 	position?: THREE.Vector3,
 	rotation?: THREE.Euler,
 	scale?: THREE.Vector3,
@@ -52,7 +52,7 @@ interface Props {
 
 export function Avatar({
 	isInView,
-	animation = 'Idle',
+	animationName = 'Idle',
 	position,
 	rotation,
 	scale,
@@ -90,31 +90,34 @@ export function Avatar({
 	], groupRef)
 
 	useEffect(() => {
-		console.log(isInView, animation);
-		if (!animation) {
-			
+		if (!animationName) {
 			actions["Crouch"].play()
 
 			setTimeout(() => {
 				actions["Salute"].crossFadeFrom(actions["Crouch"], 0.5, true).play()
-
-				setTimeout(() => {
-					actions["Idle"].crossFadeFrom(actions["Salute"], 0.5, true).play()
-
-				}, actions["Salute"].getClip().duration * 1000 - 500);
-
 			}, actions["Crouch"].getClip().duration * 1000 - 500);
 
+			setTimeout(() => {
+				actions["Idle"].crossFadeFrom(actions["Salute"], 0.5, true).play()
+
+			}, (actions["Crouch"].getClip().duration * 1000 - 500) + (actions["Salute"].getClip().duration * 1000 - 500));
+
 		} else {
-			actions[animation].fadeIn(0.5).play()
+			const action = actions[animationName]
+
+			action.reset().fadeIn(0.5).play()
 
 			setTimeout(() => {
-				actions["Idle"].crossFadeFrom(actions[animation], 0.5, true).play()
+				actions["Idle"].crossFadeFrom(action, 0.5, true).play()
 
-			}, actions[animation].getClip().duration * 1000);
+			}, action.getClip().duration * 1000);
+
+			return () => {
+				action.fadeOut(0.5)
+			}
 		}
 
-	}, [isInView, animation])
+	}, [isInView, animationName])
 
 	useFrame(state => {
 		if (headFollow) {
