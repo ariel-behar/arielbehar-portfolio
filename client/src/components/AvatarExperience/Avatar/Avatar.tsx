@@ -44,12 +44,18 @@ type GLTFResult = GLTF & {
 
 interface Props {
 	isInView: boolean;
+	position?: THREE.Vector3
+    rotation?: THREE.Euler
+    scale?: THREE.Vector3
 }
 
 export function Avatar({
 	isInView,
+	position,
+	rotation,
+	scale,
 	...props
-}: Props) {
+}: Props & JSX.IntrinsicElements['group']) {
 	const { scene } = useGLTF('models/avatar/avatar.glb')
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	const { nodes, materials } = useGraph(clone) as GLTFResult
@@ -114,7 +120,7 @@ export function Avatar({
 	})
 
 	return (
-		<group {...props} dispose={null} ref={groupRef} position-y={-1}>
+		<group position={position} rotation={rotation} scale={scale} {...props} dispose={null} ref={groupRef}>
 			<primitive object={nodes.Hips} />
 			<skinnedMesh
 				geometry={nodes.Wolf3D_Hair.geometry}
