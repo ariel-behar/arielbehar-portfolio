@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber"
 
 import Experience from "./Experience"
 import { useInView } from "framer-motion";
+import { Leva } from "leva";
 
 function ThreeJsProjectsExperience() {
     const canvasRef = useRef(null);
@@ -10,13 +11,14 @@ function ThreeJsProjectsExperience() {
 
     return (
         <StrictMode>
+            <Leva hidden />
             <Canvas
                 ref={canvasRef}
                 camera={{
-                    fov: 30,
+                    fov: 35,
                     near: 0.1,
                     far: 1000,
-                    position: [0, 0, 4]
+                    position: [1, 0.5, 4]
                 }}
             >
                 {/* <color args={['#ff0000']} attach="background" /> */}
