@@ -11,7 +11,7 @@ import ThreeJsCard from "../SectionsComponents/ThreeJs/ThreeJsCard"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
-import ThreeJsProjectsExperience from "../../AvatarExperience/ThreeJsProjectsExperience"
+import AvatarScene from "../../AvatarExperience/AvatarScene"
 
 interface Props {
 	loadSectionHandler: (sectionNum: number) => void
@@ -28,22 +28,22 @@ function ThreeJsSection({
 	return (
 		<Box component="section" py={3} >
 			<Box position='relative'>
-				<Typography variant="h4" component='h4' textAlign='center' color='text.secondary'>Three JS</Typography>
+				<Typography mb={3} variant="h4" component='h4' textAlign='center' color='text.secondary'>Three JS</Typography>
 
 				<CarouselStatus totalSlides={projects.length} currentSlide={projects.length} />
 
-				<Grid container>
-					<Grid item xs={12} md={4}>
-						<ThreeJsProjectsExperience />
+				<Grid container columnSpacing={1}>
+					<Grid item xs={12} sm={6} pt={2}>
+						<AvatarScene />
 					</Grid>
 
-					<Grid item xs={12} md={8}>
+					<Grid item xs={12} sm={6}>
 
-						<Grid container columnSpacing={1} rowSpacing={1} my={3}>
+						<Grid container columnSpacing={1}>
 							{
-								(projects as ThreeJsProject[]).map((project, index) => {
+								(projects as ThreeJsProject[]).slice(0, 6).map((project) => {
 									return (
-										<Grid item xs={6} sm={6} md={4} lg={3} key={uuiqd()}>
+										<Grid item xs={6} sm={6} md={6} key={uuiqd()}>
 											<ThreeJsCard project={project} />
 										</Grid>
 									)
@@ -52,6 +52,18 @@ function ThreeJsSection({
 						</Grid>
 
 					</Grid>
+				</Grid>
+
+				<Grid container columnSpacing={1}>
+					{
+						(projects as ThreeJsProject[]).slice(6).map((project, index) => {
+							return (
+								<Grid item xs={6} sm={3} md={3} key={uuiqd()}>
+									<ThreeJsCard project={project} />
+								</Grid>
+							)
+						}
+						)}
 				</Grid>
 			</Box>
 		</Box>
