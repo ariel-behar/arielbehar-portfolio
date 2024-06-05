@@ -7,8 +7,8 @@ import Avatar, { ActionName } from './Avatar/Avatar'
 function Experience() {
 	const {animation }= useControls({
 		animation: {
-			value: 'crouchToStand',
-			options: ['crouchToStand', 'breathingIdle', 'wavingGesture']
+			value: 'Crouch',
+			options: ['Crouch', 'Idle', 'Wave']
 		}
 	})
 
