@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { v4 as uuid } from 'uuid'
 
-import { ActionName } from "./Avatar/Avatar";
+import { ActionName, animationsNames } from "./Avatar/Avatar";
 
 import AvatarCanvas from "./AvatarCanvas";
 
@@ -13,35 +14,28 @@ function AvatarScene() {
 
     return (
         <Stack height='100%'>
-            <Stack direction="row" width='100%' justifyContent='space-around' gap={5}>
-                <Button
-                    onClick={() => setAnimationName('Wave')}
-                    size='small'
-                    sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
-                    variant='contained'
-                >
-                    WAVE
-                </Button>
-                <Button
-                    onClick={() => setAnimationName('Salute')}
-                    size='small'
-                    sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
-                    variant='contained'
-                >
-                    Salute
-                </Button>
-                <Button
-                    onClick={() => setAnimationName('Dance')}
-                    size='small'
-                    sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
-                    variant='contained'
-                >
-                    Dance
-                </Button>
+            <Stack direction="row" width='100%' justifyContent='space-around' px={1}>
+                {
+                    animationsNames.map((name) => {
+                        return (
+                            <Button
+                                key={uuid()}
+                                onClick={() => setAnimationName(name)}
+                                size='small'
+                                sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
+                                variant='contained'
+                            >
+                                {name}
+                            </Button>
+                        )
+                    })
+                }
             </Stack>
+
             <Box flexGrow={1}>
-              <AvatarCanvas animationName={animationName} />
+                <AvatarCanvas animationName={animationName} />
             </Box>
+
         </Stack>
     )
 }

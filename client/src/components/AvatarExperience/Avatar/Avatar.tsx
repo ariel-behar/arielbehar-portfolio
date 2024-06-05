@@ -10,8 +10,6 @@ import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
 import { useControls } from 'leva'
 
-export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute' | "Dance"
-
 interface GLTFAction extends THREE.AnimationClip {
 	name: ActionName;
 }
@@ -50,6 +48,10 @@ interface Props {
 	scale?: THREE.Vector3,
 }
 
+export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute' | "Dance"
+
+export const animationsNames: ActionName[] = ['Crouch', 'Idle', 'Wave', 'Salute', "Dance"];
+
 export function Avatar({
 	isInView,
 	animationName = 'Idle',
@@ -81,7 +83,7 @@ export function Avatar({
 	salute[0].name = 'Salute'
 	dance[0].name = "Dance"
 
-	const { actions, mixer } = useAnimations([
+	const { actions } = useAnimations([
 		crouchToStand[0],
 		salute[0],
 		idle[0],
