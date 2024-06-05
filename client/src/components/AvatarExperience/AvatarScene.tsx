@@ -17,28 +17,35 @@ function AvatarScene() {
 
     return (
         <Stack height='100%'>
-            <Stack direction="row" width='100%' justifyContent='center' gap={2}>
-                {
-                    animationsNames.slice(2).map((name) => {
-                        return (
-                            <Button
-                                key={uuid()}
-                                onClick={() => setAnimationName(name)}
-                                size='large'
-                                component={motion.button}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ duration: 0.5, delay: 2.7 }}
-                                style={{
-                                    fontWeight: 'bold',
-                                }}
-                                variant='text'
-                            >
-                                {name}
-                            </Button>
-                        )
-                    })
-                }
+            <Stack width='100%'>
+                <Stack
+                    direction="row"
+                    width='100%'
+                    justifyContent='center'
+                    gap={2}
+                    component={motion.div}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 2.7 }}
+                >
+                    {
+                        animationsNames.slice(2).map((name) => {
+                            return (
+                                <Button
+                                    key={uuid()}
+                                    onClick={() => setAnimationName(name)}
+                                    size='large'
+                                    style={{
+                                        fontWeight: 'bold',
+                                    }}
+                                    variant='text'
+                                >
+                                    {name}
+                                </Button>
+                            )
+                        })
+                    }
+                </Stack>
             </Stack>
 
             <Box flexGrow={1} ref={canvasContainerRef}>
