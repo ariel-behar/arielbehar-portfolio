@@ -42,14 +42,7 @@ type GLTFResult = GLTF & {
 	animations: GLTFAction[]
 }
 
-interface Props {
-	animation: ActionName
-}
-
-export function Avatar({
-	animation,
-	...props
-}: Props) {
+export function Avatar(props: JSX.IntrinsicElements['group']) {
 	const { scene } = useGLTF('models/650745a68a5f0e10f77629cd.glb')
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	const { nodes, materials } = useGraph(clone) as GLTFResult
@@ -59,6 +52,13 @@ export function Avatar({
 	const { headFollow, cursorFollow } = useControls({
 		headFollow: false,
 		cursorFollow: false
+	})
+
+	const { animation } = useControls({
+		animation: {
+			value: 'Idle',
+			options: ['Crouch', 'Idle', 'Wave']
+		}
 	})
 
 	const { animations: wavingGesture } = useFBX("animations/waving-gesture.fbx")
@@ -93,7 +93,7 @@ export function Avatar({
 	})
 
 	return (
-		<group {...props} dispose={null} ref={groupRef}>
+		<group {...props} dispose={null} ref={groupRef} position-y={-1}>
 			<primitive object={nodes.Hips} />
 			<skinnedMesh
 				geometry={nodes.Wolf3D_Hair.geometry}

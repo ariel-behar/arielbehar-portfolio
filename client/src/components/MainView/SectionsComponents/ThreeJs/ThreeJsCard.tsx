@@ -25,7 +25,7 @@ function ThreeJsCard({
                     alt={`${project.title}`}
                 />
 
-                <Typography variant="h5" component='h5' textAlign='center'>{project.title}</Typography>
+                <Typography variant="h6" component='h5' textAlign='center'>{project.title}</Typography>
             </Link>
         </Box>
     )

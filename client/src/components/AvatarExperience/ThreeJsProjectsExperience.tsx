@@ -1,9 +1,9 @@
-import { Canvas } from "@react-three/fiber"
-import Experience from "./Experience"
 import { StrictMode } from "react"
+import { Canvas } from "@react-three/fiber"
 
+import Experience from "./Experience"
 
-function AvatarExperience() {
+function ThreeJsProjectsExperience() {
     return (
         <StrictMode>
             <Canvas
@@ -11,15 +11,14 @@ function AvatarExperience() {
                     fov: 30,
                     near: 0.1,
                     far: 1000,
-                    position: [0, 1, 4]
+                    position: [0, 1.5, 4]
                 }}
-
             >
-
+                <color args={['#ff0000']} attach="background" />
                 <Experience />
             </Canvas>
         </StrictMode>
     )
 }
 
-export default AvatarExperience
+export default ThreeJsProjectsExperience

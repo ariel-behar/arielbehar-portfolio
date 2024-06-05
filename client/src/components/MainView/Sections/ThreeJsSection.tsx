@@ -11,7 +11,7 @@ import ThreeJsCard from "../SectionsComponents/ThreeJs/ThreeJsCard"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
-import AvatarExperience from "../../AvatarExperience/AvatarExperience"
+import ThreeJsProjectsExperience from "../../AvatarExperience/ThreeJsProjectsExperience"
 
 interface Props {
 	loadSectionHandler: (sectionNum: number) => void
@@ -33,13 +33,13 @@ function ThreeJsSection({
 				<CarouselStatus totalSlides={projects.length} currentSlide={projects.length} />
 
 				<Grid container>
-					<Grid item xs={12} md={3}>
-						<AvatarExperience />
+					<Grid item xs={12} md={4}>
+						<ThreeJsProjectsExperience />
 					</Grid>
 
-					<Grid item xs={12} md={9}>
+					<Grid item xs={12} md={8}>
 
-						<Grid container columnSpacing={1} rowSpacing={2} my={3}>
+						<Grid container columnSpacing={1} rowSpacing={1} my={3}>
 							{
 								(projects as ThreeJsProject[]).map((project, index) => {
 									return (
