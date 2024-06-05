@@ -50,7 +50,7 @@ export function Avatar({
 	isInView,
 	...props
 }: Props) {
-	const { scene } = useGLTF('models/650745a68a5f0e10f77629cd.glb')
+	const { scene } = useGLTF('models/avatar/avatar.glb')
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	const { nodes, materials } = useGraph(clone) as GLTFResult
 
@@ -175,4 +175,4 @@ export function Avatar({
 
 export default Avatar;
 
-useGLTF.preload('models/650745a68a5f0e10f77629cd.glb')
+useGLTF.preload('models/avatar/avatar.glb')
