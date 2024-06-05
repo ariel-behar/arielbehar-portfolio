@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { Leva } from "leva";
 
 import { Canvas } from "@react-three/fiber"
@@ -10,19 +8,17 @@ import AvatarExperience from "./AvatarExperience"
 
 interface Props {
 	animationName: ActionName | '',
+    isInView: boolean
 }
 
 function AvatarCanvas({
-    animationName
+    animationName,
+    isInView
 }: Props) {
-    const canvasRef = useRef(null);
-    const isInView = useInView(canvasRef, { once: true })
-
     return (
         <>
             <Leva />
             <Canvas
-                ref={canvasRef}
                 camera={{
                     fov: 35,
                     near: 0.1,

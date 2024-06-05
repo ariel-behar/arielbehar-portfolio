@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { v4 as uuid } from 'uuid'
+import { useInView, motion } from "framer-motion";
 
 import { ActionName, animationsNames } from "./Avatar/Avatar";
 
@@ -11,19 +12,27 @@ import Box from "@mui/material/Box";
 
 function AvatarScene() {
     const [animationName, setAnimationName] = useState<ActionName | ''>('')
+    const canvasContainerRef = useRef(null);
+    const isInView = useInView(canvasContainerRef, { once: true })
 
     return (
         <Stack height='100%'>
-            <Stack direction="row" width='100%' justifyContent='space-around' px={1}>
+            <Stack direction="row" width='100%' justifyContent='center' gap={2}>
                 {
                     animationsNames.slice(2).map((name) => {
                         return (
                             <Button
                                 key={uuid()}
                                 onClick={() => setAnimationName(name)}
-                                size='small'
-                                sx={{ backgroundColor: 'custom.blue.main', boxShadow: 7 }}
-                                variant='contained'
+                                size='large'
+                                component={motion.button}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 2.7 }}
+                                style={{
+                                    fontWeight: 'bold',
+                                }}
+                                variant='text'
                             >
                                 {name}
                             </Button>
@@ -32,8 +41,8 @@ function AvatarScene() {
                 }
             </Stack>
 
-            <Box flexGrow={1}>
-                <AvatarCanvas animationName={animationName} />
+            <Box flexGrow={1} ref={canvasContainerRef}>
+                <AvatarCanvas animationName={animationName} isInView={isInView} />
             </Box>
 
         </Stack>
