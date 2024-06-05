@@ -2,8 +2,14 @@ import { PresentationControls } from '@react-three/drei'
 
 import Avatar from './Avatar/Avatar'
 
-function Experience() {
+interface Props {
+	isInView: boolean
+}
 
+function Experience({
+	isInView
+}: Props) {
+	console.log('isInView:', isInView)
 	return (
 		<PresentationControls
 			global
@@ -13,10 +19,10 @@ function Experience() {
 		// config={{ mass: 2, tension: 400 }}
 		// snap={{ mass: 4, tension: 400 }}
 		>
-			<Avatar />
+			<Avatar isInView={isInView}/>
 
 			<ambientLight intensity={4} />
-			
+
 		</PresentationControls>
 	)
 }

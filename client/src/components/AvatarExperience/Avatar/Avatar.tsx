@@ -10,7 +10,7 @@ import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
 import { useControls } from 'leva'
 
-export type ActionName = 'Crouch' | 'Idle' | 'Wave'
+export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute'
 
 interface GLTFAction extends THREE.AnimationClip {
 	name: ActionName;
@@ -42,7 +42,14 @@ type GLTFResult = GLTF & {
 	animations: GLTFAction[]
 }
 
-export function Avatar(props: JSX.IntrinsicElements['group']) {
+interface Props {
+	isInView: boolean;
+}
+
+export function Avatar({
+	isInView,
+	...props
+}: Props) {
 	const { scene } = useGLTF('models/650745a68a5f0e10f77629cd.glb')
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	const { nodes, materials } = useGraph(clone) as GLTFResult
@@ -57,27 +64,42 @@ export function Avatar(props: JSX.IntrinsicElements['group']) {
 	const { animation } = useControls({
 		animation: {
 			value: 'Idle',
-			options: ['Crouch', 'Idle', 'Wave']
+			options: ['Crouch', 'Idle', 'Wave', 'Salute']
 		}
 	})
 
-	const { animations: wavingGesture } = useFBX("animations/waving-gesture.fbx")
+	const { animations: wavingGesture } = useFBX("animations/waving.fbx")
 	const { animations: breathingIdle } = useFBX("animations/breathing-idle.fbx")
 	const { animations: crouchToStand } = useFBX("animations/crouch-to-stand.fbx")
+	const { animations: salute } = useFBX("animations/salute.fbx")
 
 	wavingGesture[0].name = 'Wave'
 	breathingIdle[0].name = 'Idle'
 	crouchToStand[0].name = 'Crouch'
+	salute[0].name = 'Salute'
 
-	const { actions } = useAnimations([wavingGesture[0], breathingIdle[0], crouchToStand[0]], groupRef)
+	const { actions } = useAnimations([wavingGesture[0], breathingIdle[0], crouchToStand[0], salute[0]], groupRef)
 
 	useEffect(() => {
-		actions[animation].reset().fadeIn(0.5).play()
+		actions["Crouch"].reset().play()
 
-		return () => {
-			actions[animation].reset().fadeOut(0.5)
-		}
-	}, [animation])
+		setTimeout(() => {
+            actions["Salute"].crossFadeFrom(actions["Crouch"], 1, true).play()
+
+			setTimeout(() => {
+				actions["Idle"].crossFadeFrom(actions["Salute"], 1, true).play()
+			}, 1500);
+        }, 1500);
+
+	}, [isInView])
+
+	// useEffect(() => {
+	// 	actions[animation].reset().fadeIn(0.5).play()
+
+	// 	return () => {
+	// 		actions[animation].reset().fadeOut(0.5)
+	// 	}
+	// }, [animation])
 
 	useFrame(state => {
 		if (headFollow) {
