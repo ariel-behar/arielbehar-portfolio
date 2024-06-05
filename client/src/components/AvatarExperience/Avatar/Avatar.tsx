@@ -40,6 +40,10 @@ type GLTFResult = GLTF & {
 	animations: GLTFAction[]
 }
 
+export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute' | "Dance"
+
+export const animationsNames: ActionName[] = ['Crouch', 'Idle', 'Wave', 'Salute', "Dance"];
+
 interface Props {
 	isInView: boolean,
 	animationName?: ActionName | '',
@@ -48,23 +52,16 @@ interface Props {
 	scale?: THREE.Vector3,
 }
 
-export type ActionName = 'Crouch' | 'Idle' | 'Wave' | 'Salute' | "Dance"
-
-export const animationsNames: ActionName[] = ['Crouch', 'Idle', 'Wave', 'Salute', "Dance"];
-
 export function Avatar({
 	isInView,
 	animationName = 'Idle',
-	position,
-	rotation,
-	scale,
 	...props
 }: Props & JSX.IntrinsicElements['group']) {
 	const { scene } = useGLTF('models/avatar/avatar.glb')
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
 	const { nodes, materials } = useGraph(clone) as GLTFResult
 
-	const groupRef = useRef<THREE.Group>()
+	const avatarGroupRef = useRef<THREE.Group>()
 
 	const { headFollow, cursorFollow } = useControls({
 		headFollow: false,
@@ -89,7 +86,7 @@ export function Avatar({
 		idle[0],
 		waving[0],
 		dance[0]
-	], groupRef)
+	], avatarGroupRef)
 
 	useEffect(() => {
 		if (!animationName) {
@@ -123,18 +120,18 @@ export function Avatar({
 
 	useFrame(state => {
 		if (headFollow) {
-			groupRef.current.getObjectByName("Head").lookAt(state.camera.position)
+			avatarGroupRef.current.getObjectByName("Head").lookAt(state.camera.position)
 		}
 		if (cursorFollow) {
 			const target = new THREE.Vector3(state.pointer.x, state.pointer.y, 1)
 
-			groupRef.current.getObjectByName("Head").lookAt(target)
-			groupRef.current.getObjectByName("Spine2").lookAt(target)
+			avatarGroupRef.current.getObjectByName("Head").lookAt(target)
+			avatarGroupRef.current.getObjectByName("Spine2").lookAt(target)
 		}
 	})
 
 	return (
-		<group position={position} rotation={rotation} scale={scale} {...props} dispose={null} ref={groupRef}>
+		<group {...props} dispose={null} ref={avatarGroupRef}>
 			<primitive object={nodes.Hips} />
 			<skinnedMesh
 				geometry={nodes.Wolf3D_Hair.geometry}

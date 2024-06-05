@@ -1,5 +1,4 @@
 
-import * as THREE from 'three'
 import { Suspense } from 'react'
 
 import { Environment } from '@react-three/drei'
@@ -19,21 +18,24 @@ function AvatarExperience({
 	return (
 		<>
 			<Suspense fallback={null}>
-				<Avatar
-					isInView={isInView}
-					position={new THREE.Vector3(0.5, -1, -0.6)}
-					animationName={animationName}
-				/>
+				<group position={[0.5, -1, -0.6]}>
+					<Avatar
+						isInView={isInView}
+						animationName={animationName}
+					/>
+				</group>
 			</Suspense>
 
 			<Suspense fallback={null}>
-				<Harley
-					position={new THREE.Vector3(-0.3, -0.5, -0.7)}
-					rotation={new THREE.Euler(0, Math.PI - 0.5, 0, 'XYZ')}
-					scale={new THREE.Vector3(1, 1, 1)}
-				/>
+				<group
+					position={[-0.3, -0.5, -0.7]}
+					rotation={[0, Math.PI - 0.5, 0, 'XYZ']}
+					scale={[1, 1, 1]}
+				>
+					<Harley />
+				</group>
 			</Suspense>
-			
+
 			<Environment preset="warehouse" />
 		</>
 	)
