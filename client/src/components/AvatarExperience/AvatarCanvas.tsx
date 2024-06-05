@@ -27,7 +27,7 @@ function AvatarCanvas({
                     fov: 35,
                     near: 0.1,
                     far: 1000,
-                    position: [1, 0.5, 4],
+                    position: [4, 0.5, 7],
                 }}
             >
                 <AvatarExperience isInView={isInView} animationName={animationName} />
