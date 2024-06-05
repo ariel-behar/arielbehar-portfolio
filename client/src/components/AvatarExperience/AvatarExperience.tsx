@@ -1,7 +1,8 @@
 
-import { Environment } from '@react-three/drei'
-import { Suspense } from 'react'
 import * as THREE from 'three'
+import { Suspense } from 'react'
+
+import { Environment } from '@react-three/drei'
 
 import Avatar, { ActionName } from './Avatar/Avatar'
 import Harley from './Harley/Harley'
@@ -11,12 +12,10 @@ interface Props {
 	animationName: ActionName | '',
 }
 
-function Experience({
+function AvatarExperience({
 	isInView,
 	animationName
 }: Props) {
-	
-
 	return (
 		<>
 			<Suspense fallback={null}>
@@ -40,4 +39,4 @@ function Experience({
 	)
 }
 
-export default Experience
+export default AvatarExperience

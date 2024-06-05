@@ -1,17 +1,14 @@
-import { useRef, useState } from "react"
-import { Canvas } from "@react-three/fiber"
+import { useState } from "react"
 
-import Experience from "./Experience"
-import { useInView } from "framer-motion";
-import { Leva } from "leva";
+import { ActionName } from "./Avatar/Avatar";
+
+import AvatarCanvas from "./AvatarCanvas";
+
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-import { ActionName } from "./Avatar/Avatar";
 
-function ThreeJsProjectsExperience() {
-    const canvasRef = useRef(null);
-    const isInView = useInView(canvasRef, { once: true })
+function AvatarScene() {
     const [animationName, setAnimationName] = useState<ActionName | ''>('')
 
     return (
@@ -43,21 +40,10 @@ function ThreeJsProjectsExperience() {
                 </Button>
             </Stack>
             <Box flexGrow={1}>
-                <Leva />
-                <Canvas
-                    ref={canvasRef}
-                    camera={{
-                        fov: 35,
-                        near: 0.1,
-                        far: 1000,
-                        position: [1, 0.5, 4],
-                    }}
-                >
-                    <Experience isInView={isInView} animationName={animationName} />
-                </Canvas>
+              <AvatarCanvas animationName={animationName} />
             </Box>
         </Stack>
     )
 }
 
-export default ThreeJsProjectsExperience
+export default AvatarScene
