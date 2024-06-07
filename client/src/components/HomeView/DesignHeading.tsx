@@ -1,7 +1,7 @@
-import Box from '@mui/material/Box'
-
-import Typography from '@mui/material/Typography'
 import { motion } from 'framer-motion'
+
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 
 function DesignHeading() {
     return (
@@ -13,7 +13,7 @@ function DesignHeading() {
         >
             <Typography
                 mt={2}
-                variant="h3"
+                variant="h1"
                 component="h1"
                 textAlign='center'
             >

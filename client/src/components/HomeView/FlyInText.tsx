@@ -1,8 +1,10 @@
-import Stack from '@mui/material/Stack'
-import styled from '@mui/material/styles/styled'
-import Typography from '@mui/material/Typography'
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
+import styled from '@mui/material/styles/styled'
+
+import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
 
 const StyledFlyInTextUl = styled('ul')`
     list-style: none;
@@ -74,25 +76,25 @@ function FlyInText() {
         >
             <StyledFlyInTextUl className={`${isTextHidden ? 'hidden' : ''}`}>
                 <li>
-                    <Typography variant="h3" component='p'>W</Typography>
+                    <Typography variant="h1" component='p'>W</Typography>
                 </li>
                 <li>
-                    <Typography variant="h3" component='p'>E</Typography>
+                    <Typography variant="h1" component='p'>E</Typography>
                 </li>
                 <li>
-                    <Typography variant="h3" component='p'>L</Typography>
+                    <Typography variant="h1" component='p'>L</Typography>
                 </li>
                 <li>
-                    <Typography variant="h3" component='p'>C</Typography>
+                    <Typography variant="h1" component='p'>C</Typography>
                 </li>
                 <li>
-                    <Typography variant="h3" component='p'>O</Typography>
+                    <Typography variant="h1" component='p'>O</Typography>
                 </li>
                 <li>
-                    <Typography variant="h3" component='p'>M</Typography>
+                    <Typography variant="h1" component='p'>M</Typography>
                 </li>
                 <li>
-                    <Typography variant="h3" component='p'>E</Typography>
+                    <Typography variant="h1" component='p'>E</Typography>
                 </li>
                 <li>
                     <i>TO</i>
