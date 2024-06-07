@@ -18,10 +18,10 @@ function GroupedSkills({ skills, hoveredProficiency }: Props) {
             {
                 skills.map((skill: Skill, index) => {
                     return (
-                        <Box mt={index !== 0 ? { xs: 2, md: 0.2 } : 0} key={uuidv4()} width='100%'>
+                        <Box mt={{ xs: 1, sm: 1.5, md: 0.2 }} key={uuidv4()} width='100%'>
                             <Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()} textAlign={{xs: 'center', sm: 'left'}}>{skill.title}</Typography>
 
-                            <Stack direction='row' flexWrap='wrap' justifyContent={{xs: 'center', sm: 'left'}} >
+                            <Stack direction='row' flexWrap='wrap' justifyContent='left' >
                                 {
                                     skill['technologies'].map((technology: Technology) => {
                                         return technology.displayTechnology === true && (

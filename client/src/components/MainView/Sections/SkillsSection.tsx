@@ -64,9 +64,9 @@ function SkillsSection({ loadSectionHandler }: Props) {
 	return (
 		<Box component='section' id="fifth-section">
 
-			<Stack pt={{ xs: 2, md: 3 }} pb={{ xs: 0, md: 3 }} px={{xs: 2, md: 5}} direction={{ xs: 'column', md: 'row' }} justifyContent={{ xs: 'center', md: 'space-between' }} alignItems='center'>
+			<Stack pt={{ xs: 2, md: 3 }} pb={{ xs: 0, md: 1 }} px={{md: 5}} direction={{ xs: 'column', md: 'row' }} justifyContent={{ xs: 'center', md: 'space-between' }} alignItems='center'>
 
-				<Typography variant="h2" component='h3' color="text.secondary" textAlign='center'>My Abilities</Typography>
+				<Typography variant="h1" component='h3' mb={2} color="text.secondary" textAlign='center'>My Abilities</Typography>
 
 				<Stack direction='row' justifyContent='space-around' alignItems='center'>
 					<Stack direction='column' justifyContent='center' alignItems='center' pr={2} display={{ xs: 'none', lg: 'block' }}>

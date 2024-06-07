@@ -1,12 +1,11 @@
 import { useRef, useState } from 'react'
+import styled from '@mui/material/styles/styled'
 
 import designMP4 from '../../../../assets//video/design.mp4'
 import designWEBM from '../../../../assets/video/design.webm'
 import designOGV from '../../../../assets/video/design.ogv'
 
-import styled from '@mui/material/styles/styled'
 import Box from '@mui/material/Box'
-
 
 const StyledBox = styled(Box)`
     .tv-background {
