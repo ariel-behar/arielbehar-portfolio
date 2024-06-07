@@ -86,7 +86,7 @@ function AboutSection({ loadSectionHandler }: Props) {
                     <Box maxWidth='900px' position='relative'>
 
                         <Box className="float-container" >
-                            <Typography px={2} variant='h4' component='h4' mb={1}>About Me</Typography>
+                            <Typography px={2} variant='h4' component='h4' mb={2}>About Me</Typography>
 
                             <Box
                                 display={{ xs: 'block', sm: 'none' }}
@@ -114,10 +114,7 @@ function AboutSection({ loadSectionHandler }: Props) {
                     </Box>
 
                     <Box maxWidth='700px' mt={2} px={2}>
-                        <Typography variant='h4' component='h4' mb={1}>Languages</Typography>
-                        <Typography variant='body2' component='p' color='text.muted.light' mb={1}>
-                            *Speaking / Writing / Reading /	Understanding rated from 1 to 5 (5 being the highest)
-                        </Typography>
+                        <Typography variant='h4' component='h4' mb={2}>Languages</Typography>
 
                         <Grid container spacing={2}>
                             {
@@ -130,6 +127,10 @@ function AboutSection({ loadSectionHandler }: Props) {
                                 })
                             }
                         </Grid>
+
+                        <Typography variant='body2' component='p' color='text.muted.light' my={1} textAlign="center">
+                            *Speaking / Writing / Reading /	Understanding {} rated from 1 to 5 (5 being the highest)
+                        </Typography>
                     </Box>
                 </Stack>
             </Container>
