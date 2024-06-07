@@ -20,7 +20,7 @@ function AvatarExperience({
 	useFrame((state, delta) => {
 		state.camera.lookAt(0, 0, 0)
 
-		if (state.camera.position.z > 3.5) {
+		if (state.camera.position.z > 3) {
 			state.camera.position.z -= 0.02
 		}
 
@@ -49,7 +49,7 @@ function AvatarExperience({
 					</group>
 				</Suspense>
 
-				<Suspense fallback={null}>
+				{/* <Suspense fallback={null}>
 					<group
 						position={[-0.3, -0.5, -0.7]}
 						rotation={[0, Math.PI - 0.5, 0, 'XYZ']}
@@ -57,16 +57,16 @@ function AvatarExperience({
 					>
 						<Harley />
 					</group>
-				</Suspense>
+				</Suspense> */}
 			</PresentationControls>
 
 			<Float rotationIntensity={0.5}>
 				<Text
 					font="./fonts/bangers-v20-latin-regular.woff"
-					fontSize={0.4}
+					fontSize={0.5}
 					lineHeight={1.1}
-					position={[-0.75, 0.7, -1.5]}
-					rotation-y={1}
+					position={[-0.80, 0.45, -1.5]}
+					rotation-y={1.1}
 					maxWidth={1.5}
 					textAlign="center"
 				>
