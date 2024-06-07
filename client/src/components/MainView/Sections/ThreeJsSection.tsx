@@ -28,12 +28,12 @@ function ThreeJsSection({
 	return (
 		<Box component="section" py={3} >
 			<Box position='relative'>
-				<Typography mb={3} variant="h4" component='h4' textAlign='center' color='text.secondary'>Three JS</Typography>
+				<Typography mb={{xs: 0, sm: 3}} variant="h4" component='h4' textAlign='center' color='text.secondary'>Three JS</Typography>
 
 				<CarouselStatus totalSlides={projects.length} currentSlide={projects.length} />
 
 				<Grid container columnSpacing={1}>
-					<Grid item xs={12} sm={6} pt={2}>
+					<Grid item xs={12} sm={6} pt={2} height={{ xs: "500px", sm: 'auto'}}>
 						<AvatarScene />
 					</Grid>
 
