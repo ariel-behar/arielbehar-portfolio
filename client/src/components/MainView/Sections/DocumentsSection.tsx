@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 
 import Document from '../../../model/Document'
+import Project from '../../../model/Project'
 
 import styled from "@mui/material/styles/styled"
+
+import Modal from '../../Modal/Modal'
 
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import Modal from '../../Modal/Modal'
 
 const StyledSectionBox = styled(Box)`
     background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/chalkboard.jpg');
@@ -88,27 +90,36 @@ interface Props {
 }
 
 function DocumentsSection({ loadSectionHandler }: Props) {
-    const [showModal, setShowModal] = useState<boolean>(false)
-    const [documentCategory, setDocumentCategory] = useState<Document['category'] | null>(null)
-    
+    const [modalSettings, setModalSettings] = useState<{
+		show: boolean,
+        documentCategory: Document['category'] | null
+	}>({
+		show: false,
+        documentCategory: null
+	})
+
 	useEffect(() => {
         loadSectionHandler(8)
     },[loadSectionHandler])
 
 
-    const onClickImageHandler = (category: Document['category']) => {
-        setDocumentCategory(category)
-        setShowModal(true)
+    const onClickImageHandler = (documentCategory: Document['category']) => {
+        setModalSettings({
+            show: true,
+            documentCategory: documentCategory
+        })
     }
 
-    const handleCloseModal = () => {
-        setDocumentCategory(null)
-        setShowModal(false)
-    }
+    const handleShowModal = (show: boolean, project?: Project | null, documentCategory?: Document['category']) => {
+		setModalSettings({
+			show: show,
+			documentCategory: null
+		})
+	}
 
     return (
         <>
-            {(showModal && documentCategory) && <Modal documentCategory={documentCategory} showModal handleCloseModal={handleCloseModal} />}
+            {(modalSettings.show && modalSettings.documentCategory) && <Modal documentCategory={modalSettings.documentCategory} showModal handleShowModal={handleShowModal} />}
 
             <StyledSectionBox component='section' id='sixth-section' pb={5}>
                 <Container>

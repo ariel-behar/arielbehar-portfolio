@@ -2,7 +2,6 @@ import { useState } from "react";
 import { v4 as uuid } from 'uuid';
 import styled from "@mui/material/styles/styled"
 
-
 import Carousel, { StateCallBack } from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 
@@ -76,7 +75,13 @@ const responsive = {
 	}
 };
 
-function MockupProjectsCarousel() {
+interface Props {
+	handleShowModal: (show: boolean, project?: Project) => void
+}
+
+function MockupProjectsCarousel({
+	handleShowModal
+}: Props) {
 	const [currentSlide, setCurrentSlide] = useState<number>(1)
 
 
@@ -109,6 +114,7 @@ function MockupProjectsCarousel() {
 						return <MockupProjectCarouselSlide
 							key={uuid()}
 							project={project as Project}
+							handleShowModal={handleShowModal}
 						/>
 					})
 				}

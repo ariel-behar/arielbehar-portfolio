@@ -1,22 +1,22 @@
 import { forwardRef } from 'react';
+import styled from '@mui/material/styles/styled';
 
 import Project from '../../model/Project';
 import { Partial } from '../../types/common-types';
 
-import styled from '@mui/material/styles/styled';
 import { TransitionProps } from '@mui/material/transitions';
 
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-
-import Slide from '@mui/material/Slide';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-
-import CloseIcon from '@mui/icons-material/Close';
 import ProjectModalContent from './ProjectModalContent';
 import Document from '../../model/Document';
 import DocumentModalContent from './DocumentModalContent';
+
+import CloseIcon from '@mui/icons-material/Close';
+
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import Slide from '@mui/material/Slide';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 const Transition = forwardRef(function Transition(
@@ -64,10 +64,15 @@ interface Props {
     project?: Partial<Project>,
     documentCategory?: Document['category'],
     showModal: boolean,
-    handleCloseModal: () => void
+    handleShowModal: (show: boolean, project?: Project | null, documentCategory?: Document['category'] | null) => void
 }
 
-function Modal({ project, documentCategory, showModal, handleCloseModal }: Props) {
+function Modal({ 
+    project, 
+    documentCategory, 
+    showModal, 
+    handleShowModal 
+}: Props) {
 
     const getDocumentTitle = (category:Document['category']): 'Résumé' | 'References' | 'Certificates' | '' => {
         if(category === 'resume') {
@@ -85,7 +90,7 @@ function Modal({ project, documentCategory, showModal, handleCloseModal }: Props
         <Dialog
             maxWidth='md'
             open={showModal}
-            onClose={handleCloseModal}
+            onClose={() => handleShowModal(false)}
             TransitionComponent={Transition}
             keepMounted
             scroll='body'
@@ -93,7 +98,7 @@ function Modal({ project, documentCategory, showModal, handleCloseModal }: Props
             aria-describedby="alert-dialog-description"
         >
             <StyledDialogTitleBox id="alert-dialog-title">
-                <CloseIcon className='close-icon' onClick={() => handleCloseModal()} />
+                <CloseIcon className='close-icon' onClick={() => handleShowModal(false)} />
 
                 {project && <Typography variant='h5'>{project?.title}</Typography>}
 
@@ -110,7 +115,7 @@ function Modal({ project, documentCategory, showModal, handleCloseModal }: Props
                     variant='contained'
                     size='large'
                     sx={{ backgroundColor: 'custom.blue.main', marginLeft: 'auto' }}
-                    onClick={handleCloseModal}
+                    onClick={() => handleShowModal(false)}
                 >
                     Close
                 </Button>
