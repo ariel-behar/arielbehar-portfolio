@@ -5,21 +5,20 @@ import projects from '../../../data/projects.json'
 import IProject from '../../../model/Project'
 
 import ProjectDetailsBox from "../SectionsComponents/Projects/ProjectDetailsBox"
-import ProjectsCarousel from "../SectionsComponents/Projects/ProjectsCarousel"
+import ProjectLargeThumbnail from '../SectionsComponents/Projects/ProjectLargeThumbnail'
+import ProjectsThumbnailsList from '../SectionsComponents/Projects/ProjectsThumbnailsList'
 
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import Stack from '@mui/material/Stack'
-import ProjectLargeThumbnail from '../SectionsComponents/Projects/ProjectLargeThumbnail'
-import ProjectsThumbnailsList from '../SectionsComponents/Projects/ProjectsThumbnailsList'
 
 interface Props {
 	loadSectionHandler: (sectionNum: number) => void
 }
 
 function ProjectsSection({ loadSectionHandler }: Props) {
-	const [selectedProject, setSelectedProject] = useState<IProject | null>(null)
+	const [selectedProject, setSelectedProject] = useState<IProject>(projects[0] as IProject)
 	const theme = useTheme();
 	const isXsSm = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -47,23 +46,16 @@ function ProjectsSection({ loadSectionHandler }: Props) {
 			</Stack>
 
 			<Grid container spacing={1} py={2}>
-				<Grid item xs={12} md={7} lg={7}>
-					{/* <ProjectsCarousel
-						selectedProject={selectedProject}
-						projects={(projects as Project[])}
-						onChangeSelectedProject={onChangeSelectedProject}
-					/> */}
-					<ProjectLargeThumbnail selectedProject={selectedProject}/>
-
+				<Grid item xs={12} md={7} lg={7} display="flex" direction='column' justifyContent='center'>
+					<ProjectLargeThumbnail selectedProject={selectedProject} />
 				</Grid>
 
 				<Grid item xs={12} md={5} lg={5}>
-					<ProjectDetailsBox selectedProject={selectedProject} />
+					<ProjectDetailsBox selectedProject={selectedProject}/>
 				</Grid>
 
-				<Grid xs={12}>
+				<Grid item xs={12}>
 					<ProjectsThumbnailsList projects={projects as IProject[]} onChangeSelectedProject={onChangeSelectedProject} />
-
 				</Grid>
 			</Grid>
 
