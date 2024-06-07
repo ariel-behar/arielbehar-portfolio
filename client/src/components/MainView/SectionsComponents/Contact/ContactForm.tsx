@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import FormData from '../../../../model/FormData';
+import IFormData from '../../../../model/FormData';
 import contactFormSchema from '../../../../validations/contactFormSchema';
 import * as formService from '../../../../services/formService'
 import styled from '@mui/material/styles/styled';
@@ -35,7 +35,7 @@ interface Props {
 
 function ContactForm({formSubmitSuccessHandler}:Props ) {
 	const [errorDuringProcessing, setErrorDuringProcessing ] = useState<boolean>(false)
-	const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm<FormData>({
+	const { register, handleSubmit, formState: { errors, isDirty, isValid } } = useForm<IFormData>({
 		mode: 'onBlur',
 		resolver: yupResolver(contactFormSchema),
 		defaultValues: {
@@ -46,7 +46,7 @@ function ContactForm({formSubmitSuccessHandler}:Props ) {
 		}
 	});
 
-	const onFormSubmit = async (data: FormData, e: React.BaseSyntheticEvent<object, any, any> | undefined) => {
+	const onFormSubmit = async (data: IFormData, e: React.BaseSyntheticEvent<object, any, any> | undefined) => {
 		e?.preventDefault()
 
 		const {name, email, subject, message } = data;
