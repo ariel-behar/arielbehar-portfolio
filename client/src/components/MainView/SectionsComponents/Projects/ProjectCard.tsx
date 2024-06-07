@@ -15,7 +15,7 @@ interface Props {
 
 function ProjectDetailsBox({ project, projectCategory, hideTitle }: Props) {
     return (
-        <Stack>
+        <Stack py={2}>
             {!hideTitle && <Typography variant='h5' component='h5' textAlign='center' color='text.secondary'>{project?.title}</Typography>}
 
             <Typography mt={2} variant='h6' component='h6' color='text.secondary'>Project Description:</Typography>

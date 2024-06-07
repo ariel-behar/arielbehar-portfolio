@@ -4,18 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import Project from "../../../../model/Project"
 import ProjectCard from "./ProjectCard"
 
-import styled from "@mui/material/styles/styled"
-
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import Stack from "@mui/system/Stack"
 
-const StyledProjectBox = styled(Box)`
-	background-color: rgba(0, 0, 0, 0.3);
-	border-radius: 20px;
-	padding: 30px 15px 10px;
-	height: 100%;
-`
 interface Props {
 	selectedProject: Project | null,
 }
@@ -23,7 +15,13 @@ interface Props {
 function ProjectDetailsBox({ selectedProject }: Props) {
 
 	return (
-		<StyledProjectBox>
+		<Box sx={{
+			backgroundColor: "rgba(0, 0, 0, 0.3)",
+			borderRadius: "20px",
+			padding: "10px 15px 10px",
+		}}
+			height='100%'
+		>
 			{
 				selectedProject
 					? <ProjectCard project={(selectedProject as Project)} projectCategory='real' />
@@ -31,7 +29,7 @@ function ProjectDetailsBox({ selectedProject }: Props) {
 						<Stack direction='column' justifyContent='center' alignItems='center' height='100%'>
 							<Typography
 								key={uuidv4()}
-								variant='h4'
+								variant='h6'
 								component={motion.h5}
 								textAlign='center'
 								color='text.secondary'
@@ -43,7 +41,7 @@ function ProjectDetailsBox({ selectedProject }: Props) {
 						</Stack>
 					)
 			}
-		</StyledProjectBox>
+		</Box>
 	)
 }
 
