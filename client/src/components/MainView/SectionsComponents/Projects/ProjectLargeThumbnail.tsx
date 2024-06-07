@@ -1,24 +1,30 @@
 import IProject from '../../../../model/Project'
 
 import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
+import Link from '@mui/material/Link'
 
 interface Props {
-	selectedProject: IProject | null
+	selectedProject: IProject
 }
 
 function ProjectLargeThumbnail({
 	selectedProject
 }: Props) {
 	return (
-		<Stack height='100%' width='100%' direction='row' justifyContent='center' alignItems='center' >
+		<Link href={selectedProject.url} target='_blank'>
 			<Box
+				sx={{
+					cursor: 'pointer',
+					transition: 'all 0.1s',
+					'&:hover': {
+						transform: 'scale(1.01)'
+					}
+				}}
 				component="img"
 				width='100%'
-				sx={{ objectFit: 'contain' }}
 				src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${selectedProject?.image}`} alt={`${selectedProject?.title} || ${selectedProject?._id}`}
 			/>
-		</Stack>
+		</Link>
 	)
 }
 
