@@ -1,6 +1,6 @@
 import { Identifiable, IdType } from "../types/common-types"
 
-interface ThreeJsProject extends Identifiable<IdType> {
+interface IThreeJsProject extends Identifiable<IdType> {
     _id: IdType
     order: number,
     title: string,
@@ -19,4 +19,4 @@ interface ThreeJsProject extends Identifiable<IdType> {
     ]
 }
 
-export default ThreeJsProject
+export default IThreeJsProject

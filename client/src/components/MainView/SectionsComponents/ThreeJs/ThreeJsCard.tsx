@@ -1,10 +1,10 @@
 import Typography from "@mui/material/Typography"
-import ThreeJsProject from "../../../../model/ThreeJsProject"
+import IThreeJsProject from "../../../../model/ThreeJsProject"
 import Link from "@mui/material/Link"
 import Box from "@mui/material/Box"
 
 interface Props {
-    project: ThreeJsProject
+    project: IThreeJsProject
 }
 
 function ThreeJsCard({

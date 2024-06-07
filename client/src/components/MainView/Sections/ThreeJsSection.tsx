@@ -3,7 +3,7 @@ import { v4 as uuiqd } from 'uuid'
 
 import projects from '../../../data/threeJsProjects.json'
 
-import ThreeJsProject from "../../../model/ThreeJsProject"
+import IThreeJsProject from "../../../model/ThreeJsProject"
 
 import CarouselStatus from "../SectionsComponents/Photoshop/CarouselStatus"
 import ThreeJsCard from "../SectionsComponents/ThreeJs/ThreeJsCard"
