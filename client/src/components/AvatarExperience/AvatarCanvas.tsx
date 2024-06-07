@@ -17,7 +17,7 @@ function AvatarCanvas({
 }: Props) {
     return (
         <>
-            {/* <Leva hidden/> */}
+            <Leva hidden/>
             <Canvas
                 camera={{
                     fov: 35,
