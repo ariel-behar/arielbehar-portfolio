@@ -12,7 +12,9 @@ interface Props {
 	selectedProject: IProject | null,
 }
 
-function ProjectDetailsBox({ selectedProject }: Props) {
+function ProjectDetailsBox({
+	selectedProject
+}: Props) {
 
 	return (
 		<Box sx={{
@@ -20,7 +22,7 @@ function ProjectDetailsBox({ selectedProject }: Props) {
 			borderRadius: "20px",
 			padding: "10px 15px 10px",
 		}}
-			height='100%'
+			minHeight='510px'
 		>
 			{
 				selectedProject
