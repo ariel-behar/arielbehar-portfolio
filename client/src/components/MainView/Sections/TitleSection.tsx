@@ -1,4 +1,7 @@
 import { useEffect } from "react"
+import useTheme from "@mui/material/styles/useTheme"
+import useMediaQuery from "@mui/material/useMediaQuery"
+
 import styled from "@mui/material/styles/styled"
 
 import Box from "@mui/material/Box"
@@ -14,17 +17,27 @@ const StyledBox = styled(Box)`
 
     height: 37vh;
    
-    @media (max-width: 576px) { 
-        height: 70vh;
+
+    .first-section-logo-background-stack {
+        background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo-blue.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        @media (max-width: 576px) { 
+            background-size: cover;
+        }
+
+        .first-section-mask-background-stack {
+            background: rgba(64,150,238, 0.5);
+            background: linear-gradient(-45deg, rgba(64,150,238,0.5) 0%, rgba(240,248,255,0.5) 100%);
+
+            @media (max-width: 900px) { 
+                background: rgba(64,150,238, 0.8);
+                background: linear-gradient(-45deg, rgba(64,150,238,0.8) 0%, rgba(240,248,255,0.8) 100%);
+            }
+
+        }
     }
-`
-
-const StyledStack = styled(Stack)`
-    height:100%;
-
-    background-image: url('https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo-blue.png');
-    background-position: left center;
-    background-repeat: no-repeat;
 `
 
 interface Props {
@@ -32,17 +45,39 @@ interface Props {
 }
 
 function TitleSection({ loadSectionHandler }: Props) {
+    const theme = useTheme();
+    const isXsSm = useMediaQuery(theme.breakpoints.down('md'));
+
     useEffect(() => {
         loadSectionHandler(2)
-    },[loadSectionHandler])
+    }, [loadSectionHandler])
 
     return (
         <StyledBox component='section' id='first-section' >
 
-            <StyledStack direction='column' justifyContent='center' alignItems='center'  >
-                <Typography variant="h3" component='h1' textAlign='center'>ARIEL BEHAR WEB PORTFOLIO</Typography>
-                <Typography variant="h5" component='h2' fontStyle='italic' textAlign='center'>Design & Development Done Differently</Typography>
-            </StyledStack>
+            <Stack
+                className="first-section-logo-background-stack"
+                height='100%'
+            >
+                <Stack
+                    className="first-section-mask-background-stack"
+                    direction='column'
+                    justifyContent='center'
+                    alignItems='center'
+                    height='100%'
+                >
+                    <Typography variant="h1" component='h1' mb={{xs: 1, md: 0}} textAlign='center'>
+                        ARIEL BEHAR 
+                        {isXsSm && <br />}
+                        &nbsp;WEB PORTFOLIO
+                        </Typography>
+                    <Typography variant="h4" component='h2' fontStyle='italic' textAlign='center'>
+                        Design & Development
+                        {isXsSm && <br />}
+                        &nbsp;Done Differently
+                    </Typography>
+                </Stack>
+            </Stack>
         </StyledBox>
     )
 }
