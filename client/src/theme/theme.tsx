@@ -30,7 +30,7 @@ const theme = createTheme({
                 main: "#636c72",
                 light: "#9e9e9e"
             }
-            
+
         },
         action: {
             disabled: "rgb(255, 255, 255, 0.5)",
@@ -42,5 +42,66 @@ const theme = createTheme({
         fontFamily: "'Saira', sans-serif"
     }
 })
+
+theme.typography.h1 = {
+    fontSize: '2.5rem',
+    lineHeight: '2.6rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '3rem',
+        lineHeight: '3.1rem',
+    },
+}
+
+theme.typography.h2 = {
+    fontSize: '2.2rem',
+    lineHeight: '2.3rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '2.5rem',
+        lineHeight: '2.6rem',
+    },
+}
+
+theme.typography.h3 = {
+    fontSize: '2rem',
+    lineHeight: '2.1rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '2.2rem',
+        lineHeight: '2.3rem',
+    },
+}
+
+theme.typography.h4 = {
+    fontSize: '1.7rem',
+    lineHeight: '1.8rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.9rem',
+        lineHeight: '2rem',
+    },
+}
+
+theme.typography.h5 = {
+    fontSize: '1.5rem',
+    lineHeight: '1.6rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.6rem',
+        lineHeight: '1.7rem',
+    },
+}
+
+theme.typography.h6 = {
+    fontSize: '1.3rem',
+    lineHeight: '1.4rem',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.4rem',
+        lineHeight: '1.5rem',
+    },
+}
+
 
 export default theme;
