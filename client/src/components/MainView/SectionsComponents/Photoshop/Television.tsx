@@ -9,9 +9,6 @@ import Box from '@mui/material/Box'
 
 
 const StyledBox = styled(Box)`
-    position: relative;
-    margin: 25px auto 0;
-    
     .tv-background {
         position: absolute;
         width: 75%;
@@ -54,11 +51,6 @@ const StyledBox = styled(Box)`
         color: ${({ theme }) => theme.palette.text.secondary};
     }
 
-    .psdToHtmlPoster-image {
-        width: 80%;
-        margin: 0 auto;
-    }
-
     .tvOn {
         color: ${({ theme }) => theme.palette.custom.green.main};
     }
@@ -87,25 +79,23 @@ function Television() {
 
     return (
         <>
-            <StyledBox sx={{ width: { xs: '100%', sm: '80%', md: '100%' } }}>
-                <Box display={{ xs: 'none', sm: 'none', lg: 'block' }}>
-                    <Box className="tv-background" ></Box>
+            <StyledBox
+                position='relative'
+                mt={4}
+                display={{ xs: 'none', md: 'block' }}
+            >
+                <Box className="tv-background" ></Box>
 
-                    <video ref={videoRef} autoPlay muted style={isTvOn ? {} : { opacity: 0 }} onEnded={onVideoEndedHandler} poster="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/tv-designer-poster.jpg">
-                        <source className="embed-responsive-item" src={designMP4} type="video/mp4" />
-                        <source className="embed-responsive-item" src={designWEBM} type="video/webm" />
-                        <source className="embed-responsive-item" src={designOGV} type="video/ogv" />
-                    </video>
+                <video ref={videoRef} autoPlay muted style={isTvOn ? {} : { opacity: 0 }} onEnded={onVideoEndedHandler} poster="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/backgrounds/tv-designer-poster.jpg">
+                    <source className="embed-responsive-item" src={designMP4} type="video/mp4" />
+                    <source className="embed-responsive-item" src={designWEBM} type="video/webm" />
+                    <source className="embed-responsive-item" src={designOGV} type="video/ogv" />
+                </video>
 
-                    <img className='tv-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/tv.png" alt="Television" />
+                <img className='tv-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/tv.png" alt="Television" />
 
-                    <Box className="tv-buttons">
-                        <span onClick={turnTvOnHandler} className={isTvOn ? "tvOn" : ''} >ON </span>|<span className={isTvOn ? "" : 'tvOff'} onClick={turnTvOffHandler}> OFF</span>
-                    </Box>
-                </Box>
-
-                <Box display={{ xs: 'block', sm: 'block', lg: 'none' }} textAlign="center">
-                    <img className='psdToHtmlPoster-image' src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/psd-to-html5.png" alt="PSD TO HTML Poster" />
+                <Box className="tv-buttons">
+                    <span onClick={turnTvOnHandler} className={isTvOn ? "tvOn" : ''} >ON </span>|<span className={isTvOn ? "" : 'tvOff'} onClick={turnTvOffHandler}> OFF</span>
                 </Box>
             </StyledBox>
         </>
