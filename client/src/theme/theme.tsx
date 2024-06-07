@@ -44,8 +44,8 @@ const theme = createTheme({
 })
 
 theme.typography.h1 = {
-    fontSize: '2.5rem',
-    lineHeight: '2.6rem',
+    fontSize: '3rem',
+    lineHeight: '3.1rem',
     fontWeight: 'normal',
     [theme.breakpoints.up('md')]: {
         fontSize: '3rem',
