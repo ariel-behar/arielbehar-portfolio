@@ -1,12 +1,12 @@
 
-export interface Technology {
+export interface ITechnology {
     technology: string,
     proficiency: number,
     image: string,
     displayTechnology: boolean
 }
 
-export interface Skill {
+export interface ISkill {
     title: string,
-    technologies: Technology[]
+    technologies: ITechnology[]
 }

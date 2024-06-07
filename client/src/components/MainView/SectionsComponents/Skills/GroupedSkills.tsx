@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import { Skill, Technology } from "../../../../model/Skill"
+import { ISkill, ITechnology } from "../../../../model/Skill"
 import Chip from './Chip';
 
 import Box from '@mui/material/Box';
@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
 interface Props {
-    skills: Skill[],
+    skills: ISkill[],
     hoveredProficiency: 1 | 2 | 3 | null
 }
 
@@ -16,14 +16,14 @@ function GroupedSkills({ skills, hoveredProficiency }: Props) {
     return (
         <>
             {
-                skills.map((skill: Skill, index) => {
+                skills.map((skill: ISkill, index) => {
                     return (
                         <Box mt={{ xs: 1, sm: 1.5, md: 0.2 }} key={uuidv4()} width='100%'>
                             <Typography variant='body2' component="h6" color="text.secondary" key={uuidv4()} textAlign={{xs: 'center', sm: 'left'}}>{skill.title}</Typography>
 
                             <Stack direction='row' flexWrap='wrap' justifyContent='left' >
                                 {
-                                    skill['technologies'].map((technology: Technology) => {
+                                    skill['technologies'].map((technology: ITechnology) => {
                                         return technology.displayTechnology === true && (
                                             <Chip key={uuidv4()} technology={technology} hoveredProficiency={hoveredProficiency} />
                                         )

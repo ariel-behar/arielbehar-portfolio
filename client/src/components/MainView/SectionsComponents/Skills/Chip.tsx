@@ -2,7 +2,7 @@ import getChipColor from '../../../../utils/getChipColor'
 
 import Box from '@mui/material/Box'
 import styled from '@mui/material/styles/styled'
-import { Technology } from '../../../../model/Skill'
+import { ITechnology } from '../../../../model/Skill'
 import Typography from '@mui/material/Typography/Typography'
 
 const StyledChipBox = styled(Box)`
@@ -41,7 +41,7 @@ const StyledChipBox = styled(Box)`
 `
 
 interface Props {
-	technology: Technology,
+	technology: ITechnology,
 	hoveredProficiency: 1 | 2 | 3 | null
 }
 
