@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import styled from '@mui/material/styles/styled';
 
-import Project from '../../model/Project';
+import IProject from '../../model/Project';
 import { Partial } from '../../types/common-types';
 
 import { TransitionProps } from '@mui/material/transitions';
@@ -61,10 +61,10 @@ const StyledDialogActions = styled(DialogActions)`
     padding: 20px;
 `
 interface Props {
-    project?: Partial<Project>,
+    project?: Partial<IProject>,
     documentCategory?: Document['category'],
     showModal: boolean,
-    handleShowModal: (show: boolean, project?: Project | null, documentCategory?: Document['category'] | null) => void
+    handleShowModal: (show: boolean, project?: IProject | null, documentCategory?: Document['category'] | null) => void
 }
 
 function Modal({ 

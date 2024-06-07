@@ -3,7 +3,7 @@ import styled from "@mui/material/styles/styled"
 import useTheme from "@mui/material/styles/useTheme"
 import useMediaQuery from "@mui/material/useMediaQuery"
 
-import Project from "../../../model/Project"
+import IProject from "../../../model/Project"
 
 import MockupProjectsCarousel from "../SectionsComponents/Photoshop/MockupProjectsCarousel"
 import Television from "../SectionsComponents/Photoshop/Television"
@@ -36,13 +36,13 @@ function PhotoshopSection({ loadSectionHandler }: Props) {
 
 	const [modalSettings, setModalSettings] = useState<{
 		show: boolean,
-		project?: Project | null
+		project?: IProject | null
 	}>({
 		show: false,
 		project: null
 	})
 
-	const handleShowModal = (show: boolean, project?: Project) => {
+	const handleShowModal = (show: boolean, project?: IProject) => {
 		setModalSettings({
 			show: show,
 			project: project ? project : null
@@ -55,7 +55,7 @@ function PhotoshopSection({ loadSectionHandler }: Props) {
 
 	return (
 		<>
-			{(modalSettings.show && modalSettings.project) && <Modal project={modalSettings.project as Project} showModal={modalSettings.show} handleShowModal={handleShowModal} />}
+			{(modalSettings.show && modalSettings.project) && <Modal project={modalSettings.project as IProject} showModal={modalSettings.show} handleShowModal={handleShowModal} />}
 
 			<Grid container spacing={{ md: 2 }} py={{ xs: 3, md: 7 }}>
 				<Grid item xs={12} md={6} px={{ md: 2 }}>

@@ -1,6 +1,6 @@
 import { Identifiable, IdType } from "../types/common-types"
 
-interface Project extends Identifiable<IdType> {
+interface IProject extends Identifiable<IdType> {
     _id: IdType
     order: number,
     title: string,
@@ -21,4 +21,4 @@ interface Project extends Identifiable<IdType> {
     ]
 }
 
-export default Project
+export default IProject

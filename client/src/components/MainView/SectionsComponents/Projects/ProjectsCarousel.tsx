@@ -1,7 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import Project from "../../../../model/Project"
+import IProject from "../../../../model/Project"
 import styled from '@mui/material/styles/styled';
 
 const StyledCarousel = styled(Carousel)`
@@ -45,21 +45,23 @@ const StyledCarousel = styled(Carousel)`
 			ul.thumbs {
 				padding-left: 0;
 				li.thumb {
-					opacity: 0.7;
+					/* opacity: 0.7; */
+
 					
 					cursor: pointer;
 					border: none;
 					
 					&:hover{
 						border: none;
-						opacity: 1;
+						/* opacity: 1; */
 						transform: scale(1.1);
 					}
 
 					&.selected {
 						transform: scale(1.1);
 						opacity: 1;
-						border: none;
+						border-bottom: 3px solid white;
+						
 					}
 				}
 			}
@@ -111,9 +113,9 @@ const StyledCarousel = styled(Carousel)`
 
 `
 interface Props {
-	selectedProject: Project | null,
-	projects: Project[],
-	onChangeSelectedProject: (projectId: Project['_id']) => void
+	selectedProject: IProject | null,
+	projects: IProject[],
+	onChangeSelectedProject: (projectId: IProject['_id']) => void
 }
 
 function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }: Props) {
@@ -137,8 +139,8 @@ function ProjectsCarousel({ selectedProject, projects, onChangeSelectedProject }
 			showIndicators={false}
 			showArrows={false}
 			showThumbs={true}
-			swipeable={false}
-			thumbWidth={166}
+			swipeable={true}
+			thumbWidth={115}
 		>
 			{
 				projects.map(project => {

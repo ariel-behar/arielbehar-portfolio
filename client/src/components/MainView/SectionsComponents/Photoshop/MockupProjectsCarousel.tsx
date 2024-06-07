@@ -6,7 +6,7 @@ import Carousel, { StateCallBack } from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 
 import mockupProjects from '../../../../data/mockupProjects.json'
-import Project from "../../../../model/Project";
+import IProject from "../../../../model/Project";
 import MockupProjectCarouselSlide from "./MockupProjectCarouselSlide";
 import CarouselStatus from "./CarouselStatus";
 
@@ -76,7 +76,7 @@ const responsive = {
 };
 
 interface Props {
-	handleShowModal: (show: boolean, project?: Project) => void
+	handleShowModal: (show: boolean, project?: IProject) => void
 }
 
 function MockupProjectsCarousel({
@@ -113,7 +113,7 @@ function MockupProjectsCarousel({
 					mockupProjects.map((project, index) => {
 						return <MockupProjectCarouselSlide
 							key={uuid()}
-							project={project as Project}
+							project={project as IProject}
 							handleShowModal={handleShowModal}
 						/>
 					})

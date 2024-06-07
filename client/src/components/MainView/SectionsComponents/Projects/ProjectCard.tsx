@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import Project from '../../../../model/Project'
+import IProject from '../../../../model/Project'
 
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 interface Props {
-    project: Project | null,
+    project: IProject | null,
     projectCategory: 'real' | 'mockup',
     hideTitle?: boolean
 }

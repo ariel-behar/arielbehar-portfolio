@@ -1,13 +1,13 @@
 
-import Project from "../../../../model/Project"
+import IProject from "../../../../model/Project"
 
 import Link from "@mui/material/Link"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 
 interface Props {
-    project: Project,
-    handleShowModal: (show: boolean, project?: Project) => void
+    project: IProject,
+    handleShowModal: (show: boolean, project?: IProject) => void
 }
 
 function MockupProjectCarouselSlide({

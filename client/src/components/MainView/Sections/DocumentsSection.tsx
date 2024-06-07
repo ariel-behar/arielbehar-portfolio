@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Document from '../../../model/Document'
-import Project from '../../../model/Project'
+import IProject from '../../../model/Project'
 
 import styled from "@mui/material/styles/styled"
 
@@ -110,7 +110,7 @@ function DocumentsSection({ loadSectionHandler }: Props) {
         })
     }
 
-    const handleShowModal = (show: boolean, project?: Project | null, documentCategory?: Document['category']) => {
+    const handleShowModal = (show: boolean, project?: IProject | null, documentCategory?: Document['category']) => {
 		setModalSettings({
 			show: show,
 			documentCategory: null

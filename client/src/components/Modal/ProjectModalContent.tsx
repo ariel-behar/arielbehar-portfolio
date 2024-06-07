@@ -1,4 +1,4 @@
-import Project from "../../model/Project"
+import IProject from "../../model/Project"
 import ProjectCard from "../MainView/SectionsComponents/Projects/ProjectCard"
 import { Partial } from "../../types/common-types"
 
@@ -21,7 +21,7 @@ const StyledDialogContent = styled(DialogContent)`
 `
 
 interface Props {
-	project: Partial<Project>,
+	project: Partial<IProject>,
 
 }
 
@@ -36,7 +36,7 @@ function ProjectModalContent({ project }: Props) {
 				px={5}
 
 			>
-				<ProjectCard project={(project as Project)} hideTitle projectCategory='mockup' />
+				<ProjectCard project={(project as IProject)} hideTitle projectCategory='mockup' />
 
 			</DialogContentText>
 		</StyledDialogContent>

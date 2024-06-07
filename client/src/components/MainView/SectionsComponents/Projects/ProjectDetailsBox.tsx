@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { v4 as uuidv4 } from 'uuid';
 
-import Project from "../../../../model/Project"
+import IProject from "../../../../model/Project"
 import ProjectCard from "./ProjectCard"
 
 import Box from "@mui/material/Box"
@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography"
 import Stack from "@mui/system/Stack"
 
 interface Props {
-	selectedProject: Project | null,
+	selectedProject: IProject | null,
 }
 
 function ProjectDetailsBox({ selectedProject }: Props) {
@@ -24,7 +24,7 @@ function ProjectDetailsBox({ selectedProject }: Props) {
 		>
 			{
 				selectedProject
-					? <ProjectCard project={(selectedProject as Project)} projectCategory='real' />
+					? <ProjectCard project={(selectedProject as IProject)} projectCategory='real' />
 					: (
 						<Stack direction='column' justifyContent='center' alignItems='center' height='100%'>
 							<Typography
