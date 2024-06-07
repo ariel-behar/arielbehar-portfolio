@@ -3,10 +3,11 @@ import { motion } from 'framer-motion'
 
 const StyledLogoImg = styled(motion.img)`
     margin-top: 1rem;
-    max-height: 270px;
+    margin-bottom: 1rem;
+    max-height: 220px;
 
 	@media (max-width: 599px){
-        max-height: 170px;
+        max-height: 150px;
 	}
 `
 
