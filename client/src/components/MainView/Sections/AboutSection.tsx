@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
-
 import { v4 as uuidv4 } from 'uuid';
+import styled from '@mui/material/styles/styled'
 
 import languages from '../../../data/languages.json'
 
 import FlagCard from '../SectionsComponents/About/FlagCard'
-
-import styled from '@mui/material/styles/styled'
 
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -56,12 +54,12 @@ function AboutSection({ loadSectionHandler }: Props) {
                     }}
                 >
                     <Grid item sm={12} lg={8} >
-                        <Typography variant='h4' component='h5' mb={1}>About Me</Typography>
-                        <Typography variant='body1' component='p'>Certified Full-Stack Web Developer. Multilingual and self-taught in a variety of web technologies and programming languages. Passionate about both front and back-end development. Highly reliable and self-propelled to success and professionalism with a constant hunger for knowledge and improvement.</Typography>
+                        <Typography variant='h4' component='h4' mb={1}>About Me</Typography>
+                        <Typography variant='body1' component='p'>Certified Full-Stack Web Developer with over 5 years of comprehensive experience. Multilingual and self-taught in a variety of web technologies and programming languages. Proficient in working with Next.js, MERN stack, Three.js, Shopify, and WordPress. Highly reliable and self-propelled to success and professionalism with a constant hunger for knowledge and improvement.</Typography>
                     </Grid>
 
                     <Grid item sm={12} lg={8} mt={{xs: 2, lg: 0}}>
-                        <Typography variant='h4' component='h5' mb={1}>Languages</Typography>
+                        <Typography variant='h4' component='h4' mb={1}>Languages</Typography>
                         <Typography variant='body2' component='p' color='text.muted.light' mb={1}>
                             *Speaking / Writing / Reading /	Understanding rated from 1 to 5 (5 being the highest)
                         </Typography>
