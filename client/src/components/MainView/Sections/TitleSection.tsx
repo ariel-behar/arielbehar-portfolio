@@ -15,7 +15,11 @@ const StyledBox = styled(Box)`
     box-shadow: 0 12px 15px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
     position: relative;
 
-    height: 37vh;
+    height: 30vh;
+
+    @media (min-width: 576px) {
+        height: 37vh;
+    }
    
 
     .first-section-logo-background-stack {
@@ -66,12 +70,13 @@ function TitleSection({ loadSectionHandler }: Props) {
                     alignItems='center'
                     height='100%'
                 >
-                    <Typography variant="h1" component='h1' mb={{xs: 1, md: 0}} textAlign='center'>
-                        ARIEL BEHAR 
-                        {isXsSm && <br />}
-                        &nbsp;WEB PORTFOLIO
-                        </Typography>
-                    <Typography variant="h4" component='h2' fontStyle='italic' textAlign='center'>
+                    <Typography variant="h1" component='h1' mb={2} textAlign='center'>
+                        ARIEL BEHAR
+                        {/* {isXsSm && <br />} */}
+                        {/* &nbsp;WEB PORTFOLIO */}
+                    </Typography>
+
+                    <Typography variant="h4" component='h2' lineHeight='2.3rem' fontStyle='italic' textAlign='center'>
                         Design & Development
                         {isXsSm && <br />}
                         &nbsp;Done Differently
