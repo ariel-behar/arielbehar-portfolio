@@ -130,7 +130,7 @@
         "image": "portfolio.png",
         "description": "My personal portfolio. Version 3.0",
         "myRole": "Although my original site was created in 2017, this version has undergone a thorough make-over with React. I've also made use of Typescript, which has contributed to the creation of an easily manageable codebase. All related assets have also been optimized, which has has resulted in a more pleasant UX and boosted overall performance.",
-        "technologies": ["React", "TypeScript", "Material UI", "CSS", "Node.js", "Express"],
+        "technologies": ["React", "TypeScript", "Three JS", "React Three Fiber", "Material UI", "CSS", "Node.js", "Express"],
         "month": "February",
         "year": 2023,
         "url": "http://www.arielbehar.com",
