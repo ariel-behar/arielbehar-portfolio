@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useMediaQuery, useTheme } from '@mui/material'
 
 import projects from '../../../data/projects.json'
-import Project from '../../../model/Project'
+import IProject from '../../../model/Project'
 
 import ProjectDetailsBox from "../SectionsComponents/Projects/ProjectDetailsBox"
 import ProjectsCarousel from "../SectionsComponents/Projects/ProjectsCarousel"
@@ -11,13 +11,15 @@ import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import Stack from '@mui/material/Stack'
+import ProjectLargeThumbnail from '../SectionsComponents/Projects/ProjectLargeThumbnail'
+import ProjectsThumbnailsList from '../SectionsComponents/Projects/ProjectsThumbnailsList'
 
 interface Props {
 	loadSectionHandler: (sectionNum: number) => void
 }
 
 function ProjectsSection({ loadSectionHandler }: Props) {
-	const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+	const [selectedProject, setSelectedProject] = useState<IProject | null>(null)
 	const theme = useTheme();
 	const isXsSm = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -25,8 +27,8 @@ function ProjectsSection({ loadSectionHandler }: Props) {
 		loadSectionHandler(4)
 	}, [loadSectionHandler])
 
-	const onChangeSelectedProject = (projectId: Project['_id']) => {
-		let currentProject: Project | undefined = (projects as Project[]).find((project: Project) => project._id === Number(projectId))
+	const onChangeSelectedProject = (projectId: IProject['_id']) => {
+		let currentProject: IProject | undefined = (projects as IProject[]).find((project: IProject) => project._id === Number(projectId))
 
 		if (currentProject) {
 			setSelectedProject(currentProject)
@@ -39,22 +41,29 @@ function ProjectsSection({ loadSectionHandler }: Props) {
 				<Typography variant="h1" component='h3' textAlign='left' color='text.secondary'>My Projects</Typography>
 
 				{isXsSm
-					? <Typography variant="h6" component='h4' mt={2} textAlign='center' color='text.secondary' lineHeight={1.2}>Next | MERN | Shopify <br/>&nbsp;Wordpress | Vanilla JS</Typography>
+					? <Typography variant="h6" component='h4' mt={2} textAlign='center' color='text.secondary' lineHeight={1.2}>Next | MERN | Shopify <br />&nbsp;Wordpress | Vanilla JS</Typography>
 					: <Typography variant="h6" component='h4' mt={2} textAlign='center' color='text.secondary'>Next | MERN | Shopify | Wordpress | Vanilla JS</Typography>
 				}
 			</Stack>
 
-			<Grid container spacing={3} py={2}>
-				<Grid item xs={12} md={7} lg={8}>
-					<ProjectsCarousel
+			<Grid container spacing={1} py={2}>
+				<Grid item xs={12} md={7} lg={7}>
+					{/* <ProjectsCarousel
 						selectedProject={selectedProject}
 						projects={(projects as Project[])}
 						onChangeSelectedProject={onChangeSelectedProject}
-					/>
+					/> */}
+					<ProjectLargeThumbnail selectedProject={selectedProject}/>
+
 				</Grid>
 
-				<Grid item xs={12} md={5} lg={4}>
+				<Grid item xs={12} md={5} lg={5}>
 					<ProjectDetailsBox selectedProject={selectedProject} />
+				</Grid>
+
+				<Grid xs={12}>
+					<ProjectsThumbnailsList projects={projects as IProject[]} onChangeSelectedProject={onChangeSelectedProject} />
+
 				</Grid>
 			</Grid>
 
