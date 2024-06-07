@@ -1,5 +1,3 @@
-import { Leva } from "leva";
-
 import { Canvas } from "@react-three/fiber"
 
 import { ActionName } from "./Avatar/Avatar";
@@ -17,7 +15,6 @@ function AvatarCanvas({
 }: Props) {
     return (
         <>
-            <Leva hidden/>
             <Canvas
                 camera={{
                     fov: 35,

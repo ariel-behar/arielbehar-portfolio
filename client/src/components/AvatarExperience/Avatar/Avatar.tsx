@@ -5,10 +5,9 @@ Command: npx gltfjsx@6.4.1 public/models/650745a68a5f0e10f77629cd.glb --types
 
 import * as THREE from 'three'
 import React, { useEffect, useRef } from 'react'
-import { useFrame, useGraph } from '@react-three/fiber'
+import { useGraph } from '@react-three/fiber'
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
-import { useControls } from 'leva'
 
 interface GLTFAction extends THREE.AnimationClip {
 	name: ActionName;
@@ -63,11 +62,6 @@ export function Avatar({
 
 	const avatarGroupRef = useRef<THREE.Group>()
 
-	const { headFollow, cursorFollow } = useControls({
-		headFollow: false,
-		cursorFollow: false
-	})
-
 	const { animations: waving } = useFBX("animations/avatar/waving.fbx")
 	const { animations: idle } = useFBX("animations/avatar/breathing-idle.fbx")
 	const { animations: crouchToStand } = useFBX("animations/avatar/crouch-to-stand.fbx")
@@ -117,18 +111,6 @@ export function Avatar({
 		}
 
 	}, [isInView, animationName])
-
-	useFrame(state => {
-		if (headFollow) {
-			avatarGroupRef.current.getObjectByName("Head").lookAt(state.camera.position)
-		}
-		if (cursorFollow) {
-			const target = new THREE.Vector3(state.pointer.x, state.pointer.y, 1)
-
-			avatarGroupRef.current.getObjectByName("Head").lookAt(target)
-			avatarGroupRef.current.getObjectByName("Spine2").lookAt(target)
-		}
-	})
 
 	return (
 		<group {...props} dispose={null} ref={avatarGroupRef}>
