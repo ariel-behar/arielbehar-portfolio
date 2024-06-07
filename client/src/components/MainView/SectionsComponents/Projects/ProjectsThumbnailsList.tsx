@@ -13,11 +13,11 @@ function ProjectsThumbnailsList({
 	onChangeSelectedProject
 }: Props) {
 	return (
-		<Stack direction='row' alignItems='center' flexWrap='wrap' justifyContent='center' mt={2} gap={2} >
+		<Stack flexGrow="1" direction='row' alignItems='center' flexWrap='wrap' justifyContent='center' mt={2} gap={{xs: 1, md: 2}} >
 			{
 				projects.map(project => {
 					return (
-						<Box key={project._id} onClick={() => onChangeSelectedProject(project._id)} width="130px" height='auto'>
+						<Box key={project._id} onClick={() => onChangeSelectedProject(project._id)} width={{xs: '105px', md: "130px"}} height='auto'>
 							<Box
 								sx={{
 									cursor: 'pointer',
