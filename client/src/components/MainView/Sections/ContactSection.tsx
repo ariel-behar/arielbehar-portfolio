@@ -19,42 +19,27 @@ const StyledSectionBox = styled(Box)`
 `
 
 const StyledDarkStack = styled(Stack)`
+    position: relative;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 `
 
 const StyledLogoImg = styled('img')`
     position: absolute;
-    top: 20px;
-    left: -5px;
-    height: 75px;
-    width: 75px;
 
-    @media (max-width: 499px){
+    top: -10px;
+    left: -10px;
+    height: 50px;
+    width: 50px;
+
+    @media (min-width: 600px){
         top: -20px;
-        left: -37px;
-        height: 66px;
-        width: 66px;
+        left: -20px;
+        height: 75px;
+        width: 75px;
     }
 `
 
-const StyledSocialIconStack = styled(Stack)`
-    a{
-        height: auto;
-        text-align: center;
-    }
-    img {
-        width: auto;
-        height: 128px;
-    }
-
-    @media (max-width: 499px){
-        img {
-            height: 100px;
-        }
-    }
-    
-`
 interface Props {
     loadSectionHandler: (sectionNum: number) => void
 }
@@ -64,7 +49,7 @@ function ContactSection({ loadSectionHandler }: Props) {
 
     useEffect(() => {
         loadSectionHandler(9)
-    },[loadSectionHandler])
+    }, [loadSectionHandler])
 
     const formSubmitSuccessHandler = (bool: boolean) => {
         setFormSubmitSuccess(bool)
@@ -74,18 +59,18 @@ function ContactSection({ loadSectionHandler }: Props) {
     return (
         <StyledSectionBox component='section' id='seventh-section' py={4} >
             <Container>
-                <Grid container spacing={{ xs: 2, md: 0 }}>
-                    <Grid item xs={12} md={7} lg={6}>
-                        <StyledDarkStack px={3} pb={2} minHeight='392px' direction='column'>
-                            <Stack direction='row' position='relative' justifyContent='center' alignItems='center' minHeight='120px'>
-                                <StyledLogoImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png" alt="logo" />
-                                <Typography variant='h4' component='h5' color='text.secondary'>CONTACT ME</Typography>
-                            </Stack>
+                <Grid container spacing={{ xs: 2, sm:3, md: 10, lg: 22 }}>
+
+                    <Grid item xs={12} sm={7} md={7} lg={7}>
+                        <StyledDarkStack px={{ xs: 2, md: 3 }} pb={1} minHeight='392px' direction='column'>
+                            <StyledLogoImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png" alt="logo" />
+
+                            <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' my={3}>CONTACT ME</Typography>
 
                             {
                                 !formSubmitSuccess
                                     ? <>
-                                        <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>Remarks? Comments? Suggestions? Need a website done or just saying "hi"? Leave your input below and you'll get a response from me within the next 24 hours</Typography>
+                                        <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>Remarks? Comments? Suggestions? Need a website done or just saying "HI"? Leave your input below and you'll get a response from me within the next 24 hours</Typography>
                                         <ContactForm formSubmitSuccessHandler={formSubmitSuccessHandler} />
                                     </>
                                     : <Stack direction='column' justifyContent='center' alignItems='center' pt={4} spacing={2}>
@@ -96,24 +81,22 @@ function ContactSection({ loadSectionHandler }: Props) {
                         </StyledDarkStack>
                     </Grid>
 
-                    <Grid item xs={12} md={1} lg={2}></Grid>
+                    <Grid item xs={12} sm={5} md={5} lg={5}>
+                        <StyledDarkStack px={{ xs: 4, sm: 1, md: 4 }} >
+                            <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' my={3}>FIND ME ON</Typography>
 
-                    <Grid item xs={12} md={4}>
-                        <StyledDarkStack p={4} >
-                            <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' mb={3}>FIND ME ON</Typography>
-
-                            <StyledSocialIconStack direction='row' justifyContent='space-evenly' mb={3}>
-                                <Link href="https://www.linkedin.com/in/ariel-behar/" target="_blank" mr={1}>
-                                    <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/linkedin.svg" alt="LinkedIn Logo" />
+                            <Stack direction='row' justifyContent='space-evenly' mb={3} gap={1}>
+                                <Link textAlign='center'  href="https://www.linkedin.com/in/ariel-behar/" target="_blank" >
+                                    <Box height={{ xs: '80px', sm: '90px', md: '100px', lg: '110px' }} width='auto' component="img" sx={{ objectFit: 'contain' }} src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/linkedin.svg" alt="LinkedIn Logo" />
                                 </Link>
-                                <Link href="https://github.com/ariel-behar" target="_blank" ml={1}>
-                                    <img src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/github.svg" alt="Github Logo" />
+                                <Link textAlign='center' href="https://github.com/ariel-behar" target="_blank">
+                                    <Box height={{ xs: '80px', sm: '90px', md: '100px', lg: '110px' }} width='auto' component="img" sx={{ objectFit: 'contain' }} src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/icons/github.svg" alt="Github Logo" />
                                 </Link>
-                            </StyledSocialIconStack>
+                            </Stack>
 
-                            <Typography variant='h6' component='p' color='text.secondary' textAlign='center' mb={3}>OR EMAIL ME DIRECTLY AT</Typography>
+                            <Typography variant='h6' component='p' color='text.secondary' textAlign='center' mb={2}>OR EMAIL ME DIRECTLY AT</Typography>
 
-                            <Typography variant='body1' component='p' color='text.secondary' textAlign='center' mb={3}>ariel.behar@hotmail.com</Typography>
+                            <Typography variant='h6' component='p' color='text.secondary' fontStyle='italic' textAlign='center' mb={3}>ariel.behar@hotmail.com</Typography>
 
                         </StyledDarkStack>
                     </Grid>

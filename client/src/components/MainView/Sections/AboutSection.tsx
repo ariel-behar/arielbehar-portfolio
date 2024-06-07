@@ -40,7 +40,11 @@ const StyledBox = styled(Box)`
         }
 
         @media (min-width: 350px) {
-            height: 352px;
+            height: 345px;
+        }
+
+        @media (min-width: 375px) {
+            height: 340px;
         }
 
         @media (min-width: 400px) {
