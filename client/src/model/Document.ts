@@ -1,6 +1,6 @@
 import { Identifiable, IdType } from "../types/common-types"
 
-interface Document extends Identifiable<IdType> {
+interface IDocument extends Identifiable<IdType> {
     _id: IdType,
     title: string,
     image: string,
@@ -9,4 +9,4 @@ interface Document extends Identifiable<IdType> {
     creator: string
 }
 
-export default Document
+export default IDocument

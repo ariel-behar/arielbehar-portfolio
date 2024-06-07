@@ -1,4 +1,4 @@
-import Document from "../../model/Document"
+import IDocument from "../../model/Document"
 
 import documents from '../../data/documents.json'
 
@@ -26,11 +26,11 @@ const StyledDialogContent = styled(DialogContent)`
     }
 `
 interface Props {
-	documentCategory: Document['category']
+	documentCategory: IDocument['category']
 }
 
 function DocumentModalContent({ documentCategory }: Props) {
-	const filteredDocuments = (documents[documentCategory] as Document[]).filter((document: Document) => document.category === documentCategory)
+	const filteredDocuments = (documents[documentCategory] as IDocument[]).filter((document: IDocument) => document.category === documentCategory)
 
 	return (
 		<StyledDialogContent>

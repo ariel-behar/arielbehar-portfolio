@@ -1,10 +1,10 @@
-import Document from "../../model/Document"
+import IDocument from "../../model/Document"
 import { v4 as uuidv4 } from 'uuid';
 
 import Grid from '@mui/material/Grid'
 
 interface Props {
-    filteredDocuments: Document[]
+    filteredDocuments: IDocument[]
 }
 
 function DocumentModalCertificate({ filteredDocuments }: Props) {

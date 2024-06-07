@@ -1,21 +1,21 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import Document from "../../model/Document"
+import IDocument from "../../model/Document"
 
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack';
 
 interface Props {
-	documentCategory: Document['category']
-    filteredDocuments: Document[]
+	documentCategory: IDocument['category']
+    filteredDocuments: IDocument[]
 }
 
 function DocumentModalResumeReference({documentCategory, filteredDocuments}:Props) {
     return (
         <>
             {
-                (filteredDocuments as Document[]).map((document: Document) => {
+                (filteredDocuments as IDocument[]).map((document: IDocument) => {
                     return <img key={uuidv4()} src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/documents/${documentCategory}/${document.image}`} alt={document.title} />
                 })
             }

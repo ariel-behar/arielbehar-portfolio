@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import Document from '../../../model/Document'
+import IDocument from '../../../model/Document'
 import IProject from '../../../model/Project'
 
 import styled from "@mui/material/styles/styled"
@@ -92,7 +92,7 @@ interface Props {
 function DocumentsSection({ loadSectionHandler }: Props) {
     const [modalSettings, setModalSettings] = useState<{
 		show: boolean,
-        documentCategory: Document['category'] | null
+        documentCategory: IDocument['category'] | null
 	}>({
 		show: false,
         documentCategory: null
@@ -103,14 +103,14 @@ function DocumentsSection({ loadSectionHandler }: Props) {
     },[loadSectionHandler])
 
 
-    const onClickImageHandler = (documentCategory: Document['category']) => {
+    const onClickImageHandler = (documentCategory: IDocument['category']) => {
         setModalSettings({
             show: true,
             documentCategory: documentCategory
         })
     }
 
-    const handleShowModal = (show: boolean, project?: IProject | null, documentCategory?: Document['category']) => {
+    const handleShowModal = (show: boolean, project?: IProject | null, documentCategory?: IDocument['category']) => {
 		setModalSettings({
 			show: show,
 			documentCategory: null

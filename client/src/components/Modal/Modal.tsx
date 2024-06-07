@@ -7,7 +7,7 @@ import { Partial } from '../../types/common-types';
 import { TransitionProps } from '@mui/material/transitions';
 
 import ProjectModalContent from './ProjectModalContent';
-import Document from '../../model/Document';
+import IDocument from '../../model/Document';
 import DocumentModalContent from './DocumentModalContent';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -62,9 +62,9 @@ const StyledDialogActions = styled(DialogActions)`
 `
 interface Props {
     project?: Partial<IProject>,
-    documentCategory?: Document['category'],
+    documentCategory?: IDocument['category'],
     showModal: boolean,
-    handleShowModal: (show: boolean, project?: IProject | null, documentCategory?: Document['category'] | null) => void
+    handleShowModal: (show: boolean, project?: IProject | null, documentCategory?: IDocument['category'] | null) => void
 }
 
 function Modal({ 
@@ -74,7 +74,7 @@ function Modal({
     handleShowModal 
 }: Props) {
 
-    const getDocumentTitle = (category:Document['category']): 'Résumé' | 'References' | 'Certificates' | '' => {
+    const getDocumentTitle = (category:IDocument['category']): 'Résumé' | 'References' | 'Certificates' | '' => {
         if(category === 'resume') {
             return 'Résumé'
         } else if(category === 'reference') {
