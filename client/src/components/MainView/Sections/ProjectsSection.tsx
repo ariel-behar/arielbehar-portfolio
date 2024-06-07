@@ -58,9 +58,11 @@ function ProjectsSection({ loadSectionHandler }: Props) {
 			</Stack>
 
 			<Grid container spacing={1} py={2}>
-				<Grid item xs={12} md={7} lg={7} display="flex" direction='column' justifyContent='center' position="relative">
-					<CarouselStatus currentSlide={selectedProject.index} totalSlides={projects.length} />
-					<ProjectLargeThumbnail selectedProject={selectedProject.project} />
+				<Grid item xs={12} md={7} lg={7} position="relative">
+					<Stack height='100%' display="flex" direction='column' justifyContent='center'>
+						<CarouselStatus currentSlide={selectedProject.index} totalSlides={projects.length} />
+						<ProjectLargeThumbnail selectedProject={selectedProject.project} />
+					</Stack>
 				</Grid>
 
 				<Grid item xs={12} md={5} lg={5}>
