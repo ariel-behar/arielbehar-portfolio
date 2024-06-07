@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack"
 
 interface Props {
 	projects: IProject[],
-	onChangeSelectedProject: (projectId: IProject['_id']) => void
+	onChangeSelectedProject: (projectId: IProject['_id'], index: number) => void
 }
 
 function ProjectsThumbnailsList({
@@ -15,9 +15,9 @@ function ProjectsThumbnailsList({
 	return (
 		<Stack flexGrow="1" direction='row' alignItems='center' flexWrap='wrap' justifyContent='center' mt={2} gap={{xs: 1, md: 2}} >
 			{
-				projects.map(project => {
+				projects.map((project, index) => {
 					return (
-						<Box key={project._id} onClick={() => onChangeSelectedProject(project._id)} width={{xs: '105px', md: "130px"}} height='auto'>
+						<Box key={project._id} onClick={() => onChangeSelectedProject(project._id, index + 1)} width={{xs: '105px', md: "130px"}} height='auto'>
 							<Box
 								sx={{
 									cursor: 'pointer',
