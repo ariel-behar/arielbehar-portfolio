@@ -38,7 +38,7 @@ function MockupProjectCarouselSlide({
                 <Typography mt={2} mb={1} variant="h5" component='p' color='aliceblue'>{project.title}</Typography>
 
                 <Stack direction='row' justifyContent='center'>
-                    <Typography variant="h6" component='p' sx={{ color: 'primary.main', cursor: 'pointer', fontSize: { xs: '1.1rem', sm: '1.25rem' } }} onClick={() => handleShowModal(false)}>
+                    <Typography variant="h6" component='p' sx={{ color: 'primary.main', cursor: 'pointer', fontSize: { xs: '1.1rem', sm: '1.25rem' } }} onClick={() => handleShowModal(true, project)}>
                         Project Description
                     </Typography>
 
