@@ -303,33 +303,5 @@
                 "displayTechnology": true
             }
         ]
-    },
-    {
-        "title": "Miscellaneous",
-        "technologies": [{
-                "technology": "Atlas/Compass",
-                "proficiency": 1,
-                "image": "atlas-compass.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Postman",
-                "proficiency": 1,
-                "image": "postman.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Jira",
-                "proficiency": 3,
-                "image": "jira.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "FileZilla",
-                "proficiency": 2,
-                "image": "filezilla.png",
-                "displayTechnology": true
-            }
-        ]
     }
 ]
