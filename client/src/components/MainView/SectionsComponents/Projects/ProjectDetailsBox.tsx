@@ -40,7 +40,7 @@ function ProjectDetailsBox({
 								animate={{ scale: [0.9, 1, 1, 0.9], }}
 								transition={{ duration: 1.3, repeat: Infinity }}
 							>
-								Click on Thumbnails to See Information About Each Project
+								Click on thumbnails below to see information about each project
 							</Typography>
 						</Stack>
 					)

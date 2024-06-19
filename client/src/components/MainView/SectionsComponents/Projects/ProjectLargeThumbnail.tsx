@@ -5,14 +5,14 @@ import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 
 interface Props {
-	selectedProject: IProject | null
+	selectedProject: IProject
 }
 
 function ProjectLargeThumbnail({
 	selectedProject
 }: Props) {
 	return (
-		<Link href={selectedProject ? selectedProject.url : ''} target='_blank'>
+		<Link href={selectedProject.url} target='_blank'>
 			<Box
 				sx={{
 					cursor: 'pointer',
@@ -21,13 +21,13 @@ function ProjectLargeThumbnail({
 						transform: 'scale(1.01)'
 					}
 				}}
-				key={selectedProject?._id}
+				key={selectedProject._id}
 				component={motion.img}
 				initial={{ opacity: 0 }}
-				animate={{ opacity: 1}}
-				transition={{duration: 0.3}}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 0.3 }}
 				width='100%'
-				src={ selectedProject ? `https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${selectedProject?.image}` : 'https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/site-plan.jpg'}
+				src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/projects-slides/${selectedProject?.image}`}
 				alt={`${selectedProject?.title} || ${selectedProject?._id}`}
 			/>
 		</Link>

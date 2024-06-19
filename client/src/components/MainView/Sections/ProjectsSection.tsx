@@ -13,6 +13,7 @@ import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import Stack from '@mui/material/Stack'
 import CarouselStatus from '../SectionsComponents/Photoshop/CarouselStatus'
+import LargeThumbnailPlaceholder from '../SectionsComponents/Projects/LargeThumbnailPlaceholder'
 
 interface Props {
 	loadSectionHandler: (sectionNum: number) => void
@@ -61,7 +62,13 @@ function ProjectsSection({ loadSectionHandler }: Props) {
 				<Grid item xs={12} md={7} lg={7} position="relative">
 					<Stack height='100%' display="flex" direction='column' justifyContent='center'>
 						<CarouselStatus currentSlide={selectedProject.index} totalSlides={projects.length} />
-						<ProjectLargeThumbnail selectedProject={selectedProject.project} />
+
+						{
+							selectedProject.project
+								? <ProjectLargeThumbnail selectedProject={selectedProject.project} />
+								: <LargeThumbnailPlaceholder />
+						}
+
 					</Stack>
 				</Grid>
 
