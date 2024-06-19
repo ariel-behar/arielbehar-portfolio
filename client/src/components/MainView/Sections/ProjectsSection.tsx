@@ -20,10 +20,10 @@ interface Props {
 
 function ProjectsSection({ loadSectionHandler }: Props) {
 	const [selectedProject, setSelectedProject] = useState<{
-		project: IProject,
+		project: IProject | null,
 		index: number
 	}>({
-		project: projects[0] as IProject,
+		project: null,
 		index: 1
 	})
 	const theme = useTheme();

@@ -17,18 +17,20 @@ function ProjectDetailsBox({
 }: Props) {
 
 	return (
-		<Box sx={{
-			backgroundColor: "rgba(0, 0, 0, 0.3)",
-			borderRadius: "20px",
-			padding: "10px 15px 10px",
-		}}
-			minHeight={{xs: '510px', sm: '450px', lg: '510px'}}
+		<Box
+			sx={{
+				backgroundColor: "rgba(0, 0, 0, 0.3)",
+				borderRadius: "20px",
+				padding: "10px 15px 10px",
+			}}
+			minHeight={{ xs: '510px', sm: '450px', lg: '510px' }}
+			height="100%"
 		>
 			{
 				selectedProject
 					? <ProjectCard project={(selectedProject as IProject)} projectCategory='real' />
 					: (
-						<Stack direction='column' justifyContent='center' alignItems='center' height='100%'>
+						<Stack direction='column' justifyContent='center' alignItems='center' minHeight='100%' height="100%">
 							<Typography
 								key={uuidv4()}
 								variant='h6'
