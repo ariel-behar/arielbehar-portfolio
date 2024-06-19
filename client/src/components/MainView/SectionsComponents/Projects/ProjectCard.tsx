@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { motion } from 'framer-motion'
 
 import IProject from '../../../../model/Project'
 
@@ -15,7 +16,14 @@ interface Props {
 
 function ProjectCard({ project, projectCategory, hideTitle }: Props) {
     return (
-        <Stack py={1}>
+        <Stack
+            py={1}
+            key={project?._id}
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            transition={{duration: 0.3}}
+        >
             {!hideTitle && <Typography mb={1} variant='h5' component='h5' textAlign='center' color='text.secondary'>{project?.title}</Typography>}
 
             <Typography mt={1.2} variant='h6' component='h6' color='text.secondary'>Project Description:</Typography>
@@ -31,7 +39,7 @@ function ProjectCard({ project, projectCategory, hideTitle }: Props) {
             <Typography mt={1.2} variant='h6' component='h6' color='text.secondary'>My Role in the Project:</Typography>
             <Typography variant='body1' component='p' color='text.tertiary' textAlign='justify'>{project?.myRole}</Typography>
 
-             <Box>
+            <Box>
                 <Typography mt={1.2} variant='h6' component='h6' color='text.secondary'>Technologies Used:</Typography>
                 {project?.technologies && project?.technologies.map(technology => <Typography key={uuidv4()} variant='body1' component='p' color='text.tertiary' display='inline-block'>•&nbsp;{technology}&nbsp;</Typography>)}
             </Box>
