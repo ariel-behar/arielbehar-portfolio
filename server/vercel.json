@@ -3,5 +3,5 @@
         "source": "/(.*)",
         "destination": "/"
     }],
-    "regions": "fra1"
+    "regions": ["fra1"]
 }
