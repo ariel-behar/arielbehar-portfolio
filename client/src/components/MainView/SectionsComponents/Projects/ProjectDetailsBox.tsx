@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { m, motion } from "framer-motion"
 import { v4 as uuidv4 } from 'uuid';
 
 import IProject from "../../../../model/Project"
@@ -22,7 +22,7 @@ function ProjectDetailsBox({
 			borderRadius: "20px",
 			padding: "10px 15px 10px",
 		}}
-			minHeight='510px'
+			minHeight={{xs: '510px', sm: '450px', lg: '510px'}}
 		>
 			{
 				selectedProject
