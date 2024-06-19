@@ -39,11 +39,11 @@ function ThreeJsSection({
 
 					<Grid item xs={12} sm={6}>
 
-						<Grid container columnSpacing={1}>
+						<Grid container spacing={{xs: 1, lg: 1}}>
 							{
-								(projects as ThreeJsProject[]).slice(0, 6).map((project) => {
+								(projects as ThreeJsProject[]).map((project) => {
 									return (
-										<Grid item xs={6} sm={6} md={6} key={uuiqd()}>
+										<Grid item xs={6} sm={6} md={4} key={uuiqd()}>
 											<ThreeJsCard project={project} />
 										</Grid>
 									)
@@ -54,7 +54,7 @@ function ThreeJsSection({
 					</Grid>
 				</Grid>
 
-				<Grid container columnSpacing={1}>
+				{/* <Grid container spacing={{xs: 1, lg: 2}} mt={{lg:1}}>
 					{
 						(projects as ThreeJsProject[]).slice(6).map((project, index) => {
 							return (
@@ -64,7 +64,7 @@ function ThreeJsSection({
 							)
 						}
 						)}
-				</Grid>
+				</Grid> */}
 			</Box>
 		</Box>
 	)

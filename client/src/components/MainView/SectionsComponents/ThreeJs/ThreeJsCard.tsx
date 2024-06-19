@@ -11,7 +11,15 @@ function ThreeJsCard({
     project
 }: Props) {
     return (
-        <Box>
+        <Box
+            sx={{
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                '&:hover': {
+                    transform: 'scale(1.05)',
+                }
+            }}
+        >
             <Link
                 href={project.url}
                 target="_blank"
@@ -25,7 +33,7 @@ function ThreeJsCard({
                     alt={`${project.title}`}
                 />
 
-                <Typography variant="h6" component='h5' textAlign='center'>{project.title}</Typography>
+                <Typography variant="body1" component='h5' textAlign='center' color="text.secondary" >{project.title}</Typography>
             </Link>
         </Box>
     )
