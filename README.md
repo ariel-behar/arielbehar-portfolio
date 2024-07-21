@@ -31,7 +31,7 @@
         <a align="center" href="https://www.arielbehar.com/" target="_blank">www.arielbehar.com</a>
     </td>
     <td align="center">
-        <a href="https://github.com/ariel-behar/portfolio-v3.0" target="_blank">https://github.com/ariel-behar/portfolio-v3.0</a>
+        <a href="https://github.com/ariel-behar/portfolio-v3.0" target="_blank">https://github.com/ariel-behar/arielbehar-portfolio</a>
     </td>
   </tr>
 </table>
@@ -48,81 +48,16 @@ This is my personal portfolio that aims to highlight my work, projects, skills, 
 
 <h2>Release Date</h2>
 
-<blockquote>Legacy Version 1.0 - Dec 2017</blockquote>
-<blockquote>Legacy Version 2.0 - June 2020</blockquote>
-<blockquote>Latest Version 3.0 - April 2024 (current)</blockquote>
-
-<br />
-
-<h2>Quick Start</h2>
-
-<h3>Development mode</h3>
-
-<blockquote style="padding-top:5px; padding-bottom: 5px">
-
-1. In the terminal, navigate to the project's <b>client</b> folder
-
-2. Execute the following command:
-
-```bash
-npm run dev
-```
-
-3. The <b>client side</b> of the application will run the development server on [http://localhost:3000/](http://localhost:3000/)
-
-4. Open a second session in the terminal
-
-5. Navigate to the project's <b>server</b> folder
-
-6. Execute the following command:
-
-```bash
-npm run dev
-```
-
-7. The <b>server side</b> of the application will run the development server on [http://localhost:3030/](http://localhost:3030/)
-</blockquote>
-
-<br />
-
-<h3>Production mode</h3>
-
-<blockquote style="padding-top:5px; padding-bottom: 5px">
-
-1. In the terminal, navigate to the project's <b>client</b> folder
-
-2. Execute the following command:
-
-```bash
-npm run build
-```
-
-3. Copy the whole content of the generated <b>client/build</b> folder
-
-4. Delete the files in folder <b>server/src/public</b> and paste the copied content from <b>client/build</b> into it
-
-5. In the terminal, navigate to the project's <b>server</b> folder
-
-6. Execute the following command:
-
-```bash
-npm run build
-```
-
-7. Once done, execute the following command: 
-
-```bash
-npm start
-```
-
-8. If the port 3030 is available, the production build will be served on [http://localhost:3030](http://localhost:3030)
-</blockquote>
+<blockquote>Legacy Version 1.0.0 - Dec 2017</blockquote>
+<blockquote>Legacy Version 2.0.0 - June 2020</blockquote>
+<blockquote>Latest Version 3.0.0 - April 2024 (current)</blockquote>
 
 <br />
 
 <h2>Technological Overview</h2>
 
-<blockquote>Although my original site was created in 2017, this version has undergone a thorough make-over with React and Material UI. I've also made use of Typescript, which has contributed to the creation of an easily manageable, type-safe codebase. All related assets have also been optimized, which has resulted in a more pleasant UX and boosted overall performance. Node.js powers the backend, managing server-side operations and data handling.
+<blockquote>
+Welcome to version 2.0.0 of my personal portfolio! This iteration features server-side rendering with the Handlebars templating engine. The design is styled using both Bootstrap and Material-Bootstrap CSS frameworks. For enhanced functionality, I have incorporated JavaScript and jQuery. Additionally, Gulp has been utilized for workflow automation.
 </blockquote>
 
 <br />
@@ -131,38 +66,29 @@ npm start
 
 <h3>Javascript Framework</h3> 
 
-<blockquote>React</blockquote>
+<blockquote>Vanilla JS</blockquote>
+<blockquote>jQuery</blockquote>
 
-<h3>Javascript Superscript</h3> 
-
-<blockquote>Typescript</blockquote>
-
-<h3>CSS Frameworks/Libraries</h3>
+<h3>CSS & CSS Frameworks/Libraries</h3>
 
 <blockquote>
-Material UI
+CSS
 <br/>
-Emotion</blockquote>
+Bootstrap
+<br/>
+Material-Bootstrap</blockquote>
 
 <h3>Runtime (Server-Side)</h3>
 
 <blockquote>Node</blockquote>
 
-<h3>Application Framework (Server-Side)</h3>
+<h3>Runtime (Server-Side)</h3>
 
-<blockquote>Express</blockquote>
+<blockquote>Node</blockquote>
 
-<br />
+<h3>Template Engine</h3>
 
-<h2>External Integrations</h2>
-
-<blockquote>AWS S3</blockquote>
-
-<br />
-
-<h2>Deployment</h2>
-
-<blockquote>Vercel</blockquote>
+<blockquote>Handlebars</blockquote>
 
 <!-- <br /> -->
 <!-- <h2>Specs</h2> -->
