@@ -49,8 +49,8 @@ This is my personal portfolio that aims to highlight my work, projects, skills, 
 <h2>Release Date</h2>
 
 <blockquote>Legacy Version 1.0.0 - Dec 2017</blockquote>
-<blockquote>Legacy Version 2.0.0 - June 2020</blockquote>
-<blockquote>Latest Version 3.0.0 - April 2024 (current)</blockquote>
+<blockquote>Legacy Version 2.0.0 - June 2020 (this version)</blockquote>
+<blockquote>Latest Version 3.0.0 - April 2024</blockquote>
 
 <br />
 
