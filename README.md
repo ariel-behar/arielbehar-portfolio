@@ -25,6 +25,9 @@
         <img align="center" alt="Github" style="height: 20px; width: auto; margin-right: 10px;" src="https://github-repositories-images.s3.eu-central-1.amazonaws.com/github.png">
         <h3 align="center" style="margin-bottom: 10px; display: inline-block;">Github Repository</h3>
     </th>
+    <th align="center">
+        <h3 align="center" style="margin-bottom: 10px; display: inline-block;">Branch</h3>
+    </th>
   </tr>
   <tr>
     <td align="center">
@@ -32,6 +35,9 @@
     </td>
     <td align="center">
         <a href="https://github.com/ariel-behar/portfolio-v3.0" target="_blank">https://github.com/ariel-behar/arielbehar-portfolio</a>
+    </td>
+    <td align="center">
+        <p>v.2.0.0</p>
     </td>
   </tr>
 </table>
