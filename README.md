@@ -82,13 +82,13 @@ Material-Bootstrap</blockquote>
 
 <blockquote>Node</blockquote>
 
-<h3>Runtime (Server-Side)</h3>
-
-<blockquote>Node</blockquote>
-
 <h3>Template Engine</h3>
 
 <blockquote>Handlebars</blockquote>
+
+<h3>Workflow Automation</h3>
+
+<blockquote>Gulp</blockquote>
 
 <!-- <br /> -->
 <!-- <h2>Specs</h2> -->
