@@ -25,6 +25,9 @@
         <img align="center" alt="Github" style="height: 20px; width: auto; margin-right: 10px;" src="https://github-repositories-images.s3.eu-central-1.amazonaws.com/github.png">
         <h3 align="center" style="margin-bottom: 10px; display: inline-block;">Github Repository</h3>
     </th>
+        <th align="center">
+        <h3 align="center" style="margin-bottom: 10px; display: inline-block;">Branch</h3>
+    </th>
   </tr>
   <tr>
     <td align="center">
@@ -32,6 +35,9 @@
     </td>
     <td align="center">
         <a href="https://github.com/ariel-behar/portfolio-v3.0" target="_blank">https://github.com/ariel-behar/arielbehar-portfolio</a>
+    </td>
+     <td align="center">
+        <p>v.1.0.0<p>
     </td>
   </tr>
 </table>
@@ -48,8 +54,8 @@ This is my personal portfolio that aims to highlight my work, projects, skills, 
 
 <h2>Release Date</h2>
 
-<blockquote>Legacy Version 1.0.0 - Dec 2017</blockquote>
-<blockquote>Legacy Version 2.0.0 - June 2020 (this version)</blockquote>
+<blockquote>Legacy Version 1.0.0 - Dec 2017 (this version)</blockquote>
+<blockquote>Legacy Version 2.0.0 - June 2020</blockquote>
 <blockquote>Latest Version 3.0.0 - April 2024</blockquote>
 
 <br />
@@ -57,7 +63,7 @@ This is my personal portfolio that aims to highlight my work, projects, skills, 
 <h2>Technological Overview</h2>
 
 <blockquote>
-Welcome to version 2.0.0 of my personal portfolio! This iteration features server-side rendering with the Handlebars templating engine. The design is styled using both Bootstrap and Material-Bootstrap CSS frameworks. For enhanced functionality, I have incorporated JavaScript and jQuery. Additionally, Gulp has been utilized for workflow automation.
+Welcome to version 1.0.0 of my personal web design & development portfolio! It Bootstrap as its CSS framework. SCSS has been used as the CSS pre-processor. In terms of functionality, both JavaScript and jQuery have been implemented. Gulp has been utilized for workflow automation and PHP for contact form processing.
 </blockquote>
 
 <br />
@@ -74,21 +80,14 @@ Welcome to version 2.0.0 of my personal portfolio! This iteration features serve
 <blockquote>
 CSS
 <br/>
-Bootstrap
+SCSS
 <br/>
-Material-Bootstrap</blockquote>
+Bootstrap</blockquote>
 
-<h3>Runtime (Server-Side)</h3>
+<h3>Server-Side programming language</h3>
 
-<blockquote>Node</blockquote>
+<blockquote>PHP</blockquote>
 
-<h3>Runtime (Server-Side)</h3>
+<h3>Workflow Automation</h3>
 
-<blockquote>Node</blockquote>
-
-<h3>Template Engine</h3>
-
-<blockquote>Handlebars</blockquote>
-
-<!-- <br /> -->
-<!-- <h2>Specs</h2> -->
+<blockquote>Gulp</blockquote>
