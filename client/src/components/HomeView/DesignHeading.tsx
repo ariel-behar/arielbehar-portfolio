@@ -13,9 +13,14 @@ function DesignHeading() {
         >
             <Typography
                 mt={2}
+                mb={1}
                 variant="h1"
                 component="h1"
                 textAlign='center'
+
+                sx={{
+                    fontFamily: 'Peralta, serif',
+                }}
             >
                 ARIEL BEHAR
             </Typography>

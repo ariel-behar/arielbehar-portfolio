@@ -70,13 +70,18 @@ function TitleSection({ loadSectionHandler }: Props) {
                     alignItems='center'
                     height='100%'
                 >
-                    <Typography variant="h1" component='h1' mb={2} textAlign='center'>
+                    <Typography variant="h1" component='h1' mb={2} textAlign='center' style={{
+                        fontFamily: 'Peralta, serif',
+                        fontSize: !isXsSm ? '4rem': '2.6rem',
+                        lineHeight: !isXsSm ? '3.5rem' : '2.1rem',
+
+                    }}>
                         ARIEL BEHAR
                         {/* {isXsSm && <br />} */}
                         {/* &nbsp;WEB PORTFOLIO */}
                     </Typography>
 
-                    <Typography variant="h4" component='h2' lineHeight='2.3rem' fontStyle='italic' textAlign='center'>
+                    <Typography variant="h5" component='h2' textAlign='center'>
                         Design & Development
                         {isXsSm && <br />}
                         &nbsp;Done Differently
