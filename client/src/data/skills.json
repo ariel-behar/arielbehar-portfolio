@@ -85,12 +85,6 @@
                 "displayTechnology": true
             },
             {
-                "technology": "Material-Tailwind",
-                "proficiency": 2,
-                "image": "material-tailwind.png",
-                "displayTechnology": true
-            },
-            {
                 "technology": "Bootstrap",
                 "proficiency": 1,
                 "image": "bootstrap.jpg",
@@ -136,13 +130,13 @@
         "title": "WebGL",
         "technologies": [{
                 "technology": "Three JS",
-                "proficiency": 3,
+                "proficiency": 2,
                 "image": "three-js.png",
                 "displayTechnology": true
             },
             {
                 "technology": "R3F",
-                "proficiency": 3,
+                "proficiency": 2,
                 "image": "react-three-fiber.png",
                 "displayTechnology": true
             }
@@ -204,12 +198,6 @@
                 "technology": "Blender",
                 "proficiency": 3,
                 "image": "blender.png",
-                "displayTechnology": true
-            },
-            {
-                "technology": "Illustrator",
-                "proficiency": 3,
-                "image": "illustrator.png",
                 "displayTechnology": true
             },
             {
