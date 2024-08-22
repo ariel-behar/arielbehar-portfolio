@@ -28,7 +28,7 @@ function ThreeJsSection({
 	return (
 		<Box component="section" py={3} >
 			<Box position='relative'>
-				<Typography mb={{xs: 0, sm: 3}} variant="h4" component='h4' textAlign='center' color='text.secondary'>Three JS</Typography>
+				<Typography mb={{xs: 0, sm: 3}} variant="h4" component='h4' textAlign='center' color='text.secondary'>Three JS Projects</Typography>
 
 				<CarouselStatus totalSlides={projects.length} currentSlide={projects.length} />
 
