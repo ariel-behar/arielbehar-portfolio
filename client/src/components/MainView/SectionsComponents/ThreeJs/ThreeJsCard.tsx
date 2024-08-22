@@ -27,7 +27,7 @@ function ThreeJsCard({
                 style={{ textDecoration: 'none' }}
             >
                 <img
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", borderRadius: '10px' }}
                     src={`https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/three-js-projects/${project.image}`}
                     width="100%"
                     alt={`${project.title}`}
