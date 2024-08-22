@@ -62,7 +62,7 @@ function ContactSection({ loadSectionHandler }: Props) {
                 <Grid container spacing={{ xs: 2, sm:3, md: 10, lg: 22 }}>
 
                     <Grid item xs={12} sm={7} md={7} lg={7}>
-                        <StyledDarkStack px={{ xs: 2, md: 3 }} pb={1} minHeight='392px' direction='column'>
+                        <StyledDarkStack px={{ xs: 2, md: 3 }} pb={2} minHeight='392px' direction='column'>
                             <StyledLogoImg src="https://arielbehar-portfolio.s3.eu-central-1.amazonaws.com/logo/logo.png" alt="logo" />
 
                             <Typography variant='h4' component='h5' color='text.secondary' textAlign='center' my={3}>CONTACT ME</Typography>
@@ -70,7 +70,7 @@ function ContactSection({ loadSectionHandler }: Props) {
                             {
                                 !formSubmitSuccess
                                     ? <>
-                                        <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>Remarks? Comments? Suggestions? Need a website done or just saying "HI"? Leave your input below and you'll get a response from me within the next 24 hours</Typography>
+                                        <Typography variant='body1' component='p' color='text.secondary' textAlign='justify'>Need a web site/app done or just saying "HI"? Leave your input below and you'll get a response from me within the next 24 hours</Typography>
                                         <ContactForm formSubmitSuccessHandler={formSubmitSuccessHandler} />
                                     </>
                                     : <Stack direction='column' justifyContent='center' alignItems='center' pt={4} spacing={2}>
